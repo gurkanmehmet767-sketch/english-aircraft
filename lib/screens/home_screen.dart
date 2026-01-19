@@ -1096,7 +1096,6 @@ class _HomeScreenState extends State<HomeScreen> {
     final masteryLevel = provider.getMasteryLevel(categoryKey);
     final masteryIcon = provider.getMasteryIcon(categoryKey);
     final needsReview = provider.needsReview(categoryKey);
-    final reviewUrgency = provider.getReviewUrgency(categoryKey);
     
     Color getSectionColor(String? section) {
       if (section == null) return Colors.blue;
