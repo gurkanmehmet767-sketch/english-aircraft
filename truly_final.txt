@@ -1,0 +1,4 @@
+[warning] Unused import: 'unit_detail_screen.dart' (C:\Users\Casper\Desktop\english_aircraft\lib\screens\home_screen.dart:7:8)
+[info] 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead (C:\Users\Casper\Desktop\english_aircraft\lib\screens\settings_screen.dart:1:1)
+[info] Don't use web-only libraries outside Flutter web plugins (C:\Users\Casper\Desktop\english_aircraft\lib\screens\settings_screen.dart:1:1)
+[info] Don't use 'BuildContext's across async gaps (C:\Users\Casper\Desktop\english_aircraft\lib\screens\settings_screen.dart:326:37)

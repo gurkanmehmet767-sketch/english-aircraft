@@ -1,0 +1,31 @@
+﻿Analyzing english_aircraft...                                   
+
+warning - The value of the local variable 'glowColor' isn't used - lib\screens\home_screen.dart:1136:11 - unused_local_variable
+   info - The private field _isBannerAdReady could be 'final' - lib\services\ad_service.dart:10:8 - prefer_final_fields
+   info - The private field _isInterstitialAdReady could be 'final' - lib\services\ad_service.dart:11:8 - prefer_final_fields
+   info - The private field _isRewardedAdReady could be 'final' - lib\services\ad_service.dart:12:8 - prefer_final_fields
+  error - The method 'debugPrint' isn't defined for the type 'AdService' - lib\services\ad_service.dart:17:7 - undefined_method
+   info - Don't invoke 'print' in production code - scripts\convert_vocab.dart:13:3 - avoid_print
+   info - Don't invoke 'print' in production code - scripts\convert_vocab.dart:58:5 - avoid_print
+   info - Don't invoke 'print' in production code - scripts\generate_vocab.dart:129:3 - avoid_print
+   info - Don't invoke 'print' in production code - scripts\generate_vocab.dart:131:5 - avoid_print
+
+flutter : 9 issues fo
+und. (ran in 2.0s)
+At line:1 char:1
++ flutter analyze 2>&
+1 | Out-File -FilePat
+h "analyze_detailed.t
+xt" -Enc ...
++ ~~~~~~~~~~~~~~~~~~~
+~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (9 issue   
+ s found. (ran in    
+ 2.0s):String) [    ]
+, RemoteExcepti    on
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 

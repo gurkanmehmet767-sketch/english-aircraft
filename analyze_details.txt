@@ -1,0 +1,23 @@
+﻿Analyzing english_aircraft...                                   
+
+warning - Unused import: 'package:flutter/foundation.dart' - lib\main.dart:2:8 - unused_import
+  error - Const variables must be initialized with a constant value - lib\services\ad_service.dart:10:45 - const_initialized_with_non_constant_value
+  error - Const variables must be initialized with a constant value - lib\services\ad_service.dart:14:51 - const_initialized_with_non_constant_value
+  error - Const variables must be initialized with a constant value - lib\services\ad_service.dart:18:47 - const_initialized_with_non_constant_value
+
+flutter : 4 issues found. 
+(ran in 3.6s)
+At line:1 char:1
++ flutter analyze 2>&1 | O
+ut-File -FilePath "analyze
+_details.txt" -Enco ...
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (4  
+   issues found. (ran i   
+ n 3.6s):String) [], R    
+emoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 

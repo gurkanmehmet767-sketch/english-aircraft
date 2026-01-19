@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- SEO Meta Tags -->
+  <title>English Aircraft - İngilizce Öğrenme Uygulaması</title>
+  <meta name="description"
+    content="İngilizce öğrenmenin ücretsiz, eğlenceli ve etkili yolu! 600+ kelime, dilbilgisi dersleri, okuma pasajları ve interaktif oyunlar.">
+  <meta name="keywords"
+    content="ingilizce öğrenme, english learning, kelime öğrenme, grammar, vocabulary, dilbilgisi, eğitim, online eğitim, dil öğrenme">
+  <meta name="author" content="English Aircraft">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://allien-4e4f1.web.app/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://allien-4e4f1.web.app/">
+  <meta property="og:title" content="English Aircraft - İngilizce Öğren">
+  <meta property="og:description"
+    content="İngilizce öğrenmenin ücretsiz, eğlenceli ve etkili yolu! 600+ kelime ve oyunlarla öğren.">
+  <meta property="og:image" content="https://allien-4e4f1.web.app/icons/Icon-512.png">
+  <meta property="og:locale" content="tr_TR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://allien-4e4f1.web.app/">
+  <meta name="twitter:title" content="English Aircraft - İngilizce Öğren">
+  <meta name="twitter:description" content="İngilizce öğrenmenin ücretsiz, eğlenceli ve etkili yolu!">
+  <meta name="twitter:image" content="https://allien-4e4f1.web.app/icons/Icon-512.png">
+
+  <!-- Cache Control - Always get fresh content -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="English Aircraft">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon - Multiple formats for better compatibility -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      overflow-x: hidden;
+    }
+
+    /* Flutter content */
+    #flutter-app {
+      display: block;
+    }
+
+    /* Mobile Optimizations */
+    @media (max-width: 480px) {
+      .auth-container {
+        padding: 16px;
+        align-items: flex-start;
+        padding-top: 10vh;
+      }
+    }
+
+    /* Safe area support for notched phones */
+    @supports (padding: max(0px)) {
+      .auth-container {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+        padding-bottom: max(24px, env(safe-area-inset-bottom));
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Flutter App Container -->
+  <div id="flutter-app"></div>
+
+  <script>
+    // Enhanced postMessage wrapper to prevent all 'null' origin errors
+    (function () {
+      // Save original postMessage
+      const originalPostMessage = window.postMessage;
+
+      // Override postMessage globally
+      window.postMessage = function (message, targetOrigin, transfer) {
+        // Fix null or 'null' string origins
+        if (targetOrigin === 'null' || targetOrigin === null || targetOrigin === undefined) {
+          targetOrigin = window.location.origin || '*';
+        }
+
+        try {
+          return originalPostMessage.call(window, message, targetOrigin, transfer);
+        } catch (e) {
+          // Log error but don't break the app
+          if (console && console.debug) {
+            console.debug('postMessage error suppressed:', e.message);
+          }
+          return undefined;
+        }
+      };
+
+      // Also wrap for iframe postMessage calls
+      if (window.parent && window.parent !== window) {
+        const originalParentPostMessage = window.parent.postMessage;
+        window.parent.postMessage = function (message, targetOrigin, transfer) {
+          if (targetOrigin === 'null' || targetOrigin === null || targetOrigin === undefined) {
+            targetOrigin = '*';
+          }
+          try {
+            return originalParentPostMessage.call(window.parent, message, targetOrigin, transfer);
+          } catch (e) {
+            if (console && console.debug) {
+              console.debug('Parent postMessage error suppressed:', e.message);
+            }
+            return undefined;
+          }
+        };
+      }
+    })();
+
+    // Create and load the Flutter bootstrap script
+    const script = document.createElement('script');
+    script.src = 'flutter_bootstrap.js';
+    script.async = true;
+    document.body.appendChild(script);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+﻿Analyzing english_aircraft...                                   
+
+   info - Don't invoke 'print' in production code - fix_turkish.dart:546:3 - avoid_print
+warning - The value of the local variable 'isCorrectAnswer' isn't used - lib\screens\lesson_screen.dart:1063:41 - unused_local_variable
+warning - The value of the local variable 'isCorrectAnswer' isn't used - lib\screens\lesson_screen.dart:1225:39 - unused_local_variable
+  error - Undefined name '_isCorrect' - lib\screens\review_screen.dart:115:7 - undefined_identifier
+  error - Undefined name '_isCorrect' - lib\screens\review_screen.dart:144:7 - undefined_identifier
+
+flutter : 5 issues fo
+und. (ran in 3.5s)
+At line:1 char:1
++ flutter analyze 2>&
+1 | Out-File -FilePat
+h final_errors.txt -E
+ncoding  ...
++ ~~~~~~~~~~~~~~~~~~~
+~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (5 issue   
+ s found. (ran in    
+ 3.5s):String) [    ]
+, RemoteExcepti    on
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 

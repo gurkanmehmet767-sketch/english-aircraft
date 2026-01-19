@@ -1,0 +1,42 @@
+﻿Analyzing english_aircraft...                                   
+
+   info - The private field _mistakes could be 'final' - lib\providers\app_provider.dart:18:29 - prefer_final_fields
+   info - The private field _learnedWords could be 'final' - lib\providers\app_provider.dart:19:16 - prefer_final_fields
+warning - The value of the local variable 'screenWidth' isn't used - lib\screens\home_screen.dart:27:11 - unused_local_variable
+warning - Dead code - lib\screens\home_screen.dart:33:26 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:111:65 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:111:89 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:116:31 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:131:86 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:131:116 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:163:68 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:171:68 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:180:94 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:222:73 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:224:56 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:227:56 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:230:56 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:235:68 - dead_code
+warning - Dead code - lib\screens\home_screen.dart:245:52 - dead_code
+warning - The declaration '_buildMission' isn't referenced - lib\screens\home_screen.dart:372:10 - unused_element
+warning - The declaration '_buildLeagueCard' isn't referenced - lib\screens\home_screen.dart:433:10 - unused_element
+warning - The value of the local variable 'progress' isn't used - lib\screens\lesson_screen.dart:508:11 - unused_local_variable
+   info - Don't invoke 'print' in production code - lib\utils\speech_stub.dart:7:3 - avoid_print
+   info - 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead - lib\utils\speech_web.dart:3:1 - deprecated_member_use
+
+flutter : 23 issues found. (
+ran in 12.4s)
+At line:1 char:1
++ flutter analyze --no-fatal
+-infos 2>&1 | Out-File -File
+Path "analysis_ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (23 is  
+  sues found. (ran in 12.   
+ 4s):String) [], RemoteE    
+xception
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 

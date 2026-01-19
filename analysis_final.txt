@@ -1,0 +1,5 @@
+[warning] The declaration '_groupByUnit' isn't referenced (C:\Users\Casper\Desktop\english_aircraft\lib\screens\home_screen.dart:74:53)
+[warning] The declaration '_buildUnitNode' isn't referenced (C:\Users\Casper\Desktop\english_aircraft\lib\screens\home_screen.dart:532:10)
+[info] 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead (C:\Users\Casper\Desktop\english_aircraft\lib\screens\settings_screen.dart:1:1)
+[info] Don't use web-only libraries outside Flutter web plugins (C:\Users\Casper\Desktop\english_aircraft\lib\screens\settings_screen.dart:1:1)
+[info] Don't use 'BuildContext's across async gaps (C:\Users\Casper\Desktop\english_aircraft\lib\screens\settings_screen.dart:326:37)

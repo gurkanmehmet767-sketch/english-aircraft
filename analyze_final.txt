@@ -1,0 +1,22 @@
+﻿Analyzing english_aircraft...                                   
+
+  error - Const variables must be initialized with a constant value - lib\services\ad_service.dart:24:41 - const_initialized_with_non_constant_value
+  error - Const variables must be initialized with a constant value - lib\services\ad_service.dart:25:47 - const_initialized_with_non_constant_value
+  error - Const variables must be initialized with a constant value - lib\services\ad_service.dart:26:43 - const_initialized_with_non_constant_value
+
+flutter : 3 issues found. 
+(ran in 3.8s)
+At line:1 char:1
++ flutter analyze 2>&1 | O
+ut-File -FilePath "analyze
+_final.txt" -Encodi ...
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (3  
+   issues found. (ran i   
+ n 3.8s):String) [], R    
+emoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 

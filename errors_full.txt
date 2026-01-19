@@ -1,0 +1,81 @@
+﻿Analyzing english_aircraft...                                   
+
+   info - The variable name 'topicA_WordOrder' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:20:20 - non_constant_identifier_names
+   info - The variable name '_topicA_Sentences' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:30:29 - non_constant_identifier_names
+   info - The variable name 'topicB_Prepositions' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:143:20 - non_constant_identifier_names
+   info - The variable name '_topicB_Exercises' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:153:29 - non_constant_identifier_names
+   info - The variable name 'topicC1_Infinitive' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:367:20 - non_constant_identifier_names
+   info - The variable name '_topicC1_Sentences' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:377:29 - non_constant_identifier_names
+   info - The variable name 'topicC2_PresentSimple' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:391:20 - non_constant_identifier_names
+   info - The variable name '_topicC2_Sentences' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:401:29 - non_constant_identifier_names
+   info - The variable name 'topicC3_ToBeToHave' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:415:20 - non_constant_identifier_names
+   info - The variable name '_topicC3_Sentences' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:425:29 - non_constant_identifier_names
+   info - The variable name 'topicC4_Imperative' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:439:20 - non_constant_identifier_names
+   info - The variable name '_topicC4_Sentences' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:449:29 - non_constant_identifier_names
+   info - The variable name 'topicC5_Gerund' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:463:20 - non_constant_identifier_names
+   info - The variable name '_topicC5_Sentences' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:473:29 - non_constant_identifier_names
+   info - The variable name 'topicC6_PastParticiple' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:487:20 - non_constant_identifier_names
+   info - The variable name '_topicC6_Sentences' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:497:29 - non_constant_identifier_names
+   info - The variable name 'topicD_InstructionsAndProcedures' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:511:20 - non_constant_identifier_names
+   info - The variable name '_topicD_Sentences' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:521:29 - non_constant_identifier_names
+   info - The variable name 'topicE_SentencePatterns' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:596:20 - non_constant_identifier_names
+   info - The variable name '_topicE_Sentences' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:606:29 - non_constant_identifier_names
+   info - The variable name 'topicF_BasicStructureAndWordEndings' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:719:20 - non_constant_identifier_names
+   info - The variable name '_topicF_Sentences' isn't a lowerCamelCase identifier - lib\data\grammar_data.dart:729:29 - non_constant_identifier_names
+warning - Unused import: 'screens/home_screen.dart' - lib\main.dart:5:8 - unused_import
+warning - The value of the local variable 'hasSentences' isn't used - lib\screens\grammar_detail_screen.dart:26:11 - unused_local_variable
+   info - Unnecessary use of 'toList' in a spread - lib\screens\grammar_screen.dart:128:20 - unnecessary_to_list_in_spreads
+warning - The declaration '_groupByUnit' isn't referenced - lib\screens\home_screen.dart:74:53 - unused_element
+  error - Expected an identifier - lib\screens\home_screen.dart:185:74 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:212:88 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:305:73 - missing_identifier
+   info - Unnecessary use of 'toList' in a spread - lib\screens\home_screen.dart:385:30 - unnecessary_to_list_in_spreads
+   info - Unnecessary use of 'toList' in a spread - lib\screens\home_screen.dart:396:30 - unnecessary_to_list_in_spreads
+  error - Expected an identifier - lib\screens\home_screen.dart:427:50 - missing_identifier
+warning - The receiver can't be null, so the null-aware operator '?[' is unnecessary - lib\screens\home_screen.dart:431:15 - invalid_null_aware_operator
+  error - The operator '[]' isn't defined for the type 'bool' - lib\screens\home_screen.dart:431:17 - undefined_operator
+  error - Expected an identifier - lib\screens\home_screen.dart:433:70 - missing_identifier
+  error - Expected to find ')' - lib\screens\home_screen.dart:438:15 - expected_token
+  error - Expected an identifier - lib\screens\home_screen.dart:445:52 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:482:73 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:511:47 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:513:66 - missing_identifier
+warning - The declaration '_buildUnitNode' isn't referenced - lib\screens\home_screen.dart:532:10 - unused_element
+  error - Expected an identifier - lib\screens\home_screen.dart:556:41 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:595:66 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:614:61 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:693:43 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:700:50 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:718:53 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:721:48 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:752:66 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:757:56 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:810:41 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:812:43 - missing_identifier
+  error - Expected an identifier - lib\screens\home_screen.dart:848:66 - missing_identifier
+warning - The value of the field '_takeOffTranslation' isn't used - lib\screens\lesson_screen.dart:53:26 - unused_field
+warning - The value of the field '_takeOffRotation' isn't used - lib\screens\lesson_screen.dart:54:26 - unused_field
+warning - The value of the local variable 'foundMatch' isn't used - lib\screens\lesson_screen.dart:168:12 - unused_local_variable
+warning - Unused import: 'package:flutter/material.dart' - lib\screens\profile_screen.dart:2:8 - unused_import
+warning - Unused import: 'dart:convert' - lib\screens\settings_screen.dart:1:8 - unused_import
+   info - 'dart:html' is deprecated and shouldn't be used. Use package:web and dart:js_interop instead - lib\screens\settings_screen.dart:2:1 - deprecated_member_use
+   info - Don't use web-only libraries outside Flutter web plugins - lib\screens\settings_screen.dart:2:1 - avoid_web_libraries_in_flutter
+warning - The value of the local variable 'isDark' isn't used - lib\screens\settings_screen.dart:13:11 - unused_local_variable
+warning - The value of the local variable 'anchor' isn't used - lib\screens\settings_screen.dart:301:19 - unused_local_variable
+   info - Don't use 'BuildContext's across async gaps - lib\screens\settings_screen.dart:328:37 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\screens\settings_screen.dart:329:44 - use_build_context_synchronously
+   info - The private field _showOnlyLearned could be 'final' - lib\screens\words_screen.dart:17:8 - prefer_final_fields
+warning - The value of the field '_showOnlyLearned' isn't used - lib\screens\words_screen.dart:17:8 - unused_field
+warning - The value of the field '_selectedDifficulty' isn't used - lib\screens\words_screen.dart:18:8 - unused_field
+   info - Unnecessary use of 'toList' in a spread - lib\screens\words_screen.dart:146:26 - unnecessary_to_list_in_spreads
+  error - Expected to find ';' - lib\screens\words_screen.dart:374:33 - expected_token
+warning - Dead code - lib\screens\words_screen.dart:374:34 - dead_code
+  error - Expected an identifier - lib\screens\words_screen.dart:374:34 - missing_identifier
+  error - Expected to find ';' - lib\screens\words_screen.dart:374:34 - expected_token
+  error - Unexpected text ';' - lib\screens\words_screen.dart:374:34 - unexpected_token
+  error - Expected an identifier - lib\screens\words_screen.dart:375:31 - missing_identifier
+  error - Unexpected text ';' - lib\screens\words_screen.dart:375:31 - unexpected_token
+   info - Unnecessary empty statement - lib\screens\words_screen.dart:375:32 - empty_statements
+   info - Unnecessary use of 'toList' in a spread - lib\screens\words_screen.dart:378:28 - unnecessary_to_list_in_spreads
+warning - The declaration '_cleanup' isn't referenced - lib\utils\speech_web.dart:44:7 - unused_element
+

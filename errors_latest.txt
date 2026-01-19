@@ -1,0 +1,466 @@
+﻿Analyzing english_aircraft...                                   
+
+   info - Don't invoke 'print' in production code - fix_turkish.dart:546:3 - avoid_print
+  error - Target of URI doesn't exist: '../models/grammar_models.dart' - lib\data\grammar_data.dart:1:8 - uri_does_not_exist
+  error - The name 'GrammarTopic' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:4:19 - non_type_as_type_argument
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:20:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:20:38 - undefined_function
+  error - The name 'GrammarSentence' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:30:12 - non_type_as_type_argument
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:32:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:33:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:34:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:35:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:36:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:37:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:38:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:39:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:40:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:41:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:42:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:43:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:44:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:45:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:46:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:47:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:48:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:49:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:50:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:51:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:54:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:55:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:56:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:57:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:58:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:59:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:60:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:61:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:62:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:63:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:64:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:65:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:66:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:67:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:68:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:69:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:70:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:71:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:72:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:73:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:76:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:77:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:78:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:79:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:80:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:81:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:82:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:83:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:84:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:85:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:86:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:87:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:88:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:89:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:90:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:91:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:92:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:93:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:94:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:95:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:98:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:99:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:100:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:101:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:102:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:103:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:104:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:105:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:106:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:107:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:108:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:109:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:110:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:111:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:112:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:113:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:114:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:115:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:116:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:117:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:120:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:121:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:122:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:123:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:124:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:125:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:126:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:127:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:128:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:129:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:130:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:131:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:132:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:133:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:134:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:135:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:136:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:137:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:138:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:139:3 - undefined_function
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:143:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:143:41 - undefined_function
+  error - The name 'GrammarExercise' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:153:12 - non_type_as_type_argument
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:154:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:160:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:166:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:172:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:178:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:184:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:190:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:196:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:202:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:208:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:214:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:220:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:226:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:232:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:238:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:244:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:250:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:256:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:262:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:268:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:274:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:280:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:286:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:292:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:298:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:304:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:310:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:316:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:322:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:328:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:334:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:340:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:346:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:352:3 - undefined_function
+  error - The function 'GrammarExercise' isn't defined - lib\data\grammar_data.dart:358:3 - undefined_function
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:367:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:367:40 - undefined_function
+  error - The name 'GrammarSentence' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:377:12 - non_type_as_type_argument
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:378:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:379:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:380:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:381:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:382:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:383:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:384:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:385:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:386:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:387:3 - undefined_function
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:391:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:391:43 - undefined_function
+  error - The name 'GrammarSentence' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:401:12 - non_type_as_type_argument
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:402:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:403:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:404:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:405:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:406:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:407:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:408:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:409:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:410:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:411:3 - undefined_function
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:415:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:415:40 - undefined_function
+  error - The name 'GrammarSentence' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:425:12 - non_type_as_type_argument
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:426:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:427:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:428:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:429:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:430:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:431:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:432:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:433:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:434:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:435:3 - undefined_function
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:439:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:439:40 - undefined_function
+  error - The name 'GrammarSentence' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:449:12 - non_type_as_type_argument
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:450:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:451:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:452:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:453:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:454:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:455:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:456:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:457:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:458:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:459:3 - undefined_function
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:463:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:463:36 - undefined_function
+  error - The name 'GrammarSentence' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:473:12 - non_type_as_type_argument
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:474:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:475:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:476:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:477:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:478:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:479:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:480:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:481:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:482:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:483:3 - undefined_function
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:487:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:487:44 - undefined_function
+  error - The name 'GrammarSentence' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:497:12 - non_type_as_type_argument
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:498:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:499:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:500:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:501:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:502:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:503:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:504:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:505:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:506:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:507:3 - undefined_function
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:511:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:511:54 - undefined_function
+  error - The name 'GrammarSentence' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:521:12 - non_type_as_type_argument
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:523:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:524:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:525:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:526:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:527:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:528:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:529:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:530:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:531:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:532:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:535:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:536:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:537:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:538:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:539:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:540:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:541:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:542:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:543:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:544:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:547:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:548:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:549:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:550:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:551:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:552:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:553:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:554:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:555:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:556:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:559:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:560:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:561:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:562:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:563:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:564:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:565:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:566:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:567:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:568:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:571:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:572:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:573:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:574:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:575:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:576:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:577:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:578:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:579:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:580:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:583:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:584:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:585:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:586:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:587:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:588:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:589:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:590:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:591:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:592:3 - undefined_function
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:596:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:596:45 - undefined_function
+  error - The name 'GrammarSentence' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:606:12 - non_type_as_type_argument
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:608:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:609:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:610:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:611:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:612:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:613:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:614:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:615:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:616:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:617:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:618:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:619:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:620:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:621:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:622:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:625:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:626:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:627:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:628:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:629:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:630:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:631:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:632:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:633:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:634:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:637:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:638:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:639:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:640:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:641:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:642:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:643:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:644:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:645:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:646:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:647:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:648:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:649:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:650:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:651:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:654:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:655:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:656:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:657:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:658:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:659:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:660:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:661:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:662:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:663:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:666:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:667:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:668:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:669:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:670:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:671:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:672:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:673:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:674:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:675:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:676:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:677:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:678:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:679:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:680:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:681:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:682:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:683:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:684:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:685:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:686:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:687:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:688:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:689:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:690:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:691:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:692:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:693:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:694:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:695:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:696:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:697:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:698:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:699:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:700:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:701:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:702:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:703:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:704:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:705:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:706:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:707:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:708:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:709:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:710:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:711:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:712:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:713:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:714:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:715:3 - undefined_function
+  error - Undefined class 'GrammarTopic' - lib\data\grammar_data.dart:719:7 - undefined_class
+  error - The function 'GrammarTopic' isn't defined - lib\data\grammar_data.dart:719:57 - undefined_function
+  error - The name 'GrammarSentence' isn't a type, so it can't be used as a type argument - lib\data\grammar_data.dart:729:12 - non_type_as_type_argument
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:730:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:731:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:732:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:733:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:734:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:735:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:736:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:737:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:738:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:739:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:740:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:741:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:742:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:743:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:744:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:745:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:746:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:747:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:748:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:749:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:750:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:751:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:752:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:753:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:754:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:755:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:756:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:757:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:758:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:759:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:760:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:761:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:762:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:763:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:764:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:765:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:766:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:767:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:768:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:769:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:770:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:771:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:772:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:773:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:774:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:775:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:776:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:777:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:778:3 - undefined_function
+  error - The function 'GrammarSentence' isn't defined - lib\data\grammar_data.dart:779:3 - undefined_function
+   info - The private field _timerEnabled could be 'final' - lib\screens\game_screen.dart:59:8 - prefer_final_fields
+warning - The value of the local variable 'showAsCorrect' isn't used - lib\screens\lesson_screen.dart:1064:41 - unused_local_variable
+warning - The value of the local variable 'showAsWrong' isn't used - lib\screens\lesson_screen.dart:1065:41 - unused_local_variable
+warning - The value of the local variable 'showAsCorrect' isn't used - lib\screens\lesson_screen.dart:1225:39 - unused_local_variable
+warning - The value of the local variable 'showAsWrong' isn't used - lib\screens\lesson_screen.dart:1226:39 - unused_local_variable
+warning - Unused import: 'dart:math' - lib\screens\review_screen.dart:6:8 - unused_import
+warning - The value of the field '_isCorrect' isn't used - lib\screens\review_screen.dart:21:8 - unused_field
+
+flutter : 448 issues found. 
+(ran in 4.1s)
+At line:1 char:1
++ flutter analyze 2>&1 | Out
+-File -FilePath errors_lates
+t.txt -Encoding ...
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (448 i  
+  ssues found. (ran in 4.   
+ 1s):String) [], RemoteE    
+xception
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 

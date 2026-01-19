@@ -1,0 +1,31 @@
+﻿Analyzing english_aircraft...                                   
+
+   info - Don't invoke 'print' in production code - fix_turkish.dart:546:3 - avoid_print
+   info - Dangling library doc comment - lib\models\grammar_models.dart:3:1 - dangling_library_doc_comments
+   info - The private field _timerEnabled could be 'final' - lib\screens\game_screen.dart:59:8 - prefer_final_fields
+warning - The value of the local variable 'showAsCorrect' isn't used - lib\screens\lesson_screen.dart:1064:41 - unused_local_variable
+warning - The value of the local variable 'showAsWrong' isn't used - lib\screens\lesson_screen.dart:1065:41 - unused_local_variable
+warning - The value of the local variable 'showAsCorrect' isn't used - lib\screens\lesson_screen.dart:1225:39 - unused_local_variable
+warning - The value of the local variable 'showAsWrong' isn't used - lib\screens\lesson_screen.dart:1226:39 - unused_local_variable
+warning - Unused import: 'dart:math' - lib\screens\review_screen.dart:6:8 - unused_import
+warning - The value of the field '_isCorrect' isn't used - lib\screens\review_screen.dart:21:8 - unused_field
+
+flutter : 9 issues fo
+und. (ran in 3.9s)
+At line:1 char:1
++ flutter analyze 2>&
+1 | Out-File -FilePat
+h current_errors.txt 
+-Encodin ...
++ ~~~~~~~~~~~~~~~~~~~
+~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (9 issue   
+ s found. (ran in    
+ 3.9s):String) [    ]
+, RemoteExcepti    on
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 

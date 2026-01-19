@@ -1,0 +1,667 @@
+﻿emniyet kaskı
+koruyucu gözlük
+emniyet botları
+görünürlük yeleği
+işitme koruması
+emniyet eldivenleri
+yüz siperi
+solunum maskesi
+düşme koruma kemeri
+çelik burun
+kulak tıkacı
+kulaklık
+koruyucu tulum
+dizlik
+anti-statik giysi
+kimyasal dayanıklı eldiven
+güvenlik halatı
+güvenlik kemeri tutturma noktası
+uyarı işareti
+dikkat işareti
+tehlike işareti
+acil çıkış
+yangın söndürücü
+sigara içilmez
+yanıcı madde
+yüksek gerilim
+koruyucu gözlük zorunlu
+baret zorunlu bölge
+ilk yardım istasyonu
+toplanma noktası
+sadece yetkili personel
+tehlikeli atık
+aşındırıcı madde
+radyasyon tehlikesi
+kaygan zemin
+yangın tehlikesi
+elektrik tehlikesi
+kimyasal dökülme
+zehirli dumanlar
+kayma tehlikesi
+takılma tehlikesi
+düşen nesneler
+hareketli makine
+kapalı alan
+oksijen eksikliği
+patlayıcı atmosfer
+sıcak yüzey
+gürültü maruziyeti
+titreşim tehlikesi
+ergonomik risk
+tehlikeli madde
+kilitleme etiketleme
+anahtar
+tornavida
+çekiç
+pense
+ayarlanabilir anahtar
+lokma anahtar
+allen anahtarı
+düz tornavida
+yıldız tornavida
+kargaburun pense
+tel kesici
+maket bıçağı
+şerit metre
+terazi
+keski
+eğe
+testere
+günlük kayıt defteri
+iş emri
+muayene raporu
+bakım el kitabı
+güvenlik bilgi formu
+çalışma izni
+risk değerlendirmesi
+olay raporu
+kalibrasyon sertifikası
+eğitim kaydı
+uygunluk kontrol listesi
+uçuşa elverişlilik direktifi
+kalite kontrol formu
+uygunsuzluk raporu
+düzeltici faaliyet
+yetkili imza
+mevzuata uygunluk
+işyeri güvenliği
+yangın önlemleri
+acil durum irtibatları
+yangın alarmları
+tahliye yolları
+kaza raporlama
+risk değerlendirmeleri
+tehlikeli maddeler
+elektrik güvenliği
+kimyasal tehlikeler
+iş sağlığı ve güvenliği mevzuatı
+işyeri temizliği
+yangın güvenliği
+elle taşıma
+gaz tüpleri
+oksijen sistemleri
+yangın yönetmelikleri
+alet bakımı
+alet kontrolü
+el aletleri
+elektrikli aletler
+kalibrasyon
+alet deposu
+alet kullanımı
+hassas aletler
+atölye malzemeleri
+tehlikeli malzemeler
+atık bertarafı
+atölye düzeni
+güvenlik prosedürleri
+makine aletleri
+temizlik ve yağlama
+alet muayenesi
+alet takımları
+ekipman kullanımı
+tezgah bakımı
+elektrikli alet güvenliği
+malzeme taşıma
+malzeme güvenliği
+atölye deposu
+malzeme yönetimi
+malzeme kontrolü
+sıvı yönetimi
+aşındırıcı taşıma
+malzeme güvenlik bilgi formları
+sıvı depolama
+yangın güvenlik malzemeleri
+malzeme taşıma prosedürleri
+yanıcı malzemeler
+malzeme envanter yönetimi
+malzeme taşıma güvenliği
+mengene
+kelepçe
+matkap presi
+demir testeresi
+taşlama tezgahı
+taşlama diski
+el törpüsü
+kesme sıvısı
+yağlayıcı
+ayaklı matkap
+sütunlu matkap
+tel fırça diski
+çapak alma aleti
+düz törpü
+yuvarlak törpü
+testere gerilimi
+soğutucu
+aviyonik testi
+pitot-statik testi
+analog metreler
+izolasyon testi
+akım ölçümü
+gerilim ölçümü
+transformatör metreleri
+rasyo metreleri
+bağlantı test cihazları
+metre doğruluğu
+elektrik testi
+sinyal testi
+test ekipmanı kalibrasyonu
+test prosedürleri
+çift bobinli metreler
+AC testi
+izolasyon direnci
+akü testi
+bağlantı ve topraklama testleri
+teknik çizimler
+mühendislik standartları
+projeksiyon sembolleri
+kesit görünümleri
+tolerans seviyeleri
+malzeme özellikleri
+çizim tanımlaması
+geometrik boyutlandırma ve tolerans
+eskiz çizimi
+şematikler
+montaj diyagramları
+kaynak sembolleri
+üretim standartları
+CAD çizimleri
+imalat çizimleri
+uluslararası standartlar
+mekanik çizimler
+tasarım çizimleri
+perçinleme teknikleri
+dolu perçinler
+perçin türleri
+perçin tanımlaması
+perçin boyutlandırma
+perçin yerleşimi
+perçin montajı
+perçin boşluğu
+perçin kavrama uzunluğu
+perçin payları
+bağlantı elemanları
+perçinleme aletleri
+pnömatik perçinleyiciler
+elle perçinleme
+perçin muayenesi
+perçin sökümü
+perçin kusurları
+gömme perçinleme
+havşa başlı perçinler
+perçin başı türleri
+perçinleme prosedürleri
+bilyalı yataklar
+makaralı yataklar
+yatak türleri
+yatak muayenesi
+yatak yağlaması
+yatak temizliği
+yatak sökümü
+yatak arızası
+açısal temaslı yataklar
+eksenel yataklar
+silindirik makaralı yataklar
+küresel makaralı yataklar
+yatak kusurları
+yatak contaları
+yatak malzemeleri
+yatak boşluğu
+yatak aşınması
+yatak bakımı
+yatak değişimi
+yatak testi
+yatak toleransları
+kaynak teknikleri
+sert lehim yöntemleri
+lehimleme
+yumuşak lehimleme
+sert lehimleme
+gümüş lehimleme
+TIG kaynağı
+MIG kaynağı
+elle metal ark kaynağı
+kaynak muayeneleri
+kaynak kusurları
+kaynak güvenliği
+eritkenler
+dolgu çubukları
+havya
+yapıştırıcı ajanlar
+yapıştırıcı ile birleştirme
+kaynak muayenesi
+sert lehim malzemeleri
+kaynak güvenlik ekipmanı
+yangın riskleri
+kaynak aletleri
+sökme teknikleri
+muayene yöntemleri
+onarım prosedürleri
+montaj teknikleri
+bileşen sökümü
+yapısal onarımlar
+perçin onarımları
+bileşen muayenesi
+parça değişimi
+hasar değerlendirmesi
+yapısal onarımlar
+parça tanımlaması
+onarım kitleri
+onarım aletleri
+hasar sınıflandırması
+yapısal analiz
+onarım dokümantasyonu
+montaj standartları
+muayene standartları
+bağlantı elemanı montajı
+gövde
+kanat
+kuyruk takımı
+stabilizör
+dümen
+irtifa dümeni
+kanatçık
+flap
+slat
+fren kanadı
+iniş takımı
+burun takımı
+ana takımı
+motor yuvası
+pilon
+karenaj
+hidrolik sıvı
+hidrolik pompa
+hidrolik depo
+hidrolik hat
+hidrolik aktüatör
+hidrolik valf
+basınç göstergesi
+akümülatör
+hidrolik filtre
+servo valf
+hidrolik motor
+güç paketi
+hidrolik conta
+basınç tahliye valfi
+hidrolik silindir
+çek valf
+jeneratör
+batarya
+devre kesici
+bara
+transformatör
+invertör
+redresör
+röle
+gerilim regülatörü
+akım sınırlandırıcı
+toprak hatası
+yük atma
+temel bara
+acil bara
+harici güç
+APU jeneratöri
+yakıt tankı
+yakıt pompası
+yakıt filtresi
+yakıt hattı
+yakıt valfi
+yakıt selektörü
+yakıt göstergesi
+yakıt kapağı
+yakıt havalandırma
+yakıt süzgeci
+çapraz besleme valfi
+yakıt miktar göstergesi
+yakıt ısıtıcı
+su ayırıcı
+yakıt boşaltma
+merkez tank
+kanama havası
+pnömatik valf
+klima
+basınlandırma
+çıkış valfi
+paket valfi
+kabin irtifası
+diferansiyel basınç
+hava döngü makinesi
+ısı değiştirici
+karışım valfi
+resirkülasyon fanı
+motor kanaması
+APU kanaması
+kanat buz önleme
+yağmur itici
+kumanda kolonu
+yan kumanda
+pedallar
+trim kanadı
+elektrikli kumanda
+uçuş bilgisayarı
+kumanda kablosu
+it-çek çubuğu
+kol mekanizması
+tork tübü
+otopilot servo
+his ünitesi
+kumanda sarsıcı
+kumanda itici
+sapma söndürücüsü
+stol koruması
+kilitleme
+etiketleme
+enerji izolasyonu
+tehlike etiketi
+dikkat etiketi
+hizmet dışı etiketi
+asma kilit
+kilit bağlaması
+sıfır enerji durumu
+doğrulama
+yetkili personel
+etkilenen personel
+grup kilitleme
+vardiya değişimi
+kaldır prosedürü
+enerji kaynağı
+kapalı alan
+giriş izni
+atmosfer testi
+havalandırma
+oksijen seviyesi
+zehirli gaz
+yanıcı gaz
+giriş süpervizörü
+refakatçi
+giren kişi
+kurtarma ekibi
+iletişim sistemi
+acil çıkarma
+geri çekim sistemi
+hava monitörü
+izin iptali
+düşme tutucu
+güvenlik kemeri
+bağlantı noktası
+bağ ipi
+kendi çekilen halat
+şok emici
+ön kenar
+düşme mesafesi
+korkuluk
+güvenlik ağı
+kişisel düşme sınırlandırıcı
+halat tutucu
+tam vücut kemeri
+sırt halkası
+kurtarma planı
+yetkili kişi
+sıcak çalışma izni
+yangın nöbeti
+yangın söndürücü
+kaynak perdesi
+kıvılcım kontrolü
+yangın battaniyesi
+yanıcı malzeme
+temizlik mesafesi
+yanmaz
+geri tepme tutucu
+arındırma
+inertleme
+gaz tüpü depolama
+tüp ayırma
+iş sonrası muayene
+yangın nöbeti süresi
+malzeme güvenlik formu
+kimyasal etiketi
+tehlike sembolü
+KKE gereksinimi
+maruziyet limiti
+havalandırma gereksinimi
+döküntü kiti
+göz yıkama istasyonu
+kimyasal depolama
+uyumsuz kimyasallar
+ikincil çevirme
+kimyasal atık
+dekontaminasyon
+ilk yardım önlemleri
+acil duş
+kimyasal envanteri
+elektrik çarpması
+topraklama
+izolasyon
+gerilim
+amper
+canlı kablo
+devre test cihazı
+izoleli aletler
+ark parlaması
+ark patlaması
+elektrik yanıkları
+toprak hatası devre kesici
+elektrik panosu güvenliği
+enerji kesme
+doğrulama cihazı
+sınırlar
+tahliye planı
+toplanma noktası
+acil çıkış
+tahliye yolu
+alarm sinyali
+yoklama
+kişi sayımı
+tahliye tatbikatı
+kat görevlisi
+tarama ekibi
+sığınak alanı
+merdiven boşluğu
+tehlike bitti sinyali
+yeniden giriş prosedürü
+hesap verebilirlik
+özel ihtiyaç tahliyesi
+PASS tekniği
+pimi çek
+memesini hedefle
+kolu sık
+sağa sola sürükle
+yangın üçgeni
+sınıf A yangın
+sınıf B yangın
+sınıf C yangın
+sınıf D yangın
+duman solunumu
+dur yat yuvarlan
+yangın bastırma sistemi
+halon sistemi
+yangın soruşturması
+yangın hasar değerlendirmesi
+tıbbi acil durum
+ilk müdahaleci
+yaşam belirtileri
+bilinçli
+bilinçsiz
+nabız
+solunum
+tansiyon
+otomatik defibrilatör
+travma
+kanama
+turnike
+omurga yaralanması
+hareketsizleştirme
+tıbbi transport
+triyaj
+tehlikeli madde
+döküntü müdahalesi
+çevirme
+temizlik
+emme
+nötralize
+bertaraf
+dekontaminasyon bölgesi
+yasak bölge
+sıcak bölge
+ılık bölge
+soğuk bölge
+seviye A elbise
+bağımsız solunum cihazı
+kimyasala dirençli
+acil müdahale kılavuzu
+acil iniş
+çakışma kurtarma
+itfaiye aracı
+köpük uygulama
+kurtarma yolu
+yolcu tahliyesi
+acil kaydıran
+kanat üstü çıkış
+çarpışma pozisyonu
+kurtulan çıkarma
+triyaj alanı
+yaralı toplama
+birleşik komuta
+olay komutanı
+karşılıklı yardım
+havaalanı acil plan
+mayday çağrısı
+pan-pan çağrısı
+acil frekans
+telsiz iletişimi
+transponder kodu
+acil işareti
+acil yer vericisi
+çakışma pozisyon göstergesi
+dahili telefon
+anons sistemi
+el işareti
+acil kod sözcükleri
+uydu telefonu
+yedek iletişim
+tehlike sinyali
+arama kurtarma koordinasyonu
+ilk yardım
+yara
+kanama
+yanık
+bilinçsizlik
+kalp akciğer canlandırma
+hava yolu
+nefes alma
+dolaşım
+steril pansuman
+göğüs kompresyonları
+kurtarma nefesleri
+kurtarma pozisyonu
+soluk borusu
+kırık
+şok
+kalp durması
+yarı yüzükoyun pozisyon
+tehlike-yanıt-yardım-hava yolu-nefes-dolaşım
+canlandırma
+havacılık yakıtı
+gazyağı
+benzin
+benzin
+yakıt ikmali
+yakıt boşaltma
+yakıt tankı
+statik elektrik
+topraklama
+yakıt buharı
+bağlama kablosu
+yakıt dökülmesi
+buhar basıncı
+parlama noktası
+yakıt kirliliği
+parafin
+iletkenlik
+topraklama kayışı
+anti-statik katkı
+yakıt boşaltma
+yangın söndürücü
+yangın battaniyesi
+köpüklü söndürücü
+CO2 söndürücü
+kuru tozlu söndürücü
+yangın hortumu
+yangın musluğu
+yağmurlama sistemi
+duman dedektörü
+yangın alarm paneli
+acil durum aydınlatması
+yangın kapısı
+söndürücü muayenesi
+yangın tatbikatı
+yangın ekibi
+itfaiye istasyonu
+yer hizmetleri
+geri itme
+çekilme
+park yönlendirme
+takozlar
+tekerlek takozu
+çekme çubuğu
+yer güç ünitesi
+hava başlangıç ünitesi
+bagaj yükleyici
+ikram aracı
+tuvalet servisi
+buz çözme aracı
+yakıt kamyonu
+yolcu merdiveni
+köprülü biniş
+taksi yapma
+pist
+taksi yolu
+apron
+park yeri
+bekleme noktası
+izin
+yer kontrolü
+kanat gözcüsü
+takip aracı
+burun tekerlek direksiyonu
+fren bırakma
+motor çalıştırma izni
+geri itme izni
+taksi talimatları
+pist ihlali
+kokpit
+uçuş güverte
+gösterge paneli
+kumanda kolu
+gaz kolu
+dümen pedalları
+otopilot
+uçuş yönetim sistemi
+birincil uçuş ekranı
+navigasyon ekranı
+motor göstergeleri
+tavan paneli
+merkez konsol
+uçuş kontrol ünitesi
+yedek göstergeler
+devre kesiciler

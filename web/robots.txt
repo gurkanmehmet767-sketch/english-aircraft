@@ -1,0 +1,6 @@
+# Robots.txt - Google ve diğer arama motorları için
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://english-aircraft.netlify.app/sitemap.xml
