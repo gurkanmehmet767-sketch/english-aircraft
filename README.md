@@ -8,9 +8,9 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 <!-- CI/CD Status Badges -->
-[![Flutter Analyze](https://github.com/yourusername/english_aircraft/workflows/Flutter%20Analyze/badge.svg)](https://github.com/yourusername/english_aircraft/actions)
-[![Flutter Test](https://github.com/yourusername/english_aircraft/workflows/Flutter%20Test/badge.svg)](https://github.com/yourusername/english_aircraft/actions)
-[![Web Build](https://github.com/yourusername/english_aircraft/workflows/Web%20Build/badge.svg)](https://github.com/yourusername/english_aircraft/actions)
+[![Flutter Analyze](https://github.com/gurkanmehmet767-sketch/english-aircraft/workflows/Flutter%20Analyze/badge.svg)](https://github.com/gurkanmehmet767-sketch/english-aircraft/actions)
+[![Flutter Test](https://github.com/gurkanmehmet767-sketch/english-aircraft/workflows/Flutter%20Test/badge.svg)](https://github.com/gurkanmehmet767-sketch/english-aircraft/actions)
+[![Web Build](https://github.com/gurkanmehmet767-sketch/english-aircraft/workflows/Web%20Build/badge.svg)](https://github.com/gurkanmehmet767-sketch/english-aircraft/actions)
 
 **Live Demo**: [https://english-aircraft-app.netlify.app](https://english-aircraft-app.netlify.app)
 
@@ -56,7 +56,7 @@ dart --version     # 3.2.0+
 ### Installation
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/english_aircraft.git
+git clone https://github.com/gurkanmehmet767-sketch/english-aircraft.git
 cd english_aircraft
 
 # Install dependencies
@@ -197,8 +197,8 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
 
 ## 📞 Contact
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/english_aircraft/issues)
-- **Email**: your.email@example.com
+- **Issues**: [GitHub Issues](https://github.com/gurkanmehmet767-sketch/english-aircraft/issues)
+- **GitHub**: [@gurkanmehmet767-sketch](https://github.com/gurkanmehmet767-sketch)
 
 ---
 
