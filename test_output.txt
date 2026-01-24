@@ -1,0 +1,390 @@
+﻿00:00 +0: loading C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart
+00:00 +0: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests AdService should be singleton
+00:00 +1: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests initialize should complete without errors
+00:00 +2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests loadBannerAd should not throw
+00:00 +3: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests loadInterstitialAd should not throw
+00:00 +4: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests loadRewardedAd should not throw
+00:00 +5: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests showInterstitialAd should call onAdDismissed
+00:00 +5 -1: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests showInterstitialAd should call onAdDismissed [E]
+  Expected: <true>
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test\ad_service_test.dart 55:7                      main.<fn>.<fn>
+  
+00:00 +5 -1: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests showRewardedAd should call onAdDismissed
+00:00 +5 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests showRewardedAd should call onAdDismissed [E]
+  Expected: <true>
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test\ad_service_test.dart 64:7                      main.<fn>.<fn>
+  
+00:00 +5 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests bannerAd should return null
+00:00 +6 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests isBannerAdReady should be false
+00:00 +7 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests isInterstitialAdReady should be false
+00:00 +8 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests isRewardedAdReady should be false
+00:00 +9 -2: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests AuthService should be singleton
+00:00 +10 -2: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests registerOffline should require valid email
+00:00 +11 -2: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests registerOffline should require strong password
+00:00 +12 -2: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests registerOffline should require valid username
+00:00 +13 -2: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests login should  fail with non-existent user
+00:00 +14 -2: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests isLoggedIn should check user status
+00:00 +14 -3: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests isLoggedIn should check user status [E]
+  Binding has not yet been initialized.
+  The "instance" getter on the ServicesBinding binding mixin is only available once that binding has been initialized.
+  Typically, this is done by calling "WidgetsFlutterBinding.ensureInitialized()" or "runApp()" (the latter calls the former). Typically this call is done in the "void main()" method. The "ensureInitialized" method is idempotent; calling it multiple times is not harmful. After calling that method, the "instance" getter will return the binding.
+  In a test, one can call "TestWidgetsFlutterBinding.ensureInitialized()" as the first line in the test's "main()" method to initialize the binding.
+  If ServicesBinding is a custom binding mixin, there must also be a custom binding class, like WidgetsFlutterBinding, but that mixes in the selected binding, and that is the class that must be constructed before using the "instance" getter.
+  dart:async                                                           _Completer.completeError
+  package:shared_preferences/src/shared_preferences_legacy.dart 90:19  SharedPreferences.getInstance
+  ===== asynchronous gap ===========================
+  dart:async                                                           _CustomZone.registerBinaryCallback
+  package:shared_preferences/src/shared_preferences_legacy.dart 85:13  SharedPreferences.getInstance
+  package:english_aircraft/services/local_storage_service.dart 20:40   LocalStorageService.init
+  package:english_aircraft/services/local_storage_service.dart 26:13   LocalStorageService.prefs
+  package:english_aircraft/services/local_storage_service.dart 63:21   LocalStorageService.hasUser
+  package:english_aircraft/services/auth_service.dart 159:32           AuthService.isLoggedIn
+  test\auth_service_test.dart 63:42                                    main.<fn>.<fn>
+  
+00:00 +14 -3: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests getCurrentUser can return null when not logged in
+00:00 +14 -4: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests getCurrentUser can return null when not logged in [E]
+  Binding has not yet been initialized.
+  The "instance" getter on the ServicesBinding binding mixin is only available once that binding has been initialized.
+  Typically, this is done by calling "WidgetsFlutterBinding.ensureInitialized()" or "runApp()" (the latter calls the former). Typically this call is done in the "void main()" method. The "ensureInitialized" method is idempotent; calling it multiple times is not harmful. After calling that method, the "instance" getter will return the binding.
+  In a test, one can call "TestWidgetsFlutterBinding.ensureInitialized()" as the first line in the test's "main()" method to initialize the binding.
+  If ServicesBinding is a custom binding mixin, there must also be a custom binding class, like WidgetsFlutterBinding, but that mixes in the selected binding, and that is the class that must be constructed before using the "instance" getter.
+  dart:async                                                           _Completer.completeError
+  package:shared_preferences/src/shared_preferences_legacy.dart 90:19  SharedPreferences.getInstance
+  ===== asynchronous gap ===========================
+  dart:async                                                           _CustomZone.registerBinaryCallback
+  package:shared_preferences/src/shared_preferences_legacy.dart 85:13  SharedPreferences.getInstance
+  package:english_aircraft/services/local_storage_service.dart 20:40   LocalStorageService.init
+  package:english_aircraft/services/local_storage_service.dart 26:13   LocalStorageService.prefs
+  package:english_aircraft/services/local_storage_service.dart 42:21   LocalStorageService.getUser
+  package:english_aircraft/services/auth_service.dart 153:32           AuthService.getCurrentUser
+  test\auth_service_test.dart 70:37                                    main.<fn>.<fn>
+  
+00:00 +14 -4: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests logout should complete without errors
+00:00 +14 -5: C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: AuthService Basic Tests logout should complete without errors [E]
+  Binding has not yet been initialized.
+  The "instance" getter on the ServicesBinding binding mixin is only available once that binding has been initialized.
+  Typically, this is done by calling "WidgetsFlutterBinding.ensureInitialized()" or "runApp()" (the latter calls the former). Typically this call is done in the "void main()" method. The "ensureInitialized" method is idempotent; calling it multiple times is not harmful. After calling that method, the "instance" getter will return the binding.
+  In a test, one can call "TestWidgetsFlutterBinding.ensureInitialized()" as the first line in the test's "main()" method to initialize the binding.
+  If ServicesBinding is a custom binding mixin, there must also be a custom binding class, like WidgetsFlutterBinding, but that mixes in the selected binding, and that is the class that must be constructed before using the "instance" getter.
+  dart:async                                                           _Completer.completeError
+  package:shared_preferences/src/shared_preferences_legacy.dart 90:19  SharedPreferences.getInstance
+  ===== asynchronous gap ===========================
+  dart:async                                                           _CustomZone.registerBinaryCallback
+  package:shared_preferences/src/shared_preferences_legacy.dart 85:13  SharedPreferences.getInstance
+  package:english_aircraft/services/local_storage_service.dart 20:40   LocalStorageService.init
+  package:english_aircraft/services/local_storage_service.dart 26:13   LocalStorageService.prefs
+  package:english_aircraft/services/local_storage_service.dart 56:21   LocalStorageService.deleteUser
+  package:english_aircraft/services/auth_service.dart 147:25           AuthService.logout
+  test\auth_service_test.dart 74:37                                    main.<fn>.<fn>
+  
+00:00 +14 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: XP Calculation Tests Correct answer should give base XP
+00:00 +15 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: XP Calculation Tests Streak bonus should multiply correctly
+00:00 +16 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: XP Calculation Tests Wrong answer should give 0 XP
+00:00 +17 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: XP Calculation Tests Perfect lesson completion bonus
+00:00 +18 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Initial lives should be 5
+00:00 +19 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Wrong answer should decrease lives
+00:00 +20 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Lives should not go below 0
+00:00 +21 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Lives should not exceed maximum (5)
+00:00 +22 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Lives regenerate over time
+00:00 +23 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Multiple lives regeneration
+00:00 +24 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Streak System Tests New user should have 0 streak
+00:00 +25 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Streak System Tests Daily completion should increase streak
+00:00 +26 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Streak System Tests Missing a day should reset streak
+00:00 +27 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Streak System Tests Streak should be maintained with daily activity
+00:00 +28 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: League System Tests User should start in Bronze league
+00:00 +29 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: League System Tests 500 XP should promote to Silver
+00:00 +30 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: League System Tests 10000 XP should promote to Champion
+00:00 +31 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Mastery System Tests New lesson should have mastery level 0
+00:00 +32 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Mastery System Tests First completion should set mastery to 1 (Bronze)
+00:00 +33 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Mastery System Tests Mastery should not exceed level 4
+00:00 +34 -5: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Mastery System Tests Wrong answers should decrease mastery
+00:01 +35 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests New word should be due immediately
+00:01 +36 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests First review should schedule next review in 1 day
+00:01 +37 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Second review should schedule next review in 3 days
+00:01 +38 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Third review should schedule next review in 7 days
+00:01 +39 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Fourth review should schedule next review in 14 days
+00:01 +40 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Word should be due after interval passes
+00:01 +41 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Word should not be due before interval passes
+00:01 +42 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Wrong answer should reset interval to 1 day
+00:01 +43 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Correct answer should increase interval
+00:01 +44 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Review Priority Tests Overdue words should have higher priority
+00:01 +45 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Review Priority Tests Urgency should increase with days overdue
+00:01 +46 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Review Priority Tests New words should have lower priority than reviews
+00:01 +47 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Mastery Impact on Intervals High mastery should have longer intervals
+00:01 +48 -5: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Mastery Impact on Intervals Perfect answers should double interval growth
+00:01 +49 -5: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests SyncService should be singleton
+00:01 +49 -6: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests SyncService should be singleton [E]
+  [core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+  package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart 190:5  MethodChannelFirebase.app
+  package:firebase_core/src/firebase.dart 79:41                                                   Firebase.app
+  package:cloud_firestore/src/firestore.dart 33:21                                                FirebaseFirestore.instance
+  package:english_aircraft/services/firestore_service.dart 5:58                                   new FirestoreService._internal
+  package:english_aircraft/services/firestore_service.dart 8:62                                   FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart                                        FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart 9:33                                   new FirestoreService
+  package:english_aircraft/services/sync_service.dart 26:39                                       new SyncService._internal
+  package:english_aircraft/services/sync_service.dart 30:52                                       SyncService._instance
+  package:english_aircraft/services/sync_service.dart                                             SyncService._instance
+  package:english_aircraft/services/sync_service.dart 31:28                                       new SyncService
+  test\sync_service_test.dart 10:21                                                               main.<fn>.<fn>
+  
+00:01 +49 -6: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests Initial sync status should be false
+00:01 +49 -7: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests Initial sync status should be false [E]
+  [core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+  package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart 190:5  MethodChannelFirebase.app
+  package:firebase_core/src/firebase.dart 79:41                                                   Firebase.app
+  package:cloud_firestore/src/firestore.dart 33:21                                                FirebaseFirestore.instance
+  package:english_aircraft/services/firestore_service.dart 5:58                                   new FirestoreService._internal
+  package:english_aircraft/services/firestore_service.dart 8:62                                   FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart                                        FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart 9:33                                   new FirestoreService
+  package:english_aircraft/services/sync_service.dart 26:39                                       new SyncService._internal
+  package:english_aircraft/services/sync_service.dart 30:52                                       SyncService._instance
+  package:english_aircraft/services/sync_service.dart                                             SyncService._instance
+  package:english_aircraft/services/sync_service.dart 31:28                                       new SyncService
+  test\sync_service_test.dart 10:21                                                               main.<fn>.<fn>
+  
+00:01 +49 -7: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests startAutoSync should not throw
+00:01 +49 -8: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests startAutoSync should not throw [E]
+  [core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+  package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart 190:5  MethodChannelFirebase.app
+  package:firebase_core/src/firebase.dart 79:41                                                   Firebase.app
+  package:cloud_firestore/src/firestore.dart 33:21                                                FirebaseFirestore.instance
+  package:english_aircraft/services/firestore_service.dart 5:58                                   new FirestoreService._internal
+  package:english_aircraft/services/firestore_service.dart 8:62                                   FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart                                        FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart 9:33                                   new FirestoreService
+  package:english_aircraft/services/sync_service.dart 26:39                                       new SyncService._internal
+  package:english_aircraft/services/sync_service.dart 30:52                                       SyncService._instance
+  package:english_aircraft/services/sync_service.dart                                             SyncService._instance
+  package:english_aircraft/services/sync_service.dart 31:28                                       new SyncService
+  test\sync_service_test.dart 10:21                                                               main.<fn>.<fn>
+  
+00:01 +49 -8: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests stopAutoSync should not throw
+00:01 +49 -9: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests stopAutoSync should not throw [E]
+  [core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+  package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart 190:5  MethodChannelFirebase.app
+  package:firebase_core/src/firebase.dart 79:41                                                   Firebase.app
+  package:cloud_firestore/src/firestore.dart 33:21                                                FirebaseFirestore.instance
+  package:english_aircraft/services/firestore_service.dart 5:58                                   new FirestoreService._internal
+  package:english_aircraft/services/firestore_service.dart 8:62                                   FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart                                        FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart 9:33                                   new FirestoreService
+  package:english_aircraft/services/sync_service.dart 26:39                                       new SyncService._internal
+  package:english_aircraft/services/sync_service.dart 30:52                                       SyncService._instance
+  package:english_aircraft/services/sync_service.dart                                             SyncService._instance
+  package:english_aircraft/services/sync_service.dart 31:28                                       new SyncService
+  test\sync_service_test.dart 10:21                                                               main.<fn>.<fn>
+  
+00:01 +49 -9: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests Manual sync should complete
+00:01 +49 -10: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests Manual sync should complete [E]
+  [core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+  package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart 190:5  MethodChannelFirebase.app
+  package:firebase_core/src/firebase.dart 79:41                                                   Firebase.app
+  package:cloud_firestore/src/firestore.dart 33:21                                                FirebaseFirestore.instance
+  package:english_aircraft/services/firestore_service.dart 5:58                                   new FirestoreService._internal
+  package:english_aircraft/services/firestore_service.dart 8:62                                   FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart                                        FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart 9:33                                   new FirestoreService
+  package:english_aircraft/services/sync_service.dart 26:39                                       new SyncService._internal
+  package:english_aircraft/services/sync_service.dart 30:52                                       SyncService._instance
+  package:english_aircraft/services/sync_service.dart                                             SyncService._instance
+  package:english_aircraft/services/sync_service.dart 31:28                                       new SyncService
+  test\sync_service_test.dart 10:21                                                               main.<fn>.<fn>
+  
+00:01 +49 -10: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests Multiple sync calls should not cause errors
+00:01 +49 -11: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests Multiple sync calls should not cause errors [E]
+  [core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+  package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart 190:5  MethodChannelFirebase.app
+  package:firebase_core/src/firebase.dart 79:41                                                   Firebase.app
+  package:cloud_firestore/src/firestore.dart 33:21                                                FirebaseFirestore.instance
+  package:english_aircraft/services/firestore_service.dart 5:58                                   new FirestoreService._internal
+  package:english_aircraft/services/firestore_service.dart 8:62                                   FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart                                        FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart 9:33                                   new FirestoreService
+  package:english_aircraft/services/sync_service.dart 26:39                                       new SyncService._internal
+  package:english_aircraft/services/sync_service.dart 30:52                                       SyncService._instance
+  package:english_aircraft/services/sync_service.dart                                             SyncService._instance
+  package:english_aircraft/services/sync_service.dart 31:28                                       new SyncService
+  test\sync_service_test.dart 10:21                                                               main.<fn>.<fn>
+  
+00:01 +49 -11: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests Auto sync period should be reasonable
+00:01 +49 -12: C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: SyncService Tests Auto sync period should be reasonable [E]
+  [core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+  package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart 190:5  MethodChannelFirebase.app
+  package:firebase_core/src/firebase.dart 79:41                                                   Firebase.app
+  package:cloud_firestore/src/firestore.dart 33:21                                                FirebaseFirestore.instance
+  package:english_aircraft/services/firestore_service.dart 5:58                                   new FirestoreService._internal
+  package:english_aircraft/services/firestore_service.dart 8:62                                   FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart                                        FirestoreService._instance
+  package:english_aircraft/services/firestore_service.dart 9:33                                   new FirestoreService
+  package:english_aircraft/services/sync_service.dart 26:39                                       new SyncService._internal
+  package:english_aircraft/services/sync_service.dart 30:52                                       SyncService._instance
+  package:english_aircraft/services/sync_service.dart                                             SyncService._instance
+  package:english_aircraft/services/sync_service.dart 31:28                                       new SyncService
+  test\sync_service_test.dart 10:21                                                               main.<fn>.<fn>
+  
+00:01 +49 -12: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: Term Model Tests Term should be created with correct properties
+00:01 +50 -12: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: Term Model Tests Term equality should work correctly
+00:01 +51 -12: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: Term Model Tests Term hashCode should be consistent
+00:01 +52 -12: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: CategoryData Model Tests CategoryData should be created correctly
+00:01 +53 -12: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: CategoryData Model Tests CategoryData should have correct term count
+00:01 +54 -12: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: League Model Tests League should be created with correct properties
+00:01 +55 -12: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: League Model Tests League comparison should work based on XP
+00:02 +56 -12: C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart: App should build successfully
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY WIDGETS LIBRARY ÔòŞÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following FirebaseException was thrown building AlienApp(dirty, dependencies:
+[_InheritedProviderScope<AppProvider?>]):
+[core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+
+The relevant error-causing widget was:
+  AlienApp AlienApp:file:///C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart:20:22
+
+When the exception was thrown, this was the stack:
+#0      MethodChannelFirebase.app (package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart:190:5)
+#1      Firebase.app (package:firebase_core/src/firebase.dart:79:41)
+#2      FirebaseFirestore.instance (package:cloud_firestore/src/firestore.dart:33:21)
+#3      new FirestoreService._internal (package:english_aircraft/services/firestore_service.dart:5:58)
+#4      FirestoreService._instance (package:english_aircraft/services/firestore_service.dart:8:62)
+#5      FirestoreService._instance (package:english_aircraft/services/firestore_service.dart)
+#6      new FirestoreService (package:english_aircraft/services/firestore_service.dart:9:33)
+#7      new SyncService._internal (package:english_aircraft/services/sync_service.dart:26:39)
+#8      SyncService._instance (package:english_aircraft/services/sync_service.dart:30:52)
+#9      SyncService._instance (package:english_aircraft/services/sync_service.dart)
+#10     new SyncService (package:english_aircraft/services/sync_service.dart:31:28)
+#11     new AppProvider (package:english_aircraft/providers/app_provider.dart:59:36)
+#12     main.<anonymous closure>.<anonymous closure> (file:///C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart:19:24)
+#13     _CreateInheritedProviderState.value (package:provider/src/inherited_provider.dart:749:36)
+#14     _InheritedProviderScopeElement.value (package:provider/src/inherited_provider.dart:603:33)
+#15     Provider.of (package:provider/src/provider.dart:337:37)
+#16     AlienApp.build (package:english_aircraft/main.dart:44:31)
+#17     StatelessElement.build (package:flutter/src/widgets/framework.dart:5892:49)
+#18     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5820:15)
+#19     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#20     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5802:5)
+#21     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5796:5)
+...     Normal element mounting (7 frames)
+#28     _InheritedProviderScopeElement.mount (package:provider/src/inherited_provider.dart:424:11)
+...     Normal element mounting (7 frames)
+#35     SingleChildWidgetElementMixin.mount (package:nested/nested.dart:222:11)
+#36     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4590:20)
+#37     Element.updateChild (package:flutter/src/widgets/framework.dart:4053:20)
+#38     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#39     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#40     ProxyElement.update (package:flutter/src/widgets/framework.dart:6152:5)
+#41     _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#42     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#43     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#44     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5985:11)
+#45     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#46     StatefulElement.update (package:flutter/src/widgets/framework.dart:6010:5)
+#47     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#48     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#49     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#50     ProxyElement.update (package:flutter/src/widgets/framework.dart:6152:5)
+#51     _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#52     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#53     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#54     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5985:11)
+#55     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#56     StatefulElement.update (package:flutter/src/widgets/framework.dart:6010:5)
+#57     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#58     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#59     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5985:11)
+#60     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#61     StatefulElement.update (package:flutter/src/widgets/framework.dart:6010:5)
+#62     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#63     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#64     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#65     ProxyElement.update (package:flutter/src/widgets/framework.dart:6152:5)
+#66     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#67     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#68     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5985:11)
+#69     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#70     StatefulElement.update (package:flutter/src/widgets/framework.dart:6010:5)
+#71     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#72     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#73     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#74     ProxyElement.update (package:flutter/src/widgets/framework.dart:6152:5)
+#75     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#76     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#77     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#78     ProxyElement.update (package:flutter/src/widgets/framework.dart:6152:5)
+#79     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#80     _RawViewElement._updateChild (package:flutter/src/widgets/view.dart:481:16)
+#81     _RawViewElement.update (package:flutter/src/widgets/view.dart:568:5)
+#82     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#83     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#84     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#85     StatelessElement.update (package:flutter/src/widgets/framework.dart:5898:5)
+#86     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#87     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#88     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5985:11)
+#89     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#90     StatefulElement.update (package:flutter/src/widgets/framework.dart:6010:5)
+#91     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#92     RootElement._rebuild (package:flutter/src/widgets/binding.dart:1782:16)
+#93     RootElement.update (package:flutter/src/widgets/binding.dart:1760:5)
+#94     RootElement.performRebuild (package:flutter/src/widgets/binding.dart:1774:7)
+#95     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#96     BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2750:15)
+#97     BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2807:11)
+#98     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3111:18)
+#99     AutomatedTestWidgetsFlutterBinding.drawFrame (package:flutter_test/src/binding.dart:1506:19)
+#100    RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:495:5)
+#101    SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1434:15)
+#102    SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1347:9)
+#103    AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:1335:9)
+#106    TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#107    AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:1324:27)
+#108    WidgetTester.pumpWidget.<anonymous closure> (package:flutter_test/src/widget_tester.dart:598:22)
+#111    TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#112    WidgetTester.pumpWidget (package:flutter_test/src/widget_tester.dart:595:27)
+#113    main.<anonymous closure> (file:///C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart:17:18)
+#114    testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:29)
+<asynchronous suspension>
+#115    TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 5 frames from dart:async and package:stack_trace)
+
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ÔòŞÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TypeWidgetFinder:<Found 0 widgets with type "MaterialApp": []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart:25:5)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart line 25
+The test description was:
+  App should build successfully
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ÔòŞÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following message was thrown:
+Multiple exceptions (2) were detected during the running of the current test, and at least one was
+unexpected.
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:02 +56 -13: C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart: App should build successfully [E]
+  Test failed. See exception logs above.
+  The test description was: App should build successfully
+  
+00:02 +56 -13: Some tests failed.
