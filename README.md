@@ -121,12 +121,12 @@ test/
 
 ## 📱 Platforms
 
-- ✅ **Web** (Primary)
+- ✅ **Web** (Primary - Live on Netlify)
 - ✅ **Android**
-- ✅ **iOS**
 - ✅ **Windows**
+- ✅ **Linux** (Enabled, requires WSL for Windows builds)
+- ✅ **iOS**
 - ✅ **macOS**
-- ✅ **Linux**
 
 ---
 

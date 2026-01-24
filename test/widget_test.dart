@@ -3,7 +3,6 @@
 // Note: Full app widget test requires Firebase initialization.
 // For CI/CD, this is tested in integration tests instead.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
