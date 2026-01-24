@@ -20,7 +20,7 @@ class PathPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final path = _createPath();
-    
+
     if (isLocked) {
       _drawLockedPath(canvas, path);
     } else {
@@ -31,22 +31,26 @@ class PathPainter extends CustomPainter {
   void _drawUnlockedPath(Canvas canvas, Path path) {
     // Simple 2-layer approach for CONSISTENT brightness
     // No overlapping layers = no curve accumulation issues
-    
+
     // Layer 1: Main path - solid color
-    canvas.drawPath(path, Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 18.0
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round
-      ..color = color);
-    
+    canvas.drawPath(
+        path,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 18.0
+          ..strokeCap = StrokeCap.round
+          ..strokeJoin = StrokeJoin.round
+          ..color = color);
+
     // Layer 2: Center highlight for 3D effect
-    canvas.drawPath(path, Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 6.0
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round
-      ..color = Colors.white.withValues(alpha: 0.35));
+    canvas.drawPath(
+        path,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 6.0
+          ..strokeCap = StrokeCap.round
+          ..strokeJoin = StrokeJoin.round
+          ..color = Colors.white.withValues(alpha: 0.35));
   }
 
   void _drawLockedPath(Canvas canvas, Path path) {
@@ -59,7 +63,7 @@ class PathPainter extends CustomPainter {
       ..color = color.withValues(alpha: 0.2)
       ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4);
     canvas.drawPath(path, glowPaint);
-    
+
     // Main path (dimmer)
     final mainPaint = Paint()
       ..style = PaintingStyle.stroke
@@ -68,7 +72,7 @@ class PathPainter extends CustomPainter {
       ..strokeJoin = StrokeJoin.round
       ..color = color.withValues(alpha: 0.55);
     canvas.drawPath(path, mainPaint);
-    
+
     // Inner highlight
     final highlightPaint = Paint()
       ..style = PaintingStyle.stroke
@@ -85,7 +89,7 @@ class PathPainter extends CustomPainter {
 
     final deltaX = endPoint.dx - startPoint.dx;
     final deltaY = endPoint.dy - startPoint.dy;
-    
+
     // Nearly vertical - just draw straight line
     if (deltaX.abs() < 30) {
       path.lineTo(endPoint.dx, endPoint.dy);
@@ -94,11 +98,14 @@ class PathPainter extends CustomPainter {
       // Control points create a natural flowing curve
       final controlPoint1 = Offset(startPoint.dx, startPoint.dy + deltaY * 0.5);
       final controlPoint2 = Offset(endPoint.dx, startPoint.dy + deltaY * 0.5);
-      
+
       path.cubicTo(
-        controlPoint1.dx, controlPoint1.dy,
-        controlPoint2.dx, controlPoint2.dy,
-        endPoint.dx, endPoint.dy,
+        controlPoint1.dx,
+        controlPoint1.dy,
+        controlPoint2.dx,
+        controlPoint2.dy,
+        endPoint.dx,
+        endPoint.dy,
       );
     }
 
@@ -114,4 +121,3 @@ class PathPainter extends CustomPainter {
         oldDelegate.progress != progress;
   }
 }
-

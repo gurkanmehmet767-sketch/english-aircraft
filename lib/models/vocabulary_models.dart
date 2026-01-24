@@ -1,13 +1,16 @@
 class Term {
   final String english;
   final String turkish;
-  final String? dutch;      // Flemenkçe
-  final String? german;     // Almanca
-  final String? french;     // Fransızca
-  final String? spanish;    // İspanyolca
+  final String? dutch; // Flemenkçe
+  final String? german; // Almanca
+  final String? french; // Fransızca
+  final String? spanish; // İspanyolca
   final dynamic level; // Can be int (legacy) or String like 'A1'.
 
-  const Term(this.english, this.turkish, this.level, {
+  const Term(
+    this.english,
+    this.turkish,
+    this.level, {
     this.dutch,
     this.german,
     this.french,
@@ -39,7 +42,8 @@ class Reading {
   final List<String> options;
   final dynamic level; // optional: can be int or 'A1'
   final String? translation; // Türkçe çeviri (opsiyonel)
-  final Map<String, String>? wordTranslations; // Türkçe kelime çevirileri (legacy)
+  final Map<String, String>?
+      wordTranslations; // Türkçe kelime çevirileri (legacy)
   // Çok dilli kelime çevirileri
   final Map<String, String>? wordTranslationsDutch;
   final Map<String, String>? wordTranslationsGerman;
@@ -77,7 +81,6 @@ class Reading {
     }
   }
 }
-
 
 class CategoryData {
   final String title;

@@ -11,7 +11,7 @@ class BannerAdWidget extends StatelessWidget {
     if (kIsWeb) {
       return const SizedBox.shrink();
     }
-    
+
     // On mobile, return empty for now (will be implemented when ads are enabled)
     return const SizedBox.shrink();
   }

@@ -26,7 +26,7 @@ class RewardedAdButton extends StatelessWidget {
         ),
       );
     }
-    
+
     // On mobile, return placeholder for now
     return ElevatedButton.icon(
       onPressed: null,

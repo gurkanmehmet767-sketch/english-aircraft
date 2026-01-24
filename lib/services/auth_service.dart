@@ -52,13 +52,12 @@ class AuthService {
       if (!_isValidEmail(email)) {
         return AuthResult.error('Geçersiz email adresi');
       }
-      
+
       if (!_isValidUsername(username)) {
         return AuthResult.error(
-          'Kullanıcı adı 3-20 karakter olmalı ve sadece harf, rakam ve _ içerebilir'
-        );
+            'Kullanıcı adı 3-20 karakter olmalı ve sadece harf, rakam ve _ içerebilir');
       }
-      
+
       if (!_isValidPassword(password)) {
         return AuthResult.error('Şifre en az 6 karakter olmalıdır');
       }
@@ -126,7 +125,7 @@ class AuthService {
       // Verify password
       final storedHash = await _localStorage.getPasswordHash();
       final inputHash = _hashPassword(password);
-      
+
       if (storedHash != inputHash) {
         return AuthResult.error('Email veya şifre hatalı');
       }
@@ -164,7 +163,7 @@ class AuthService {
   Future<AuthResult> updateUser(UserModel user) async {
     try {
       await _localStorage.saveUser(user);
-      
+
       // Add to sync queue if synced user
       if (user.isSynced) {
         await _localStorage.addToSyncQueue({
@@ -174,7 +173,7 @@ class AuthService {
           'updatedAt': DateTime.now().millisecondsSinceEpoch,
         });
       }
-      
+
       return AuthResult.success(user);
     } catch (e) {
       return AuthResult.error('Kullanıcı güncellenemedi: $e');
@@ -191,7 +190,7 @@ class AuthService {
       // Verify current password
       final storedHash = await _localStorage.getPasswordHash();
       final currentHash = _hashPassword(currentPassword);
-      
+
       if (storedHash != currentHash) {
         return AuthResult.error('Mevcut şifre hatalı');
       }

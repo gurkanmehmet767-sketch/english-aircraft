@@ -1,8 +1,8 @@
 /// Ad Service - Web-safe implementation
-/// 
+///
 /// Provides a no-op implementation of ad services for web platform.
 /// Ads only work on mobile platforms (Android/iOS).
-/// 
+///
 /// This service follows the singleton pattern to ensure only one instance exists.
 /// All methods are safe to call on any platform, but will no-op on web.
 library;
@@ -10,12 +10,12 @@ library;
 import 'package:flutter/foundation.dart' show kIsWeb, debugPrint;
 
 /// AdService singleton for managing advertisements across the app.
-/// 
+///
 /// Provides methods for loading and showing different types of ads:
 /// - Banner ads (persistent bottom ads)
 /// - Interstitial ads (full-screen between content)
 /// - Rewarded ads (watch video for rewards)
-/// 
+///
 /// On web platform, all methods are no-op and callbacks are triggered immediately.
 class AdService {
   static final AdService _instance = AdService._internal();
@@ -92,4 +92,3 @@ class AdService {
   // Dispose
   void dispose() {}
 }
-

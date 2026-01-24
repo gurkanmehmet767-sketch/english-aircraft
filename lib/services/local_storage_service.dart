@@ -42,7 +42,7 @@ class LocalStorageService {
     final p = await prefs;
     final userJson = p.getString(_keyUser);
     if (userJson == null) return null;
-    
+
     try {
       final userMap = json.decode(userJson) as Map<String, dynamic>;
       return UserModel.fromJson(userMap);
@@ -92,7 +92,7 @@ class LocalStorageService {
     final p = await prefs;
     final queueJson = p.getString(_keySyncQueue);
     if (queueJson == null) return [];
-    
+
     try {
       final queueList = json.decode(queueJson) as List<dynamic>;
       return queueList.map((e) => e as Map<String, dynamic>).toList();
@@ -128,7 +128,7 @@ class LocalStorageService {
     final p = await prefs;
     final friendsJson = p.getString(_keyFriends);
     if (friendsJson == null) return [];
-    
+
     try {
       final friendsList = json.decode(friendsJson) as List<dynamic>;
       return friendsList

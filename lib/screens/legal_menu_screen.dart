@@ -20,7 +20,8 @@ class LegalMenuScreen extends StatelessWidget {
           _buildLegalCard(
             context,
             title: 'KVKK Aydınlatma Metni',
-            description: 'Kişisel verilerinizin işlenmesi hakkında bilgilendirme',
+            description:
+                'Kişisel verilerinizin işlenmesi hakkında bilgilendirme',
             icon: Icons.privacy_tip_outlined,
             color: const Color(0xFF00D9FF),
             onTap: () {
@@ -43,7 +44,8 @@ class LegalMenuScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const LegalScreen(documentType: 'privacy'),
+                  builder: (context) =>
+                      const LegalScreen(documentType: 'privacy'),
                 ),
               );
             },
@@ -59,7 +61,8 @@ class LegalMenuScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const LegalScreen(documentType: 'terms'),
+                  builder: (context) =>
+                      const LegalScreen(documentType: 'terms'),
                 ),
               );
             },

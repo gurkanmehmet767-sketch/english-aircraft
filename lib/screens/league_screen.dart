@@ -10,11 +10,12 @@ class LeagueScreen extends StatefulWidget {
   State<LeagueScreen> createState() => _LeagueScreenState();
 }
 
-class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderStateMixin {
+class _LeagueScreenState extends State<LeagueScreen>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final _firestoreService = FirestoreService();
   final _localStorageService = LocalStorageService();
-  
+
   UserModel? _currentUser;
   List<LeaderboardEntry> _globalLeaderboard = [];
   List<LeaderboardEntry> _friendsLeaderboard = [];
@@ -36,10 +37,10 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
 
   Future<void> _loadData() async {
     setState(() => _isLoading = true);
-    
+
     try {
       _currentUser = await _localStorageService.getUser();
-      
+
       if (_currentUser != null) {
         try {
           // Try to load global leaderboard
@@ -47,13 +48,13 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
             _currentUser!.league,
             limit: 50,
           );
-          
+
           // Load friends leaderboard
           _friendsLeaderboard = await _firestoreService.getFriendsLeaderboard(
             _currentUser!.uid,
             limit: 50,
           );
-          
+
           // Get user's global rank
           _userGlobalRank = await _firestoreService.getUserGlobalRank(
             _currentUser!.uid,
@@ -67,7 +68,7 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
     } catch (e) {
       debugPrint('Error in _loadData: $e');
     }
-    
+
     setState(() => _isLoading = false);
   }
 
@@ -77,7 +78,8 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
       appBar: AppBar(
         title: Row(
           children: [
-            const Text('Alpha League', style: TextStyle(fontWeight: FontWeight.bold)),
+            const Text('Alpha League',
+                style: TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(width: 8),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -109,12 +111,12 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
         ),
       ),
       body: TabBarView(
-                  controller: _tabController,
-                  children: [
-                    _buildGlobalTab(),
-                    _buildFriendsTab(),
-                  ],
-                ),
+        controller: _tabController,
+        children: [
+          _buildGlobalTab(),
+          _buildFriendsTab(),
+        ],
+      ),
     );
   }
 
@@ -127,7 +129,10 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
           const SizedBox(height: 16),
           Text(
             'Giriş yapmanız gerekiyor',
-            style: TextStyle(fontSize: 18, color: Colors.grey.shade600, fontWeight: FontWeight.w600),
+            style: TextStyle(
+                fontSize: 18,
+                color: Colors.grey.shade600,
+                fontWeight: FontWeight.w600),
           ),
           const SizedBox(height: 8),
           Text(
@@ -150,7 +155,10 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
             const SizedBox(height: 16),
             Text(
               'Hesabınız henüz senkronize edilmedi',
-              style: TextStyle(fontSize: 18, color: Colors.grey.shade600, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.grey.shade600,
+                  fontWeight: FontWeight.w600),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 8),
@@ -167,7 +175,8 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF667eea),
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
               ),
             ),
           ],
@@ -248,11 +257,13 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
                         ),
                         Row(
                           children: [
-                            const Icon(Icons.star, color: Colors.amber, size: 16),
+                            const Icon(Icons.star,
+                                color: Colors.amber, size: 16),
                             const SizedBox(width: 4),
                             Text(
                               '${_currentUser!.xp} XP',
-                              style: const TextStyle(color: Colors.white70, fontSize: 14),
+                              style: const TextStyle(
+                                  color: Colors.white70, fontSize: 14),
                             ),
                           ],
                         ),
@@ -263,7 +274,7 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
                 ],
               ),
             ),
-          
+
           // Leaderboard list
           Expanded(
             child: _globalLeaderboard.isEmpty
@@ -271,7 +282,8 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.leaderboard, size: 80, color: Colors.grey.shade300),
+                        Icon(Icons.leaderboard,
+                            size: 80, color: Colors.grey.shade300),
                         const SizedBox(height: 16),
                         Text(
                           'Henüz sıralama yok',
@@ -356,7 +368,7 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
   Widget _buildLeaderboardCard(LeaderboardEntry entry, bool isCurrentUser) {
     Color rankColor;
     String rankEmoji;
-    
+
     if (entry.rank == 1) {
       rankColor = const Color(0xFFFFD700); // Gold
       rankEmoji = '🥇';
@@ -374,14 +386,12 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
-        color: isCurrentUser 
+        color: isCurrentUser
             ? const Color(0xFF667eea).withValues(alpha: 0.1)
             : Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: isCurrentUser 
-              ? const Color(0xFF667eea)
-              : Colors.grey.shade200,
+          color: isCurrentUser ? const Color(0xFF667eea) : Colors.grey.shade200,
           width: isCurrentUser ? 2 : 1,
         ),
         boxShadow: [
@@ -438,7 +448,8 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
-                  color: isCurrentUser ? const Color(0xFF667eea) : Colors.black87,
+                  color:
+                      isCurrentUser ? const Color(0xFF667eea) : Colors.black87,
                 ),
               ),
             ),
@@ -490,7 +501,7 @@ class _LeagueScreenState extends State<LeagueScreen> with SingleTickerProviderSt
       const Color(0xFFFF6B6B),
       const Color(0xFF9B59B6),
     ];
-    
+
     final index = username.codeUnitAt(0) % colors.length;
     return colors[index];
   }

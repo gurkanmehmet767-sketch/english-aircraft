@@ -24,7 +24,7 @@ void main() {
         username: 'testuser',
         password: 'Pass123',
       );
-      
+
       expect(result.success, false);
       expect(result.error, contains('email'));
     });
@@ -35,7 +35,7 @@ void main() {
         username: 'testuser',
         password: '123', // Too short
       );
-      
+
       expect(result.success, false);
       expect(result.error, contains('en az 6'));
     });
@@ -46,7 +46,7 @@ void main() {
         username: 'ab', // Too short
         password: 'Pass123',
       );
-      
+
       expect(result.success, false);
       expect(result.error, contains('3-20'));
     });
@@ -56,7 +56,7 @@ void main() {
         email: 'nonexistent@test.com',
         password: 'anypassword',
       );
-      
+
       expect(result.success, false);
     });
 

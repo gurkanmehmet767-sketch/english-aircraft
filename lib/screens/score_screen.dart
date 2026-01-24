@@ -9,7 +9,7 @@ class ScoreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<AppProvider>(context);
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('📊 PUAN & İSTATİSTİKLER'),
@@ -34,15 +34,15 @@ class ScoreScreen extends StatelessWidget {
               // Ana XP Kartı
               _buildMainXPCard(context, provider, isDark),
               const SizedBox(height: 16),
-              
+
               // İstatistikler Grid
               _buildStatsGrid(context, provider, isDark),
               const SizedBox(height: 16),
-              
+
               // Seviye İlerleme
               _buildLevelProgress(context, provider, isDark),
               const SizedBox(height: 16),
-              
+
               // Başarılar
               _buildAchievements(context, provider, isDark),
             ],
@@ -52,7 +52,8 @@ class ScoreScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildMainXPCard(BuildContext context, AppProvider provider, bool isDark) {
+  Widget _buildMainXPCard(
+      BuildContext context, AppProvider provider, bool isDark) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(24),
@@ -112,7 +113,8 @@ class ScoreScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildStatsGrid(BuildContext context, AppProvider provider, bool isDark) {
+  Widget _buildStatsGrid(
+      BuildContext context, AppProvider provider, bool isDark) {
     return GridView.count(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -168,17 +170,17 @@ class ScoreScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: isDark 
-            ? Colors.white.withValues(alpha: 0.1)
-            : Colors.white,
+        color: isDark ? Colors.white.withValues(alpha: 0.1) : Colors.white,
         borderRadius: BorderRadius.circular(16),
-        boxShadow: isDark ? null : [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.1),
-            blurRadius: 8,
-            offset: const Offset(0, 4),
-          ),
-        ],
+        boxShadow: isDark
+            ? null
+            : [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.1),
+                  blurRadius: 8,
+                  offset: const Offset(0, 4),
+                ),
+              ],
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -206,7 +208,8 @@ class ScoreScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildLevelProgress(BuildContext context, AppProvider provider, bool isDark) {
+  Widget _buildLevelProgress(
+      BuildContext context, AppProvider provider, bool isDark) {
     final currentLevel = provider.currentLevel;
     final xpForCurrentLevel = (currentLevel - 1) * 100;
     final xpForNextLevel = currentLevel * 100;
@@ -218,17 +221,17 @@ class ScoreScreen extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: isDark 
-            ? Colors.white.withValues(alpha: 0.1)
-            : Colors.white,
+        color: isDark ? Colors.white.withValues(alpha: 0.1) : Colors.white,
         borderRadius: BorderRadius.circular(16),
-        boxShadow: isDark ? null : [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.1),
-            blurRadius: 8,
-            offset: const Offset(0, 4),
-          ),
-        ],
+        boxShadow: isDark
+            ? null
+            : [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.1),
+                  blurRadius: 8,
+                  offset: const Offset(0, 4),
+                ),
+              ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -259,10 +262,11 @@ class ScoreScreen extends StatelessWidget {
             child: LinearProgressIndicator(
               value: progress,
               minHeight: 12,
-              backgroundColor: isDark 
+              backgroundColor: isDark
                   ? Colors.white.withValues(alpha: 0.2)
                   : Colors.grey.shade200,
-              valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF58CC02)),
+              valueColor:
+                  const AlwaysStoppedAnimation<Color>(Color(0xFF58CC02)),
             ),
           ),
         ],
@@ -270,31 +274,62 @@ class ScoreScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildAchievements(BuildContext context, AppProvider provider, bool isDark) {
+  Widget _buildAchievements(
+      BuildContext context, AppProvider provider, bool isDark) {
     final achievements = [
-      {'icon': '🔥', 'title': 'Ateş Başlangıcı', 'desc': '3 günlük seri', 'done': provider.streak >= 3},
-      {'icon': '⭐', 'title': 'Yıldız Öğrenci', 'desc': '100 XP kazan', 'done': provider.totalXP >= 100},
-      {'icon': '📚', 'title': 'Kitap Kurdu', 'desc': '5 ders tamamla', 'done': provider.completedLessons.length >= 5},
-      {'icon': '🏆', 'title': 'Şampiyon', 'desc': '500 XP kazan', 'done': provider.totalXP >= 500},
-      {'icon': '🚀', 'title': 'Roket Öğrenci', 'desc': '10 ders tamamla', 'done': provider.completedLessons.length >= 10},
-      {'icon': '💎', 'title': 'Elmas Seviye', 'desc': '1000 XP kazan', 'done': provider.totalXP >= 1000},
+      {
+        'icon': '🔥',
+        'title': 'Ateş Başlangıcı',
+        'desc': '3 günlük seri',
+        'done': provider.streak >= 3
+      },
+      {
+        'icon': '⭐',
+        'title': 'Yıldız Öğrenci',
+        'desc': '100 XP kazan',
+        'done': provider.totalXP >= 100
+      },
+      {
+        'icon': '📚',
+        'title': 'Kitap Kurdu',
+        'desc': '5 ders tamamla',
+        'done': provider.completedLessons.length >= 5
+      },
+      {
+        'icon': '🏆',
+        'title': 'Şampiyon',
+        'desc': '500 XP kazan',
+        'done': provider.totalXP >= 500
+      },
+      {
+        'icon': '🚀',
+        'title': 'Roket Öğrenci',
+        'desc': '10 ders tamamla',
+        'done': provider.completedLessons.length >= 10
+      },
+      {
+        'icon': '💎',
+        'title': 'Elmas Seviye',
+        'desc': '1000 XP kazan',
+        'done': provider.totalXP >= 1000
+      },
     ];
 
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: isDark 
-            ? Colors.white.withValues(alpha: 0.1)
-            : Colors.white,
+        color: isDark ? Colors.white.withValues(alpha: 0.1) : Colors.white,
         borderRadius: BorderRadius.circular(16),
-        boxShadow: isDark ? null : [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.1),
-            blurRadius: 8,
-            offset: const Offset(0, 4),
-          ),
-        ],
+        boxShadow: isDark
+            ? null
+            : [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.1),
+                  blurRadius: 8,
+                  offset: const Offset(0, 4),
+                ),
+              ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -309,13 +344,13 @@ class ScoreScreen extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           ...achievements.map((a) => _buildAchievementItem(
-            context,
-            icon: a['icon'] as String,
-            title: a['title'] as String,
-            description: a['desc'] as String,
-            isCompleted: a['done'] as bool,
-            isDark: isDark,
-          )),
+                context,
+                icon: a['icon'] as String,
+                title: a['title'] as String,
+                description: a['desc'] as String,
+                isCompleted: a['done'] as bool,
+                isDark: isDark,
+              )),
         ],
       ),
     );
@@ -335,18 +370,20 @@ class ScoreScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: isCompleted
             ? const Color(0xFF58CC02).withValues(alpha: 0.2)
-            : (isDark ? Colors.white.withValues(alpha: 0.05) : Colors.grey.shade100),
+            : (isDark
+                ? Colors.white.withValues(alpha: 0.05)
+                : Colors.grey.shade100),
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: isCompleted
-              ? const Color(0xFF58CC02)
-              : Colors.transparent,
+          color: isCompleted ? const Color(0xFF58CC02) : Colors.transparent,
           width: 2,
         ),
       ),
       child: Row(
         children: [
-          Text(icon, style: TextStyle(fontSize: 28, color: isCompleted ? null : Colors.grey)),
+          Text(icon,
+              style: TextStyle(
+                  fontSize: 28, color: isCompleted ? null : Colors.grey)),
           const SizedBox(width: 12),
           Expanded(
             child: Column(

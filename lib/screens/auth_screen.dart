@@ -7,38 +7,39 @@ import 'legal_screen.dart';
 
 class AuthScreen extends StatefulWidget {
   final bool showLogin;
-  
+
   const AuthScreen({super.key, this.showLogin = false});
 
   @override
   State<AuthScreen> createState() => _AuthScreenState();
 }
 
-class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateMixin {
+class _AuthScreenState extends State<AuthScreen>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final _authService = AuthService();
-  
+
   // Controllers
   final _loginEmailController = TextEditingController();
   final _loginPasswordController = TextEditingController();
-  
+
   final _registerEmailController = TextEditingController();
   final _registerUsernameController = TextEditingController();
   final _registerPasswordController = TextEditingController();
-  
+
   // Focus nodes
   final _loginEmailFocus = FocusNode();
   final _loginPasswordFocus = FocusNode();
   final _registerEmailFocus = FocusNode();
   final _registerUsernameFocus = FocusNode();
   final _registerPasswordFocus = FocusNode();
-  
+
   // State
   bool _isLoading = false;
   bool _obscurePassword = true;
   String? _errorMessage;
   bool _kvkkAccepted = false; // KVKK onayı
-  
+
   // Validation
   bool _emailValid = false;
   bool _usernameValid = false;
@@ -52,7 +53,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
       vsync: this,
       initialIndex: widget.showLogin ? 0 : 1,
     );
-    
+
     // Add listeners for real-time validation
     _registerEmailController.addListener(_validateEmail);
     _registerUsernameController.addListener(_validateUsername);
@@ -78,15 +79,17 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
   void _validateEmail() {
     final email = _registerEmailController.text;
     setState(() {
-      _emailValid = email.contains('@') && email.contains('.') && email.length > 5;
+      _emailValid =
+          email.contains('@') && email.contains('.') && email.length > 5;
     });
   }
 
   void _validateUsername() {
     final username = _registerUsernameController.text;
     setState(() {
-      _usernameValid = username.length >= 3 && username.length <= 20 && 
-                       RegExp(r'^[a-zA-Z0-9_]+$').hasMatch(username);
+      _usernameValid = username.length >= 3 &&
+          username.length <= 20 &&
+          RegExp(r'^[a-zA-Z0-9_]+$').hasMatch(username);
     });
   }
 
@@ -95,7 +98,8 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
     int strength = 0;
     if (password.length >= 6) strength++;
     if (password.length >= 10) strength++;
-    if (RegExp(r'[A-Z]').hasMatch(password) && RegExp(r'[0-9]').hasMatch(password)) strength++;
+    if (RegExp(r'[A-Z]').hasMatch(password) &&
+        RegExp(r'[0-9]').hasMatch(password)) strength++;
     setState(() => _passwordStrength = strength);
   }
 
@@ -127,10 +131,11 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
   Future<void> _handleRegister() async {
     // KVKK kontrolü
     if (!_kvkkAccepted) {
-      setState(() => _errorMessage = 'Lütfen KVKK Aydınlatma Metnini onaylayın.');
+      setState(
+          () => _errorMessage = 'Lütfen KVKK Aydınlatma Metnini onaylayın.');
       return;
     }
-    
+
     setState(() {
       _isLoading = true;
       _errorMessage = null;
@@ -165,7 +170,8 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.check_circle, color: Color(0xFF58CC02), size: 64),
+              const Icon(Icons.check_circle,
+                  color: Color(0xFF58CC02), size: 64),
               const SizedBox(height: 16),
               const Text(
                 'Giriş Başarılı!',
@@ -176,7 +182,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
         ),
       ),
     );
-    
+
     Future.delayed(const Duration(milliseconds: 1500), () {
       if (!mounted) return;
       Navigator.pop(context);
@@ -187,14 +193,14 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
   void _showWelcomeDialog(UserModel user) async {
     final syncService = SyncService();
     final isOnline = await syncService.isOnline();
-    
+
     // If online, trigger sync immediately
     if (isOnline) {
       syncService.processSyncQueue();
     }
-    
+
     if (!mounted) return;
-    
+
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -240,10 +246,14 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: isOnline ? const Color(0xFFE8F5E9) : const Color(0xFFFFF3E0),
+                  color: isOnline
+                      ? const Color(0xFFE8F5E9)
+                      : const Color(0xFFFFF3E0),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: isOnline ? const Color(0xFF4CAF50) : const Color(0xFFFF9800),
+                    color: isOnline
+                        ? const Color(0xFF4CAF50)
+                        : const Color(0xFFFF9800),
                   ),
                 ),
                 child: Row(
@@ -251,18 +261,22 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                   children: [
                     Icon(
                       isOnline ? Icons.cloud_done : Icons.wifi_off,
-                      color: isOnline ? const Color(0xFF4CAF50) : const Color(0xFFFF9800),
+                      color: isOnline
+                          ? const Color(0xFF4CAF50)
+                          : const Color(0xFFFF9800),
                       size: 18,
                     ),
                     const SizedBox(width: 8),
                     Flexible(
                       child: Text(
-                        isOnline 
-                          ? 'Hesabın oluşturuldu ve senkronize edildi! ✓'
-                          : 'Offline kaydedildi • WiFi bağlandığında sync olacak',
+                        isOnline
+                            ? 'Hesabın oluşturuldu ve senkronize edildi! ✓'
+                            : 'Offline kaydedildi • WiFi bağlandığında sync olacak',
                         style: TextStyle(
-                          fontSize: 11, 
-                          color: isOnline ? const Color(0xFF2E7D32) : const Color(0xFF795548),
+                          fontSize: 11,
+                          color: isOnline
+                              ? const Color(0xFF2E7D32)
+                              : const Color(0xFF795548),
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -324,8 +338,10 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
           child: Center(
             child: SingleChildScrollView(
               child: Container(
-                constraints: BoxConstraints(maxWidth: isMobile ? double.infinity : 420),
-                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+                constraints:
+                    BoxConstraints(maxWidth: isMobile ? double.infinity : 420),
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white.withValues(alpha: 0.95),
@@ -354,9 +370,9 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                               _buildLogoCircle('✈️'),
                             ],
                           ),
-                          
+
                           const SizedBox(height: 16),
-                          
+
                           ShaderMask(
                             shaderCallback: (bounds) => const LinearGradient(
                               colors: [Color(0xFFFF9800), Color(0xFFFF5722)],
@@ -371,7 +387,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                               ),
                             ),
                           ),
-                          
+
                           const SizedBox(height: 20),
 
                           // Modern Tabs
@@ -385,12 +401,16 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                               controller: _tabController,
                               indicator: BoxDecoration(
                                 gradient: const LinearGradient(
-                                  colors: [Color(0xFF667eea), Color(0xFF764ba2)],
+                                  colors: [
+                                    Color(0xFF667eea),
+                                    Color(0xFF764ba2)
+                                  ],
                                 ),
                                 borderRadius: BorderRadius.circular(12),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: const Color(0xFF667eea).withValues(alpha: 0.4),
+                                    color: const Color(0xFF667eea)
+                                        .withValues(alpha: 0.4),
                                     blurRadius: 8,
                                     offset: const Offset(0, 2),
                                   ),
@@ -413,10 +433,11 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
 
                           const SizedBox(height: 20),
 
-                          // Error message  
+                          // Error message
                           if (_errorMessage != null)
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 10),
                               margin: const EdgeInsets.only(bottom: 16),
                               decoration: BoxDecoration(
                                 color: Colors.red.shade50,
@@ -425,12 +446,15 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                               ),
                               child: Row(
                                 children: [
-                                  const Icon(Icons.error_outline, color: Colors.red, size: 20),
+                                  const Icon(Icons.error_outline,
+                                      color: Colors.red, size: 20),
                                   const SizedBox(width: 10),
                                   Expanded(
                                     child: Text(
                                       _errorMessage!,
-                                      style: TextStyle(color: Colors.red.shade700, fontSize: 13),
+                                      style: TextStyle(
+                                          color: Colors.red.shade700,
+                                          fontSize: 13),
                                     ),
                                   ),
                                 ],
@@ -440,7 +464,8 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                           // Tab Content - Flexible height based on screen
                           ConstrainedBox(
                             constraints: BoxConstraints(
-                              maxHeight: MediaQuery.of(context).size.height * 0.4,
+                              maxHeight:
+                                  MediaQuery.of(context).size.height * 0.4,
                               minHeight: 260,
                             ),
                             child: TabBarView(
@@ -508,11 +533,14 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
               onSubmitted: (_) => _handleLogin(),
               suffixIcon: IconButton(
                 icon: Icon(
-                  _obscurePassword ? Icons.visibility_outlined : Icons.visibility_off_outlined,
+                  _obscurePassword
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
                   color: const Color(0xFF999999),
                   size: 20,
                 ),
-                onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
+                onPressed: () =>
+                    setState(() => _obscurePassword = !_obscurePassword),
               ),
             ),
             const SizedBox(height: 20),
@@ -569,11 +597,14 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
               onSubmitted: (_) => _handleRegister(),
               suffixIcon: IconButton(
                 icon: Icon(
-                  _obscurePassword ? Icons.visibility_outlined : Icons.visibility_off_outlined,
+                  _obscurePassword
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
                   color: const Color(0xFF999999),
                   size: 20,
                 ),
-                onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
+                onPressed: () =>
+                    setState(() => _obscurePassword = !_obscurePassword),
               ),
             ),
             if (_registerPasswordController.text.isNotEmpty) ...[
@@ -581,7 +612,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
               _buildPasswordStrengthIndicator(),
             ],
             const SizedBox(height: 16),
-            
+
             // KVKK Onay Checkbox
             InkWell(
               onTap: () => setState(() => _kvkkAccepted = !_kvkkAccepted),
@@ -589,13 +620,13 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
               child: Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: _kvkkAccepted 
-                      ? const Color(0xFFE8F5E9) 
+                  color: _kvkkAccepted
+                      ? const Color(0xFFE8F5E9)
                       : Colors.grey.shade50,
                   borderRadius: BorderRadius.circular(8),
                   border: Border.all(
-                    color: _kvkkAccepted 
-                        ? const Color(0xFF4CAF50) 
+                    color: _kvkkAccepted
+                        ? const Color(0xFF4CAF50)
                         : Colors.grey.shade300,
                     width: 1.5,
                   ),
@@ -604,8 +635,11 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Icon(
-                      _kvkkAccepted ? Icons.check_box : Icons.check_box_outline_blank,
-                      color: _kvkkAccepted ? const Color(0xFF4CAF50) : Colors.grey,
+                      _kvkkAccepted
+                          ? Icons.check_box
+                          : Icons.check_box_outline_blank,
+                      color:
+                          _kvkkAccepted ? const Color(0xFF4CAF50) : Colors.grey,
                       size: 22,
                     ),
                     const SizedBox(width: 10),
@@ -672,7 +706,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                 ),
               ),
             ),
-            
+
             const SizedBox(height: 20),
             _buildModernButton(
               label: 'KAYIT OL',
@@ -687,8 +721,13 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
 
   Widget _buildPasswordStrengthIndicator() {
     final strengthLabels = ['Zayıf', 'Orta', 'İyi', 'Güçlü'];
-    final strengthColors = [Colors.red, Colors.orange, Colors.blue, Colors.green];
-    
+    final strengthColors = [
+      Colors.red,
+      Colors.orange,
+      Colors.blue,
+      Colors.green
+    ];
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -699,7 +738,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                 height: 4,
                 margin: EdgeInsets.only(right: index < 2 ? 4 : 0),
                 decoration: BoxDecoration(
-                  color: index < _passwordStrength 
+                  color: index < _passwordStrength
                       ? strengthColors[_passwordStrength]
                       : Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(2),
@@ -713,7 +752,9 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
           _passwordStrength > 0 ? strengthLabels[_passwordStrength - 1] : '',
           style: TextStyle(
             fontSize: 11,
-            color: _passwordStrength > 0 ? strengthColors[_passwordStrength] : Colors.grey,
+            color: _passwordStrength > 0
+                ? strengthColors[_passwordStrength]
+                : Colors.grey,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -762,7 +803,8 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
         ),
         filled: true,
         fillColor: Colors.grey.shade50,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       ),
     );
   }

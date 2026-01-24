@@ -54,12 +54,12 @@ class SettingsScreen extends StatelessWidget {
   Widget _buildHeader(BuildContext context, AppProvider provider) {
     final user = provider.currentUser;
     final username = user?.username ?? 'Alien Learner';
-    
+
     // Sync status icon and color
     IconData syncIcon;
     Color syncColor;
     String syncText;
-    
+
     if (provider.isSyncing) {
       syncIcon = Icons.sync;
       syncColor = Colors.blue;
@@ -77,7 +77,7 @@ class SettingsScreen extends StatelessWidget {
       syncColor = Colors.orange;
       syncText = 'Senkronize edilmedi';
     }
-    
+
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -100,14 +100,20 @@ class SettingsScreen extends StatelessWidget {
               Text(
                 user!.email,
                 style: TextStyle(
-                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                  color: Theme.of(context)
+                      .colorScheme
+                      .onSurface
+                      .withValues(alpha: 0.5),
                   fontSize: 12,
                 ),
               ),
             Text(
               '${provider.currentLeague.name} League',
               style: TextStyle(
-                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
+                color: Theme.of(context)
+                    .colorScheme
+                    .onSurface
+                    .withValues(alpha: 0.6),
                 fontSize: 14,
               ),
             ),
@@ -126,7 +132,9 @@ class SettingsScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                if (provider.isOnline && !provider.isSyncing && !provider.isSynced)
+                if (provider.isOnline &&
+                    !provider.isSyncing &&
+                    !provider.isSynced)
                   Padding(
                     padding: const EdgeInsets.only(left: 12),
                     child: TextButton.icon(
@@ -134,7 +142,8 @@ class SettingsScreen extends StatelessWidget {
                       icon: const Icon(Icons.sync, size: 16),
                       label: const Text('Senkronize Et'),
                       style: TextButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 4),
                         foregroundColor: syncColor,
                       ),
                     ),
@@ -146,7 +155,8 @@ class SettingsScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 _buildQuickStat('⚡', '${provider.xp}', 'XP'),
-                _buildQuickStat('📚', '${provider.completedLessons.length}', 'Lessons'),
+                _buildQuickStat(
+                    '📚', '${provider.completedLessons.length}', 'Lessons'),
                 _buildQuickStat('🔥', '${provider.streak}', 'Streak'),
               ],
             ),
@@ -163,7 +173,8 @@ class SettingsScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF58CC02),
                   foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 ),
               ),
             ],
@@ -177,7 +188,8 @@ class SettingsScreen extends StatelessWidget {
                     context: context,
                     builder: (context) => AlertDialog(
                       title: const Text('Çıkış Yap'),
-                      content: const Text('Hesabınızdan çıkmak istediğinizden emin misiniz?'),
+                      content: const Text(
+                          'Hesabınızdan çıkmak istediğinizden emin misiniz?'),
                       actions: [
                         TextButton(
                           onPressed: () => Navigator.pop(context, false),
@@ -194,23 +206,26 @@ class SettingsScreen extends StatelessWidget {
                       ],
                     ),
                   );
-                  
+
                   if (confirm == true && context.mounted) {
                     await AuthService().logout();
                     if (context.mounted) {
                       Navigator.pushAndRemoveUntil(
                         context,
-                        MaterialPageRoute(builder: (_) => const WelcomeScreen()),
+                        MaterialPageRoute(
+                            builder: (_) => const WelcomeScreen()),
                         (route) => false,
                       );
                     }
                   }
                 },
                 icon: const Icon(Icons.logout, color: Colors.red),
-                label: const Text('Çıkış Yap', style: TextStyle(color: Colors.red)),
+                label: const Text('Çıkış Yap',
+                    style: TextStyle(color: Colors.red)),
                 style: OutlinedButton.styleFrom(
                   side: const BorderSide(color: Colors.red),
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 ),
               ),
             ],
@@ -224,13 +239,15 @@ class SettingsScreen extends StatelessWidget {
     return Column(
       children: [
         Text(icon, style: TextStyle(fontSize: 24)),
-        Text(value, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+        Text(value,
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
         Text(label, style: TextStyle(fontSize: 12, color: Colors.grey)),
       ],
     );
   }
 
-  Widget _buildNotificationsSection(BuildContext context, AppProvider provider) {
+  Widget _buildNotificationsSection(
+      BuildContext context, AppProvider provider) {
     return ExpansionTile(
       leading: Icon(Icons.notifications, color: Color(0xFFFF9800)),
       title: Text(provider.getString('notifications')),
@@ -243,7 +260,8 @@ class SettingsScreen extends StatelessWidget {
         if (provider.notificationsEnabled)
           ListTile(
             title: Text(provider.getString('reminder_time')),
-            subtitle: Text('${provider.reminderHour.toString().padLeft(2, '0')}:${provider.reminderMinute.toString().padLeft(2, '0')}'),
+            subtitle: Text(
+                '${provider.reminderHour.toString().padLeft(2, '0')}:${provider.reminderMinute.toString().padLeft(2, '0')}'),
             trailing: Icon(Icons.access_time),
             onTap: () async {
               final time = await showTimePicker(
@@ -271,7 +289,9 @@ class SettingsScreen extends StatelessWidget {
           color: Color(0xFF1CB0F6),
         ),
         title: Text(provider.getString('theme')),
-        subtitle: Text(isDark ? provider.getString('dark_mode') : provider.getString('light_mode')),
+        subtitle: Text(isDark
+            ? provider.getString('dark_mode')
+            : provider.getString('light_mode')),
         trailing: Switch(
           value: isDark,
           onChanged: (_) => provider.toggleTheme(),
@@ -344,11 +364,9 @@ class SettingsScreen extends StatelessWidget {
       child: ListTile(
         leading: Icon(Icons.bar_chart, color: Color(0xFFFF9800)),
         title: Text(provider.getString('statistics')),
-        subtitle: Text(
-          provider.detailedStats 
-            ? provider.getString('detailed_stats') 
-            : provider.getString('simple_stats')
-        ),
+        subtitle: Text(provider.detailedStats
+            ? provider.getString('detailed_stats')
+            : provider.getString('simple_stats')),
         trailing: Switch(
           value: provider.detailedStats,
           onChanged: (_) => provider.toggleStatsMode(),
@@ -359,10 +377,9 @@ class SettingsScreen extends StatelessWidget {
 
   Widget _buildBackgroundsSection(BuildContext context, AppProvider provider) {
     final isDark = provider.themeMode == ThemeMode.dark;
-    final backgrounds = isDark 
-      ? AppProvider.darkBackgrounds 
-      : AppProvider.lightBackgrounds;
-    
+    final backgrounds =
+        isDark ? AppProvider.darkBackgrounds : AppProvider.lightBackgrounds;
+
     return ExpansionTile(
       leading: Icon(Icons.wallpaper, color: Color(0xFF1CB0F6)),
       title: Text(provider.getString('backgrounds')),
@@ -374,9 +391,9 @@ class SettingsScreen extends StatelessWidget {
             spacing: 12,
             runSpacing: 12,
             children: backgrounds.map((bg) {
-              final isSelected = isDark 
-                ? bg == provider.selectedDarkBg 
-                : bg == provider.selectedLightBg;
+              final isSelected = isDark
+                  ? bg == provider.selectedDarkBg
+                  : bg == provider.selectedLightBg;
               return GestureDetector(
                 onTap: () {
                   if (isDark) {
@@ -430,12 +447,15 @@ class SettingsScreen extends StatelessWidget {
             if (kIsWeb) {
               // Web-only export functionality
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Export feature only available on web version')),
+                SnackBar(
+                    content:
+                        Text('Export feature only available on web version')),
               );
             } else {
               // Mobile platforms - data is already saved locally
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Your data is safely stored on this device')),
+                SnackBar(
+                    content: Text('Your data is safely stored on this device')),
               );
             }
           },
@@ -460,10 +480,13 @@ class SettingsScreen extends StatelessWidget {
                       if (!ctx.mounted) return;
                       Navigator.pop(ctx);
                       ScaffoldMessenger.of(ctx).showSnackBar(
-                        SnackBar(content: Text(provider.getString('progress_reset'))),
+                        SnackBar(
+                            content:
+                                Text(provider.getString('progress_reset'))),
                       );
                     },
-                    style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.red),
                     child: Text(provider.getString('reset_confirm_button')),
                   ),
                 ],

@@ -3,7 +3,7 @@ import 'dart:io';
 void main() async {
   final file = File('lib/data/vocabulary_data.dart');
   var content = await file.readAsString();
-  
+
   // Turkish character replacements
   final replacements = <String, String>{
     // Category titles
@@ -38,7 +38,7 @@ void main() async {
     'Ucak Hareketi': 'Uçak Hareketi',
     'Kokpit Islemleri': 'Kokpit İşlemleri',
     'Yakit Sistemleri': 'Yakıt Sistemleri',
-    
+
     // Common Turkish word fixes - most specific first
     'emniyet kaski': 'emniyet kaskı',
     'koruyucu gozluk': 'koruyucu gözlük',
@@ -53,7 +53,7 @@ void main() async {
     'kimyasal dayanikli eldiven': 'kimyasal dayanıklı eldiven',
     'guvenlik halati': 'güvenlik halatı',
     'guvenlik kemeri tutturma noktasi': 'güvenlik kemeri tutturma noktası',
-    
+
     'uyari isareti': 'uyarı işareti',
     'dikkat isareti': 'dikkat işareti',
     'tehlike isareti': 'tehlike işareti',
@@ -68,7 +68,7 @@ void main() async {
     'toplanma noktasi': 'toplanma noktası',
     'tehlikeli atik': 'tehlikeli atık',
     'asindirici madde': 'aşındırıcı madde',
-    
+
     'yangin tehlikesi': 'yangın tehlikesi',
     'kimyasal dokulme': 'kimyasal dökülme',
     'takilma tehlikesi': 'takılma tehlikesi',
@@ -80,7 +80,7 @@ void main() async {
     'sicak yuzey': 'sıcak yüzey',
     'gurultu maruziyeti': 'gürültü maruziyeti',
     'titresim tehlikesi': 'titreşim tehlikesi',
-    
+
     'cekic': 'çekiç',
     'allen anahtari': 'allen anahtarı',
     'duz tornavida': 'düz tornavida',
@@ -88,7 +88,7 @@ void main() async {
     'maket bicagi': 'maket bıçağı',
     'serit metre': 'şerit metre',
     'ege': 'eğe',
-    
+
     'gunluk kayit defteri': 'günlük kayıt defteri',
     'is emri': 'iş emri',
     'bakim el kitabi': 'bakım el kitabı',
@@ -99,7 +99,7 @@ void main() async {
     'egitim kaydi': 'eğitim kaydı',
     'ucusa elverislilik direktifi': 'uçuşa elverişlilik direktifi',
     'duzeltici faaliyet': 'düzeltici faaliyet',
-    
+
     'isyeri guvenligi': 'işyeri güvenliği',
     'yangin onlemleri': 'yangın önlemleri',
     'acil durum irtibatlari': 'acil durum irtibatları',
@@ -113,7 +113,7 @@ void main() async {
     'elle tasima': 'elle taşıma',
     'gaz tupleri': 'gaz tüpleri',
     'yangin yonetmelikleri': 'yangın yönetmelikleri',
-    
+
     'alet bakimi': 'alet bakımı',
     'alet kontrolu': 'alet kontrolü',
     'alet kullanimi': 'alet kullanımı',
@@ -126,7 +126,7 @@ void main() async {
     'ekipman kullanimi': 'ekipman kullanımı',
     'tezgah bakimi': 'tezgah bakımı',
     'elektrikli alet guvenligi': 'elektrikli alet güvenliği',
-    
+
     'malzeme tasima': 'malzeme taşıma',
     'malzeme guvenligi': 'malzeme güvenliği',
     'atolye deposu': 'atölye deposu',
@@ -141,7 +141,7 @@ void main() async {
     'yanici malzemeler': 'yanıcı malzemeler',
     'malzeme envanter yonetimi': 'malzeme envanter yönetimi',
     'malzeme tasima guvenligi': 'malzeme taşıma güvenliği',
-    
+
     'kelepce': 'kelepçe',
     'taslama tezgahi': 'taşlama tezgahı',
     'taslama diski': 'taşlama diski',
@@ -155,7 +155,7 @@ void main() async {
     'duz torpu': 'düz törpü',
     'yuvarlak torpu': 'yuvarlak törpü',
     'sogutucu': 'soğutucu',
-    
+
     'akim olcumu': 'akım ölçümü',
     'gerilim olcumu': 'gerilim ölçümü',
     'transformator metreleri': 'transformatör metreleri',
@@ -166,13 +166,14 @@ void main() async {
     'cift bobinli metreler': 'çift bobinli metreler',
     'aku testi': 'akü testi',
     'baglanti ve topraklama testleri': 'bağlantı ve topraklama testleri',
-    
+
     'teknik cizimler': 'teknik çizimler',
     'muhendislik standartlari': 'mühendislik standartları',
     'kesit gorunumleri': 'kesit görünümleri',
     'malzeme ozellikleri': 'malzeme özellikleri',
     'cizim tanimlamasi': 'çizim tanımlaması',
-    'geometrik boyutlandirma ve tolerans': 'geometrik boyutlandırma ve tolerans',
+    'geometrik boyutlandirma ve tolerans':
+        'geometrik boyutlandırma ve tolerans',
     'eskiz cizimi': 'eskiz çizimi',
     'sematikler': 'şematikler',
     'montaj diyagramlari': 'montaj diyagramları',
@@ -182,7 +183,7 @@ void main() async {
     'uluslararasi standartlar': 'uluslararası standartlar',
     'mekanik cizimler': 'mekanik çizimler',
     'tasarim cizimleri': 'tasarım çizimleri',
-    
+
     'percinleme teknikleri': 'perçinleme teknikleri',
     'dolu percinler': 'dolu perçinler',
     'percin turleri': 'perçin türleri',
@@ -204,7 +205,7 @@ void main() async {
     'havsa basli percinler': 'havşa başlı perçinler',
     'percin basi turleri': 'perçin başı türleri',
     'percinleme prosedurleri': 'perçinleme prosedürleri',
-    
+
     'bilyali yataklar': 'bilyalı yataklar',
     'makarali yataklar': 'makaralı yataklar',
     'yatak turleri': 'yatak türleri',
@@ -222,7 +223,7 @@ void main() async {
     'yatak bakimi': 'yatak bakımı',
     'yatak degisimi': 'yatak değişimi',
     'yatak toleranslari': 'yatak toleransları',
-    
+
     'sert lehim yontemleri': 'sert lehim yöntemleri',
     'yumusak lehimleme': 'yumuşak lehimleme',
     'gumus lehimleme': 'gümüş lehimleme',
@@ -236,7 +237,7 @@ void main() async {
     'yapistirici ile birlestirme': 'yapıştırıcı ile birleştirme',
     'kaynak guvenlik ekipmani': 'kaynak güvenlik ekipmanı',
     'yangin riskleri': 'yangın riskleri',
-    
+
     'sokme teknikleri': 'sökme teknikleri',
     'muayene yontemleri': 'muayene yöntemleri',
     'onarim prosedurleri': 'onarım prosedürleri',
@@ -254,7 +255,7 @@ void main() async {
     'montaj standartlari': 'montaj standartları',
     'muayene standartlari': 'muayene standartları',
     'baglanti elemani montaji': 'bağlantı elemanı montajı',
-    
+
     'govde': 'gövde',
     'kuyruk takimi': 'kuyruk takımı',
     'stabilizor': 'stabilizör',
@@ -266,7 +267,7 @@ void main() async {
     'burun takimi': 'burun takımı',
     'ana takimi': 'ana takımı',
     'motor yuvasi': 'motor yuvası',
-    
+
     'hidrolik sivi': 'hidrolik sıvı',
     'hidrolik aktuator': 'hidrolik aktüatör',
     'basinc gostergesi': 'basınç göstergesi',
@@ -274,7 +275,7 @@ void main() async {
     'guc paketi': 'güç paketi',
     'basinc tahliye valfi': 'basınç tahliye valfi',
     'cek valf': 'çek valf',
-    
+
     'jenerator': 'jeneratör',
     'transformator': 'transformatör',
     'invertor': 'invertör',
@@ -286,7 +287,7 @@ void main() async {
     'yuk atma': 'yük atma',
     'harici guc': 'harici güç',
     'APU jeneratori': 'APU jeneratörü',
-    
+
     'yakit tanki': 'yakıt tankı',
     'yakit pompasi': 'yakıt pompası',
     'yakit filtresi': 'yakıt filtresi',
@@ -302,7 +303,7 @@ void main() async {
     'yakit isitici': 'yakıt ısıtıcı',
     'su ayirici': 'su ayırıcı',
     'yakit bosaltma': 'yakıt boşaltma',
-    
+
     'kanama havasi': 'kanama havası',
     'pnomatik valf': 'pnömatik valf',
     'basinlandirma': 'basınlandırma',
@@ -317,7 +318,7 @@ void main() async {
     'APU kanamasi': 'APU kanaması',
     'kanat buz onleme': 'kanat buz önleme',
     'yagmur itici': 'yağmur itici',
-    
+
     'trim kanati': 'trim kanadı',
     'ucus bilgisayari': 'uçuş bilgisayarı',
     'it-cek cubugu': 'it-çek çubuğu',
@@ -327,7 +328,7 @@ void main() async {
     'kumanda sarsici': 'kumanda sarsıcı',
     'sapma sondurucusu': 'sapma söndürücüsü',
     'stol korumasi': 'stol koruması',
-    
+
     'hizmet disi etiketi': 'hizmet dışı etiketi',
     'kilit baglamasi': 'kilit bağlaması',
     'sifir enerji durumu': 'sıfır enerji durumu',
@@ -335,7 +336,7 @@ void main() async {
     'vardiya degisimi': 'vardiya değişimi',
     'kaldir proseduru': 'kaldır prosedürü',
     'enerji kaynagi': 'enerji kaynağı',
-    
+
     'giris izni': 'giriş izni',
     'havalandirma': 'havalandırma',
     'yanici gaz': 'yanıcı gaz',
@@ -346,7 +347,7 @@ void main() async {
     'acil cikarma': 'acil çıkarma',
     'geri cekim sistemi': 'geri çekim sistemi',
     'hava monitoru': 'hava monitörü',
-    
+
     'dusme tutucu': 'düşme tutucu',
     'guvenlik kemeri': 'güvenlik kemeri',
     'baglanti noktasi': 'bağlantı noktası',
@@ -361,7 +362,7 @@ void main() async {
     'sirt halkasi': 'sırt halkası',
     'kurtarma plani': 'kurtarma planı',
     'yetkili kisi': 'yetkili kişi',
-    
+
     'sicak calisma izni': 'sıcak çalışma izni',
     'yangin nobeti': 'yangın nöbeti',
     'kivilcim kontrolu': 'kıvılcım kontrolü',
@@ -373,7 +374,7 @@ void main() async {
     'tup ayirma': 'tüp ayırma',
     'is sonrasi muayene': 'iş sonrası muayene',
     'yangin nobeti suresi': 'yangın nöbeti süresi',
-    
+
     'malzeme guvenlik formu': 'malzeme güvenlik formu',
     'tehlike sembolu': 'tehlike sembolü',
     'havalandirma gereksinimi': 'havalandırma gereksinimi',
@@ -383,7 +384,7 @@ void main() async {
     'kimyasal atik': 'kimyasal atık',
     'ilk yardim onlemleri': 'ilk yardım önlemleri',
     'acil dus': 'acil duş',
-    
+
     'elektrik carpmasi': 'elektrik çarpması',
     'canli kablo': 'canlı kablo',
     'devre test cihazi': 'devre test cihazı',
@@ -394,7 +395,7 @@ void main() async {
     'elektrik panosu guvenligi': 'elektrik panosu güvenliği',
     'dogrulama cihazi': 'doğrulama cihazı',
     'sinirlar': 'sınırlar',
-    
+
     'tahliye plani': 'tahliye planı',
     'kisi sayimi': 'kişi sayımı',
     'tahliye tatbikati': 'tahliye tatbikatı',
@@ -403,7 +404,7 @@ void main() async {
     'merdiven boslugu': 'merdiven boşluğu',
     'yeniden giris proseduru': 'yeniden giriş prosedürü',
     'ozel ihtiyac tahliyesi': 'özel ihtiyaç tahliyesi',
-    
+
     'PASS teknigi': 'PASS tekniği',
     'pimi cek': 'pimi çek',
     'kolu sik': 'kolu sık',
@@ -416,7 +417,7 @@ void main() async {
     'yangin bastirma sistemi': 'yangın bastırma sistemi',
     'yangin sorusturmasi': 'yangın soruşturması',
     'yangin hasar degerlendirmesi': 'yangın hasar değerlendirmesi',
-    
+
     'tibbi acil durum': 'tıbbi acil durum',
     'ilk mudahaleci': 'ilk müdahaleci',
     'yasam belirtileri': 'yaşam belirtileri',
@@ -428,7 +429,7 @@ void main() async {
     'hareketsizlestirme': 'hareketsizleştirme',
     'tibbi transport': 'tıbbi transport',
     'triaj': 'triyaj',
-    
+
     'dokuntu mudahalesi': 'döküntü müdahalesi',
     'cevirme': 'çevirme',
     'notralize': 'nötralize',
@@ -440,7 +441,7 @@ void main() async {
     'bagimsiz solunum cihazi': 'bağımsız solunum cihazı',
     'kimyasala direncli': 'kimyasala dirençli',
     'acil mudahale kilavuzu': 'acil müdahale kılavuzu',
-    
+
     'acil inis': 'acil iniş',
     'cakisma kurtarma': 'çakışma kurtarma',
     'itfaiye araci': 'itfaiye aracı',
@@ -455,7 +456,7 @@ void main() async {
     'olay komutani': 'olay komutanı',
     'karsilikli yardim': 'karşılıklı yardım',
     'havaalani acil plan': 'havaalanı acil plan',
-    
+
     'mayday cagrisi': 'mayday çağrısı',
     'pan-pan cagrisi': 'pan-pan çağrısı',
     'telsiz iletisimi': 'telsiz iletişimi',
@@ -464,7 +465,7 @@ void main() async {
     'el isareti': 'el işareti',
     'acil kod sozcukleri': 'acil kod sözcükleri',
     'yedek iletisim': 'yedek iletişim',
-    
+
     'ilk yardim': 'ilk yardım',
     'yanik': 'yanık',
     'bilincsizlik': 'bilinçsizlik',
@@ -475,9 +476,10 @@ void main() async {
     'sok': 'şok',
     'kalp durmasi': 'kalp durması',
     'yari yuzukoyun pozisyon': 'yarı yüzükoyun pozisyon',
-    'tehlike-yanit-yardim-hava yolu-nefes-dolasim': 'tehlike-yanıt-yardım-hava yolu-nefes-dolaşım',
+    'tehlike-yanit-yardim-hava yolu-nefes-dolasim':
+        'tehlike-yanıt-yardım-hava yolu-nefes-dolaşım',
     'canlandirma': 'canlandırma',
-    
+
     'havacilik yakiti': 'havacılık yakıtı',
     'gazyagi': 'gazyağı',
     'yakit ikmali': 'yakıt ikmali',
@@ -489,7 +491,7 @@ void main() async {
     'yakit kirliligi': 'yakıt kirliliği',
     'topraklama kayisi': 'topraklama kayışı',
     'anti-statik katki': 'anti-statik katkı',
-    
+
     'kopuklu sondurucu': 'köpüklü söndürücü',
     'CO2 sondurucu': 'CO2 söndürücü',
     'kuru tozlu sondurucu': 'kuru tozlu söndürücü',
@@ -503,7 +505,7 @@ void main() async {
     'sondurucu muayenesi': 'söndürücü muayenesi',
     'yangin tatbikati': 'yangın tatbikatı',
     'yangin ekibi': 'yangın ekibi',
-    
+
     'cekilme': 'çekilme',
     'park yonlendirme': 'park yönlendirme',
     'cekme cubugu': 'çekme çubuğu',
@@ -514,7 +516,7 @@ void main() async {
     'buz cozme araci': 'buz çözme aracı',
     'yakit kamyonu': 'yakıt kamyonu',
     'koprulu binis': 'köprülü biniş',
-    
+
     'bekleme noktasi': 'bekleme noktası',
     'yer kontrolu': 'yer kontrolü',
     'kanat gozcusu': 'kanat gözcüsü',
@@ -522,7 +524,7 @@ void main() async {
     'fren birakma': 'fren bırakma',
     'motor calistirma izni': 'motor çalıştırma izni',
     'taksi talimatlari': 'taksi talimatları',
-    
+
     'ucus guverte': 'uçuş güverte',
     'gosterge paneli': 'gösterge paneli',
     'dumen pedallari': 'dümen pedalları',
@@ -532,16 +534,16 @@ void main() async {
     'motor gostergeleri': 'motor göstergeleri',
     'ucus kontrol unitesi': 'uçuş kontrol ünitesi',
     'yedek gostergeler': 'yedek göstergeler',
-    
+
     // UNITE fixes
     'UNITE': 'ÜNİTE',
   };
-  
+
   // Apply all replacements
   replacements.forEach((old, newVal) {
     content = content.replaceAll(old, newVal);
   });
-  
+
   await file.writeAsString(content);
   // Türkçe karakter düzeltmeleri tamamlandı!
 }

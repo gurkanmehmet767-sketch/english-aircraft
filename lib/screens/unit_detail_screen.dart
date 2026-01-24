@@ -126,12 +126,12 @@ class _UnitDetailScreenState extends State<UnitDetailScreen> {
                       final lesson = widget.lessons[index];
                       final lessonKey = lesson.key;
                       final lessonData = lesson.value;
-                      
+
                       final isCompleted =
                           provider.completedLessons.contains(lessonKey);
                       final isLocked = index > 0 &&
-                          !provider.completedLessons.contains(
-                              widget.lessons[index - 1].key);
+                          !provider.completedLessons
+                              .contains(widget.lessons[index - 1].key);
 
                       return _buildLessonNode(
                         context,
@@ -192,9 +192,8 @@ class _UnitDetailScreenState extends State<UnitDetailScreen> {
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
         child: Row(
-          mainAxisAlignment: isLeftAligned
-              ? MainAxisAlignment.start
-              : MainAxisAlignment.end,
+          mainAxisAlignment:
+              isLeftAligned ? MainAxisAlignment.start : MainAxisAlignment.end,
           children: [
             Column(
               children: [

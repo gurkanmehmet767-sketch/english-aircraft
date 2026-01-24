@@ -6,7 +6,7 @@ bool _isSpeaking = false;
 
 void speakText(String text, {double rate = 0.9}) {
   final synth = html.window.speechSynthesis;
-  
+
   // Toggle mantığı: konuşuyorsa durdur, durmuşsa konuş
   if (_isSpeaking) {
     synth?.cancel();
@@ -16,12 +16,12 @@ void speakText(String text, {double rate = 0.9}) {
     final utterance = html.SpeechSynthesisUtterance(text);
     utterance.lang = 'en-US';
     utterance.rate = rate; // Kullanıcının belirlediği hız
-    
+
     // Konuşma bitince flag'i sıfırla
     utterance.onEnd.listen((_) {
       _isSpeaking = false;
     });
-    
+
     synth?.speak(utterance);
     _isSpeaking = true;
   }

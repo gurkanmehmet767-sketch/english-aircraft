@@ -48,7 +48,8 @@ class _LegalScreenState extends State<LegalScreen> {
       });
     } catch (e) {
       setState(() {
-        _content = '# Hata\n\nDokuman yüklenirken bir hata oluştu.\n\nLütfen daha sonra tekrar deneyin.';
+        _content =
+            '# Hata\n\nDokuman yüklenirken bir hata oluştu.\n\nLütfen daha sonra tekrar deneyin.';
         _isLoading = false;
       });
     }

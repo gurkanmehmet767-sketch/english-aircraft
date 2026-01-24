@@ -23,10 +23,12 @@ class MistakesScreen extends StatelessWidget {
                 children: [
                   const Text('🎉', style: TextStyle(fontSize: 64)),
                   const SizedBox(height: 16),
-                  Text(provider.getString('no_mistakes'), 
-                    style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                  Text(provider.getString('no_mistakes'),
+                      style: const TextStyle(
+                          fontSize: 24, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
-                  Text(provider.getString('continue_lessons'), style: TextStyle(color: Colors.grey[600])),
+                  Text(provider.getString('continue_lessons'),
+                      style: TextStyle(color: Colors.grey[600])),
                 ],
               ),
             )
@@ -39,11 +41,15 @@ class MistakesScreen extends StatelessWidget {
                   color: Colors.red.withValues(alpha: 0.1),
                   child: Column(
                     children: [
-                      Text('${mistakes.length} ${provider.getString('mistakes_count')}', 
-                        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.red)),
+                      Text(
+                          '${mistakes.length} ${provider.getString('mistakes_count')}',
+                          style: const TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.red)),
                       const SizedBox(height: 8),
                       Text(provider.getString('check_mistakes'),
-                        style: const TextStyle(color: Colors.grey)),
+                          style: const TextStyle(color: Colors.grey)),
                     ],
                   ),
                 ),
@@ -53,23 +59,27 @@ class MistakesScreen extends StatelessWidget {
                     itemCount: mistakes.length,
                     itemBuilder: (context, index) {
                       final mistake = mistakes[index];
-                      
+
                       return Card(
-                        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 8),
                         child: ListTile(
                           leading: const CircleAvatar(
                             backgroundColor: Colors.red,
                             child: Text('❌', style: TextStyle(fontSize: 20)),
                           ),
-                          title: Text(mistake['question'] ?? '', 
-                            style: const TextStyle(fontWeight: FontWeight.bold)),
+                          title: Text(mistake['question'] ?? '',
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.bold)),
                           subtitle: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('${provider.getString('your_answer')}: ${mistake['yourAnswer']}', 
-                                style: const TextStyle(color: Colors.red)),
-                              Text('${provider.getString('correct_answer')}: ${mistake['correctAnswer']}', 
-                                style: const TextStyle(color: Colors.green)),
+                              Text(
+                                  '${provider.getString('your_answer')}: ${mistake['yourAnswer']}',
+                                  style: const TextStyle(color: Colors.red)),
+                              Text(
+                                  '${provider.getString('correct_answer')}: ${mistake['correctAnswer']}',
+                                  style: const TextStyle(color: Colors.green)),
                             ],
                           ),
                           trailing: IconButton(

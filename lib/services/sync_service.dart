@@ -1,8 +1,8 @@
 /// SyncService - Manages offline-first data synchronization
-/// 
+///
 /// Handles synchronization of local data to Firebase when connectivity is available.
 /// Implements a queue-based system for reliable offline-to-online data sync.
-/// 
+///
 /// Features:
 /// - Automatic connectivity detection
 /// - Queue-based sync for reliability
@@ -18,14 +18,14 @@ import 'local_storage_service.dart';
 import 'firestore_service.dart';
 
 /// Manages data synchronization between local storage and Firebase.
-/// 
+///
 /// This service monitors connectivity and automatically syncs queued changes
 /// when the device comes online. On web, assumes always online.
 class SyncService {
   final LocalStorageService _localStorage = LocalStorageService();
   final FirestoreService _firestore = FirestoreService();
   final Connectivity _connectivity = Connectivity();
-  
+
   // Singleton pattern
   static final SyncService _instance = SyncService._internal();
   factory SyncService() => _instance;
@@ -41,11 +41,11 @@ class SyncService {
     if (kIsWeb) {
       return true;
     }
-    
+
     final result = await _connectivity.checkConnectivity();
-    return result == ConnectivityResult.wifi || 
-           result == ConnectivityResult.mobile ||
-           result == ConnectivityResult.ethernet;
+    return result == ConnectivityResult.wifi ||
+        result == ConnectivityResult.mobile ||
+        result == ConnectivityResult.ethernet;
   }
 
   // Get connectivity stream
@@ -55,9 +55,9 @@ class SyncService {
       return Stream.value(true);
     }
     return _connectivity.onConnectivityChanged.map((result) {
-      return result == ConnectivityResult.wifi || 
-             result == ConnectivityResult.mobile ||
-             result == ConnectivityResult.ethernet;
+      return result == ConnectivityResult.wifi ||
+          result == ConnectivityResult.mobile ||
+          result == ConnectivityResult.ethernet;
     });
   }
 
@@ -72,12 +72,13 @@ class SyncService {
       });
       return;
     }
-    
-    _connectivitySubscription = _connectivity.onConnectivityChanged.listen((result) async {
-      final online = result == ConnectivityResult.wifi || 
-                     result == ConnectivityResult.mobile ||
-                     result == ConnectivityResult.ethernet;
-      
+
+    _connectivitySubscription =
+        _connectivity.onConnectivityChanged.listen((result) async {
+      final online = result == ConnectivityResult.wifi ||
+          result == ConnectivityResult.mobile ||
+          result == ConnectivityResult.ethernet;
+
       if (online && !_isSyncing) {
         await processSyncQueue();
       }
@@ -130,7 +131,7 @@ class SyncService {
 
       // Clear sync queue after successful sync
       await _localStorage.clearSyncQueue();
-      
+
       _isSyncing = false;
       return SyncResult.success('Sync completed successfully');
     } catch (e) {
@@ -140,7 +141,8 @@ class SyncService {
   }
 
   // Process individual sync item
-  Future<void> _processSyncItem(Map<String, dynamic> item, UserModel localUser) async {
+  Future<void> _processSyncItem(
+      Map<String, dynamic> item, UserModel localUser) async {
     final type = item['type'] as String;
 
     switch (type) {
@@ -162,7 +164,8 @@ class SyncService {
   }
 
   // Sync user creation to Firebase
-  Future<void> _syncUserCreation(Map<String, dynamic> item, UserModel localUser) async {
+  Future<void> _syncUserCreation(
+      Map<String, dynamic> item, UserModel localUser) async {
     try {
       final email = item['email'] as String;
       final username = item['username'] as String;
@@ -183,7 +186,7 @@ class SyncService {
       // Note: We can't use the hashed password directly with Firebase Auth
       // For offline-first apps, we'll create the user without password
       // and user will need to set password when online
-      
+
       // For now, we'll just create the Firestore document
       // with a flag indicating pending Firebase Auth creation
       final updatedUser = localUser.copyWith(
@@ -204,7 +207,7 @@ class SyncService {
   // Add item to sync queue
   Future<void> addToQueue(Map<String, dynamic> item) async {
     await _localStorage.addToSyncQueue(item);
-    
+
     // Try to sync immediately if online
     if (await isOnline()) {
       await processSyncQueue();

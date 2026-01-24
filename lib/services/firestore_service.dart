@@ -30,7 +30,7 @@ class FirestoreService {
         .where('email', isEqualTo: email.toLowerCase())
         .limit(1)
         .get();
-    
+
     if (query.docs.isEmpty) return null;
     return UserModel.fromJson(query.docs.first.data());
   }
@@ -42,7 +42,7 @@ class FirestoreService {
         .where('username', isEqualTo: username.toLowerCase())
         .limit(1)
         .get();
-    
+
     return query.docs.isNotEmpty;
   }
 
@@ -52,14 +52,16 @@ class FirestoreService {
   }
 
   // Update user progress
-  Future<void> updateUserProgress(String uid, Map<String, dynamic> progress) async {
+  Future<void> updateUserProgress(
+      String uid, Map<String, dynamic> progress) async {
     await _firestore.collection('users').doc(uid).update(progress);
   }
 
   // ===== FRIENDS OPERATIONS =====
 
   // Send friend request
-  Future<void> sendFriendRequest(String fromUid, String toUid, String fromUsername, String toUsername) async {
+  Future<void> sendFriendRequest(String fromUid, String toUid,
+      String fromUsername, String toUsername) async {
     final requestId = '${fromUid}_$toUid';
     final request = FriendRequest(
       id: requestId,
@@ -71,18 +73,25 @@ class FirestoreService {
       createdAt: DateTime.now(),
     );
 
-    await _firestore.collection('friendRequests').doc(requestId).set(request.toJson());
+    await _firestore
+        .collection('friendRequests')
+        .doc(requestId)
+        .set(request.toJson());
   }
 
   // Accept friend request
   Future<void> acceptFriendRequest(String requestId) async {
-    final requestDoc = await _firestore.collection('friendRequests').doc(requestId).get();
+    final requestDoc =
+        await _firestore.collection('friendRequests').doc(requestId).get();
     if (!requestDoc.exists) return;
 
     final request = FriendRequest.fromJson(requestDoc.data()!);
 
     // Update request status
-    await _firestore.collection('friendRequests').doc(requestId).update({'status': 'accepted'});
+    await _firestore
+        .collection('friendRequests')
+        .doc(requestId)
+        .update({'status': 'accepted'});
 
     // Add to each user's friends list
     await _firestore.collection('users').doc(request.fromUserId).update({
@@ -96,7 +105,10 @@ class FirestoreService {
 
   // Reject friend request
   Future<void> rejectFriendRequest(String requestId) async {
-    await _firestore.collection('friendRequests').doc(requestId).update({'status': 'rejected'});
+    await _firestore
+        .collection('friendRequests')
+        .doc(requestId)
+        .update({'status': 'rejected'});
   }
 
   // Get friend requests (received)
@@ -120,7 +132,9 @@ class FirestoreService {
         .where(FieldPath.documentId, whereIn: user.friendIds)
         .get();
 
-    return friendsQuery.docs.map((doc) => UserModel.fromJson(doc.data())).toList();
+    return friendsQuery.docs
+        .map((doc) => UserModel.fromJson(doc.data()))
+        .toList();
   }
 
   // Search users by username
@@ -134,7 +148,9 @@ class FirestoreService {
         .limit(20)
         .get();
 
-    return usersQuery.docs.map((doc) => UserModel.fromJson(doc.data())).toList();
+    return usersQuery.docs
+        .map((doc) => UserModel.fromJson(doc.data()))
+        .toList();
   }
 
   // Remove friend
@@ -151,7 +167,8 @@ class FirestoreService {
   // ===== LEADERBOARD OPERATIONS =====
 
   // Get global leaderboard
-  Future<List<LeaderboardEntry>> getGlobalLeaderboard(String league, {int limit = 50}) async {
+  Future<List<LeaderboardEntry>> getGlobalLeaderboard(String league,
+      {int limit = 50}) async {
     final query = await _firestore
         .collection('leaderboards')
         .doc('global')
@@ -167,7 +184,8 @@ class FirestoreService {
   }
 
   // Get friends leaderboard
-  Future<List<LeaderboardEntry>> getFriendsLeaderboard(String uid, {int limit = 50}) async {
+  Future<List<LeaderboardEntry>> getFriendsLeaderboard(String uid,
+      {int limit = 50}) async {
     final friends = await getFriends(uid);
     if (friends.isEmpty) return [];
 
@@ -181,23 +199,29 @@ class FirestoreService {
     friends.sort((a, b) => b.xp.compareTo(a.xp));
 
     // Convert to leaderboard entries
-    return friends.asMap().entries.map((entry) {
-      final rank = entry.key + 1;
-      final user = entry.value;
-      return LeaderboardEntry(
-        uid: user.uid,
-        username: user.username,
-        photoURL: user.photoURL,
-        xp: user.xp,
-        league: user.league,
-        rank: rank,
-        updatedAt: user.lastActive,
-      );
-    }).take(limit).toList();
+    return friends
+        .asMap()
+        .entries
+        .map((entry) {
+          final rank = entry.key + 1;
+          final user = entry.value;
+          return LeaderboardEntry(
+            uid: user.uid,
+            username: user.username,
+            photoURL: user.photoURL,
+            xp: user.xp,
+            league: user.league,
+            rank: rank,
+            updatedAt: user.lastActive,
+          );
+        })
+        .take(limit)
+        .toList();
   }
 
   // Update leaderboard
-  Future<void> updateLeaderboard(String uid, String username, int xp, String league) async {
+  Future<void> updateLeaderboard(
+      String uid, String username, int xp, String league) async {
     final data = {
       'uid': uid,
       'username': username,

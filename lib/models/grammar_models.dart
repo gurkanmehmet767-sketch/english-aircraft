@@ -3,8 +3,8 @@
 
 /// Tek bir gramer cümlesi modeli
 class GrammarSentence {
-  final String text;         // İngilizce cümle
-  final String translation;  // Türkçe çeviri
+  final String text; // İngilizce cümle
+  final String translation; // Türkçe çeviri
 
   const GrammarSentence({
     required this.text,
@@ -14,10 +14,10 @@ class GrammarSentence {
 
 /// Gramer alıştırması modeli (Quiz tarzı sorular için)
 class GrammarExercise {
-  final String question;        // Soru metni (boşluk doldurma vb.)
-  final List<String> options;   // Seçenekler listesi
-  final int correctIndex;       // Doğru cevabın indeksi
-  final String explanation;     // Açıklama (neden bu cevap doğru)
+  final String question; // Soru metni (boşluk doldurma vb.)
+  final List<String> options; // Seçenekler listesi
+  final int correctIndex; // Doğru cevabın indeksi
+  final String explanation; // Açıklama (neden bu cevap doğru)
 
   const GrammarExercise({
     required this.question,
@@ -29,13 +29,13 @@ class GrammarExercise {
 
 /// Gramer konusu modeli
 class GrammarTopic {
-  final String letter;       // Konu harfi (A, B, C1, C2, vb.)
-  final String title;        // Konu başlığı (İngilizce)
-  final String titleKey;     // Çeviri anahtarı
-  final String description;  // Konu açıklaması
-  final String icon;         // Emoji ikonu
-  final List<GrammarSentence>? sentences;   // Cümle listesi (opsiyonel)
-  final List<GrammarExercise>? exercises;   // Alıştırma listesi (opsiyonel)
+  final String letter; // Konu harfi (A, B, C1, C2, vb.)
+  final String title; // Konu başlığı (İngilizce)
+  final String titleKey; // Çeviri anahtarı
+  final String description; // Konu açıklaması
+  final String icon; // Emoji ikonu
+  final List<GrammarSentence>? sentences; // Cümle listesi (opsiyonel)
+  final List<GrammarExercise>? exercises; // Alıştırma listesi (opsiyonel)
 
   const GrammarTopic({
     required this.letter,

@@ -27,7 +27,9 @@ class WelcomeScreen extends StatelessWidget {
           ),
         ),
         child: SafeArea(
-          child: isMobile ? _buildMobileLayout(context, provider) : _buildDesktopLayout(context, provider),
+          child: isMobile
+              ? _buildMobileLayout(context, provider)
+              : _buildDesktopLayout(context, provider),
         ),
       ),
     );
@@ -143,11 +145,11 @@ class WelcomeScreen extends StatelessWidget {
                           Image.asset(
                             'assets/images/sky_mascot_hero.webp',
                             fit: BoxFit.contain,
-                            errorBuilder: (context, error, stackTrace) => 
-                              Text('👽✈️\n🌍📚🚀', 
-                                style: TextStyle(fontSize: 100, height: 1.5),
-                                textAlign: TextAlign.center,
-                              ),
+                            errorBuilder: (context, error, stackTrace) => Text(
+                              '👽✈️\n🌍📚🚀',
+                              style: TextStyle(fontSize: 100, height: 1.5),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                         ],
                       ),
@@ -175,7 +177,8 @@ class WelcomeScreen extends StatelessWidget {
                                   color: Color(0xFF58CC02),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Text('👽', style: TextStyle(fontSize: 36)),
+                                child:
+                                    Text('👽', style: TextStyle(fontSize: 36)),
                               ),
                               SizedBox(width: 12),
                               Container(
@@ -184,12 +187,13 @@ class WelcomeScreen extends StatelessWidget {
                                   color: Color(0xFF58CC02),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Text('✈️', style: TextStyle(fontSize: 36)),
+                                child:
+                                    Text('✈️', style: TextStyle(fontSize: 36)),
                               ),
                             ],
                           ),
                           SizedBox(height: 24),
-                          
+
                           Text(
                             'Havacılık İngilizcesi öğrenmenin',
                             style: TextStyle(
@@ -211,9 +215,9 @@ class WelcomeScreen extends StatelessWidget {
                             ),
                             textAlign: TextAlign.center,
                           ),
-                          
+
                           SizedBox(height: 48),
-                          
+
                           // Start button with gradient
                           Container(
                             decoration: BoxDecoration(
@@ -223,7 +227,8 @@ class WelcomeScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(16),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Color(0xFFFF9800).withValues(alpha: 0.3),
+                                  color:
+                                      Color(0xFFFF9800).withValues(alpha: 0.3),
                                   blurRadius: 16,
                                   offset: Offset(0, 8),
                                 ),
@@ -233,7 +238,8 @@ class WelcomeScreen extends StatelessWidget {
                               onPressed: () {
                                 Navigator.pushReplacement(
                                   context,
-                                  MaterialPageRoute(builder: (_) => const AuthScreen()),
+                                  MaterialPageRoute(
+                                      builder: (_) => const AuthScreen()),
                                 );
                               },
                               style: ElevatedButton.styleFrom(
@@ -257,26 +263,30 @@ class WelcomeScreen extends StatelessWidget {
                                     ),
                                   ),
                                   SizedBox(width: 8),
-                                  Icon(Icons.rocket_launch, size: 24, color: Colors.black),
+                                  Icon(Icons.rocket_launch,
+                                      size: 24, color: Colors.black),
                                 ],
                               ),
                             ),
                           ),
-                          
+
                           SizedBox(height: 16),
-                          
+
                           // Already have account button
                           OutlinedButton(
                             onPressed: () {
                               Navigator.pushReplacement(
                                 context,
-                                MaterialPageRoute(builder: (_) => const AuthScreen(showLogin: true)),
+                                MaterialPageRoute(
+                                    builder: (_) =>
+                                        const AuthScreen(showLogin: true)),
                               );
                             },
                             style: OutlinedButton.styleFrom(
                               foregroundColor: Color(0xFF1CB0F6),
                               padding: EdgeInsets.symmetric(vertical: 20),
-                              side: BorderSide(color: Color(0xFFE5E5E5), width: 2),
+                              side: BorderSide(
+                                  color: Color(0xFFE5E5E5), width: 2),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16),
                               ),
@@ -290,15 +300,16 @@ class WelcomeScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          
+
                           SizedBox(height: 16),
-                          
+
                           // Guest mode button
                           TextButton(
                             onPressed: () {
                               Navigator.pushReplacement(
                                 context,
-                                MaterialPageRoute(builder: (_) => const HomeScreen()),
+                                MaterialPageRoute(
+                                    builder: (_) => const HomeScreen()),
                               );
                             },
                             style: TextButton.styleFrom(
@@ -320,9 +331,9 @@ class WelcomeScreen extends StatelessWidget {
                               ],
                             ),
                           ),
-                          
+
                           SizedBox(height: 32),
-                          
+
                           // Features
                           _buildFeature('✅', 'Ücretsiz ve reklamsız'),
                           SizedBox(height: 12),
@@ -445,11 +456,11 @@ class WelcomeScreen extends StatelessWidget {
             child: Image.asset(
               'assets/images/alien_welcome_hero.webp',
               fit: BoxFit.contain,
-              errorBuilder: (context, error, stackTrace) => 
-                Text('🌍📚🚀\n✈️🛩️🌟', 
-                  style: TextStyle(fontSize: 60, height: 1.5),
-                  textAlign: TextAlign.center,
-                ),
+              errorBuilder: (context, error, stackTrace) => Text(
+                '🌍📚🚀\n✈️🛩️🌟',
+                style: TextStyle(fontSize: 60, height: 1.5),
+                textAlign: TextAlign.center,
+              ),
             ),
           ),
 
@@ -482,9 +493,9 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                
+
                 SizedBox(height: 16),
-                
+
                 // Start button
                 Container(
                   decoration: BoxDecoration(
@@ -528,22 +539,24 @@ class WelcomeScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 8),
-                        Icon(Icons.rocket_launch, size: 22, color: Colors.black),
+                        Icon(Icons.rocket_launch,
+                            size: 22, color: Colors.black),
                       ],
                     ),
                   ),
                 ),
-                
+
                 SizedBox(height: 10),
-                
+
                 // Already have account button
                 OutlinedButton(
                   onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (_) => const AuthScreen(showLogin: false)),
-                );
-              },
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => const AuthScreen(showLogin: false)),
+                    );
+                  },
                   style: OutlinedButton.styleFrom(
                     foregroundColor: Color(0xFF1CB0F6),
                     padding: EdgeInsets.symmetric(vertical: 14),
@@ -561,9 +574,9 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                
+
                 SizedBox(height: 10),
-                
+
                 // Guest mode button
                 TextButton(
                   onPressed: () {
@@ -591,9 +604,9 @@ class WelcomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                
+
                 SizedBox(height: 16),
-                
+
                 // Features
                 _buildFeature('✅', 'Ücretsiz ve reklamsız'),
                 SizedBox(height: 6),
@@ -717,7 +730,8 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildLanguageChip(String flag, String name, String local, AppProvider provider) {
+  Widget _buildLanguageChip(
+      String flag, String name, String local, AppProvider provider) {
     return Container(
       margin: EdgeInsets.only(right: 12),
       padding: EdgeInsets.symmetric(horizontal: 8, vertical: 6),

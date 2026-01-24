@@ -3,23 +3,23 @@ class UserModel {
   final String email;
   final String username;
   final String? photoURL;
-  
+
   // Game Stats
   final int xp;
   final int level;
   final String league;
   final int streak;
   final int lives;
-  
+
   // Progress
   final List<String> completedLessons;
   final Map<String, int> masteryLevels;
   final Map<String, dynamic> wordStats;
-  
+
   // Friends
   final List<String> friendIds;
   final List<String> pendingRequestIds;
-  
+
   // Sync
   final bool isSynced;
   final DateTime createdAt;

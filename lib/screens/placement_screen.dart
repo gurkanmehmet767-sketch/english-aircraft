@@ -124,7 +124,8 @@ class _PlacementScreenState extends State<PlacementScreen> {
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
                             color: isSelected
-                                ? (option['color'] as Color).withValues(alpha: 0.3)
+                                ? (option['color'] as Color)
+                                    .withValues(alpha: 0.3)
                                 : Colors.white.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(16),
                             border: Border.all(
@@ -206,7 +207,8 @@ class _PlacementScreenState extends State<PlacementScreen> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: _selectedLevel != null ? _continueWithLevel : null,
+                    onPressed:
+                        _selectedLevel != null ? _continueWithLevel : null,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       foregroundColor: isDark ? Colors.green : Colors.blue,
@@ -214,7 +216,8 @@ class _PlacementScreenState extends State<PlacementScreen> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      disabledBackgroundColor: Colors.white.withValues(alpha: 0.3),
+                      disabledBackgroundColor:
+                          Colors.white.withValues(alpha: 0.3),
                       disabledForegroundColor: Colors.white54,
                     ),
                     child: Text(

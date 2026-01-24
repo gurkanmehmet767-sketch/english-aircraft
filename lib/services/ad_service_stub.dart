@@ -5,7 +5,7 @@ class AdService {
   AdService._internal();
 
   Future<void> initialize() async {}
-  
+
   void loadBannerAd({
     required Function onAdLoaded,
     required Function(dynamic) onAdFailedToLoad,
@@ -28,7 +28,7 @@ class AdService {
   }
 
   void showInterstitialAd({required Function onAdDismissed}) {}
-  
+
   void showRewardedAd({
     required Function onUserEarnedReward,
     required Function onAdDismissed,

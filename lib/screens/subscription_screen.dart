@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_provider.dart';
@@ -23,7 +22,9 @@ class SubscriptionScreen extends StatelessWidget {
           // Arka Plan
           Positioned.fill(
             child: Image.asset(
-              isDark ? 'assets/images/space_bg.webp' : 'assets/images/palm_beach_bg.png',
+              isDark
+                  ? 'assets/images/space_bg.webp'
+                  : 'assets/images/palm_beach_bg.png',
               fit: BoxFit.cover,
             ),
           ),

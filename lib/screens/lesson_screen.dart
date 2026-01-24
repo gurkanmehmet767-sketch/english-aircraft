@@ -11,7 +11,6 @@ import '../data/word_dictionary.dart';
 import '../utils/speech_stub.dart'
     if (dart.library.html) '../utils/speech_web.dart';
 
-
 class LessonScreen extends StatefulWidget {
   final CategoryData category;
 
@@ -50,7 +49,7 @@ class _LessonScreenState extends State<LessonScreen>
   late AnimationController _planeController;
   late Animation<double> _planeAnimation;
   late AnimationController _takeOffController;
-  
+
   // Speech speed control (0.6 = yavaş, 0.9 = normal, 1.2 = hızlı)
   double _speechRate = 0.9;
 
@@ -105,7 +104,7 @@ class _LessonScreenState extends State<LessonScreen>
 
   void _generateQuestions() {
     _questions = [];
-    
+
     // Seçilen dili al
     final provider = Provider.of<AppProvider>(context, listen: false);
     final langCode = provider.targetLanguage;
@@ -113,19 +112,19 @@ class _LessonScreenState extends State<LessonScreen>
     // 1. Get Terms (Need 6) - Çift yönlü sorular oluştur
     final termQuestions = <Map<String, dynamic>>[];
     final terms = List.from(widget.category.terms)..shuffle();
-    
+
     for (var term in terms) {
       // Seçilen dile göre çeviri al
       final translation = term.getTranslation(langCode);
-      
+
       // HER ZAMAN İngilizce soru → Hedef Dil cevap (Türkçe vb.)
       termQuestions.add({
         'type': 'term',
-        'question': term.english,  // İngilizce kelime (soru)
-        'correct': translation,     // Hedef dilde cevap (Türkçe vb.)
+        'question': term.english, // İngilizce kelime (soru)
+        'correct': translation, // Hedef dilde cevap (Türkçe vb.)
         'options': _generateOptions(
-          correct: translation, 
-          langCode: langCode, 
+          correct: translation,
+          langCode: langCode,
           questionInEnglish: true,
           termLevel: term.level,
         ),
@@ -140,7 +139,7 @@ class _LessonScreenState extends State<LessonScreen>
     for (var reading in readings) {
       // Doğru cevabı bul - ünite terimlerinden
       String correctAnswer = reading.correctAnswer;
-      
+
       // Ünite terimlerinde doğru cevabı ara (Türkçe'den başla, sonra diğer diller)
       for (var term in widget.category.terms) {
         // Tam eşleşme kontrolü - Türkçe
@@ -157,24 +156,24 @@ class _LessonScreenState extends State<LessonScreen>
           break;
         }
         // Kısmi eşleşme kontrolü - doğru cevap terim çevirisini içeriyor mu?
-        if (reading.correctAnswer.contains(term.turkish) || 
+        if (reading.correctAnswer.contains(term.turkish) ||
             term.turkish.contains(reading.correctAnswer)) {
           correctAnswer = term.getTranslation(langCode);
           break;
         }
       }
-      
+
       // Eğer eşleşme bulunamadıysa, orijinal cevabı kullan (dil çevirisi yapılmaz)
       // Ancak seçenekler yine de ünite terimlerinden oluşturulacak
-      
+
       // Seçenekleri ünite terimlerinden oluştur
       final readingOptions = _generateOptions(
-        correct: correctAnswer, 
+        correct: correctAnswer,
         langCode: langCode,
-        questionInEnglish: true,  // Reading her zaman İngilizce
+        questionInEnglish: true, // Reading her zaman İngilizce
         termLevel: 'A1',
       );
-      
+
       readingQuestions.add({
         'type': 'reading',
         'passage': reading.passage,
@@ -204,27 +203,28 @@ class _LessonScreenState extends State<LessonScreen>
   }
 
   List<String> _generateOptions({
-    required String correct, 
+    required String correct,
     required String langCode,
     required bool questionInEnglish,
     dynamic termLevel,
   }) {
-    final options = <String>{correct};  // Doğru cevapla başla
-    
+    final options = <String>{correct}; // Doğru cevapla başla
+
     if (questionInEnglish) {
       // İngilizce → Hedef Dil sorusu
       // 1. Önce aynı level'daki kelimelerden al
       final sameLevelTerms = widget.category.terms
-          .where((t) => t.level == termLevel && t.getTranslation(langCode) != correct)
+          .where((t) =>
+              t.level == termLevel && t.getTranslation(langCode) != correct)
           .map((t) => t.getTranslation(langCode))
           .toList();
       sameLevelTerms.shuffle();
-      
+
       for (var term in sameLevelTerms.take(3)) {
         if (options.length >= 4) break;
         options.add(term);
       }
-      
+
       // 2. Yetersizse aynı kategoriden al
       if (options.length < 4) {
         final categoryTerms = widget.category.terms
@@ -232,13 +232,13 @@ class _LessonScreenState extends State<LessonScreen>
             .where((t) => t != correct && !options.contains(t))
             .toList();
         categoryTerms.shuffle();
-        
+
         for (var term in categoryTerms) {
           if (options.length >= 4) break;
           options.add(term);
         }
       }
-      
+
       // 3. Hala yetersizse tüm vocabulary'den al
       if (options.length < 4) {
         final allTerms = <String>[];
@@ -251,7 +251,7 @@ class _LessonScreenState extends State<LessonScreen>
           }
         }
         allTerms.shuffle();
-        
+
         for (var term in allTerms) {
           if (options.length >= 4) break;
           options.add(term);
@@ -265,12 +265,12 @@ class _LessonScreenState extends State<LessonScreen>
           .map((t) => t.english)
           .toList();
       sameLevelTerms.shuffle();
-      
+
       for (var term in sameLevelTerms.take(3)) {
         if (options.length >= 4) break;
         options.add(term);
       }
-      
+
       // 2. Yetersizse aynı kategoriden al
       if (options.length < 4) {
         final categoryTerms = widget.category.terms
@@ -278,13 +278,13 @@ class _LessonScreenState extends State<LessonScreen>
             .where((t) => t != correct && !options.contains(t))
             .toList();
         categoryTerms.shuffle();
-        
+
         for (var term in categoryTerms) {
           if (options.length >= 4) break;
           options.add(term);
         }
       }
-      
+
       // 3. Hala yetersizse tüm vocabulary'den al
       if (options.length < 4) {
         final allTerms = <String>[];
@@ -296,19 +296,19 @@ class _LessonScreenState extends State<LessonScreen>
           }
         }
         allTerms.shuffle();
-        
+
         for (var term in allTerms) {
           if (options.length >= 4) break;
           options.add(term);
         }
       }
     }
-    
+
     // 4 şıktan azsa tekrar ekle (döngülü - son çare)
     while (options.length < 4) {
       options.add(correct); // Aynı cevabı ekle ve shuffle ile karıştır
     }
-    
+
     return options.toList()..shuffle();
   }
 
@@ -347,11 +347,11 @@ class _LessonScreenState extends State<LessonScreen>
 
       if (_isCorrect) {
         _correctAnswers++;
-        
+
         // 📚 PATH XP SİSTEMİ - Düşük XP (Oyun daha çok XP verir)
         int baseXP = 3; // Az XP - Path için
         int bonusXP = 0;
-        
+
         // Reading sorusu için küçük hız bonusu
         if (question['type'] == 'reading') {
           // Hızlı okuma bonusu (0-30 saniye arası)
@@ -366,7 +366,7 @@ class _LessonScreenState extends State<LessonScreen>
           }
           // 45+ saniye = bonus yok
         }
-        
+
         int totalXP = baseXP + bonusXP;
         provider.addXP(totalXP);
 
@@ -392,7 +392,7 @@ class _LessonScreenState extends State<LessonScreen>
         provider.loseLife(); // 🔥 CAN KAYBI
         provider.addXP(1); // Path için düşük XP
         provider.addMistake(question['question'], selected, correct);
-        
+
         // Yanlış cevaplanan kelimeyi spaced repetition'da düşür
         if (question['type'] == 'term') {
           String englishWord = '';
@@ -419,14 +419,14 @@ class _LessonScreenState extends State<LessonScreen>
         _writingController.clear();
         _wordCount = 0;
         _canProceedToQuestion = false;
-        
+
         // Timer'ı sadece YENİ reading sorusu için sıfırla
         final nextQuestion = _questions[_currentIndex];
         if (nextQuestion['type'] == 'reading') {
           _readingSeconds = 0;
           _readingTimer?.cancel();
         }
-        
+
         // Progress bar otomatik olarak _correctAnswers'a göre güncellenir
         // Yanlış cevaplarda _correctAnswers artmadığı için progress bar ilerlemez
       });
@@ -468,7 +468,7 @@ class _LessonScreenState extends State<LessonScreen>
     // Seçilen dili al
     final provider = Provider.of<AppProvider>(context, listen: false);
     final langCode = provider.targetLanguage;
-    
+
     // Noktalama işaretlerini temizle
     String cleanWord = word.toLowerCase().replaceAll(RegExp(r'[^\w\s]'), '');
 
@@ -486,7 +486,7 @@ class _LessonScreenState extends State<LessonScreen>
           return term.getTranslation(langCode);
         }
         // Kelime başında veya içinde eşleşme (örn: "technicians" -> "technician")
-        if (term.english.toLowerCase().contains(cleanWord) || 
+        if (term.english.toLowerCase().contains(cleanWord) ||
             cleanWord.contains(term.english.toLowerCase())) {
           return term.getTranslation(langCode);
         }
@@ -498,11 +498,12 @@ class _LessonScreenState extends State<LessonScreen>
       final trans = wordTranslations[cleanWord];
       if (trans != null && trans.isNotEmpty) return trans;
     }
-    
+
     // 4. Reading'lerdeki çok dilli çevirilere bak
     for (var reading in widget.category.readings) {
       final langWordTranslations = reading.getWordTranslations(langCode);
-      if (langWordTranslations != null && langWordTranslations.containsKey(cleanWord)) {
+      if (langWordTranslations != null &&
+          langWordTranslations.containsKey(cleanWord)) {
         final trans = langWordTranslations[cleanWord];
         if (trans != null && trans.isNotEmpty) return trans;
       }
@@ -537,7 +538,6 @@ class _LessonScreenState extends State<LessonScreen>
       ),
     );
   }
-
 
   // Basit hover tooltip - düz cümle, tüm kelimeler beyaz, hover yapınca 2 saniye tooltip
   Widget _buildSimpleTooltip(String text, Map<String, String>? wordTranslations,
@@ -622,8 +622,9 @@ class _LessonScreenState extends State<LessonScreen>
     // Get mastery info for display
     final provider = Provider.of<AppProvider>(context, listen: false);
     final currentMastery = provider.getMasteryLevel(widget.category.title);
-    double performance = _questions.isNotEmpty ? _correctAnswers / _questions.length : 0;
-    
+    double performance =
+        _questions.isNotEmpty ? _correctAnswers / _questions.length : 0;
+
     // Calculate expected new mastery level
     int expectedNewMastery = currentMastery;
     if (performance >= 0.8) {
@@ -631,7 +632,7 @@ class _LessonScreenState extends State<LessonScreen>
     } else if (currentMastery == 0) {
       expectedNewMastery = 1;
     }
-    
+
     bool willLevelUp = expectedNewMastery > currentMastery;
 
     showDialog(
@@ -662,7 +663,7 @@ class _LessonScreenState extends State<LessonScreen>
             const SizedBox(height: 10),
             Text('⏱️ Süre: $timeText', style: const TextStyle(fontSize: 16)),
             const SizedBox(height: 10),
-            
+
             // Mastery progression display
             Container(
               padding: const EdgeInsets.all(12),
@@ -693,7 +694,7 @@ class _LessonScreenState extends State<LessonScreen>
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    willLevelUp 
+                    willLevelUp
                         ? '${AppProvider.masteryNames[currentMastery]} → ${AppProvider.masteryNames[expectedNewMastery]}!'
                         : 'Mastery: ${AppProvider.masteryNames[currentMastery]}',
                     style: TextStyle(
@@ -704,18 +705,20 @@ class _LessonScreenState extends State<LessonScreen>
                   if (willLevelUp)
                     const Text(
                       'Level Up! 🎉',
-                      style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.green, fontWeight: FontWeight.bold),
                     ),
                   if (!willLevelUp && performance < 0.8 && currentMastery > 0)
                     Text(
                       'Get 80%+ to level up!',
-                      style: TextStyle(color: Colors.orange.shade700, fontSize: 12),
+                      style: TextStyle(
+                          color: Colors.orange.shade700, fontSize: 12),
                     ),
                 ],
               ),
             ),
             const SizedBox(height: 10),
-            
+
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
@@ -747,14 +750,14 @@ class _LessonScreenState extends State<LessonScreen>
             onPressed: () {
               Navigator.of(context).pop(); // Close dialog
               Navigator.of(context).pop(); // Close screen
-              
+
               // Use mastery-aware completion with performance data
               Provider.of<AppProvider>(context, listen: false)
                   .completeLessonWithMastery(
-                    widget.category.title,
-                    correctAnswers: _correctAnswers,
-                    totalQuestions: _questions.length,
-                  );
+                widget.category.title,
+                correctAnswers: _correctAnswers,
+                totalQuestions: _questions.length,
+              );
             },
             child: const Text('Continue'),
           )
@@ -772,7 +775,8 @@ class _LessonScreenState extends State<LessonScreen>
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(kToolbarHeight + MediaQuery.of(context).padding.top),
+        preferredSize: Size.fromHeight(
+            kToolbarHeight + MediaQuery.of(context).padding.top),
         child: Container(
           padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
           child: AppBar(
@@ -934,9 +938,9 @@ class _LessonScreenState extends State<LessonScreen>
                           Builder(
                             builder: (context) {
                               // Timer'ı başlat (henüz başlamadıysa VE soruya geçilmediyse)
-                              if (!_canProceedToQuestion && 
+                              if (!_canProceedToQuestion &&
                                   (_readingTimer == null ||
-                                   !_readingTimer!.isActive)) {
+                                      !_readingTimer!.isActive)) {
                                 _startReadingTimer();
                               }
 
@@ -975,16 +979,24 @@ class _LessonScreenState extends State<LessonScreen>
                                             // Hız seçimi chips
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: Colors.black.withValues(alpha: 0.3),
-                                                borderRadius: BorderRadius.circular(20),
+                                                color: Colors.black
+                                                    .withValues(alpha: 0.3),
+                                                borderRadius:
+                                                    BorderRadius.circular(20),
                                               ),
-                                              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 4,
+                                                      vertical: 2),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.min,
                                                 children: [
-                                                  _buildSpeedChip('🐌', 0.6, 'Yavaş'),
-                                                  _buildSpeedChip('▶️', 0.9, 'Normal'),
-                                                  _buildSpeedChip('⚡', 1.2, 'Hızlı'),
+                                                  _buildSpeedChip(
+                                                      '🐌', 0.6, 'Yavaş'),
+                                                  _buildSpeedChip(
+                                                      '▶️', 0.9, 'Normal'),
+                                                  _buildSpeedChip(
+                                                      '⚡', 1.2, 'Hızlı'),
                                                 ],
                                               ),
                                             ),
@@ -992,9 +1004,11 @@ class _LessonScreenState extends State<LessonScreen>
                                             // Ses butonu
                                             IconButton(
                                               icon: const Icon(Icons.volume_up,
-                                                  color: Colors.amber, size: 28),
-                                              onPressed: () =>
-                                                  speakText(question['passage'], rate: _speechRate),
+                                                  color: Colors.amber,
+                                                  size: 28),
+                                              onPressed: () => speakText(
+                                                  question['passage'],
+                                                  rate: _speechRate),
                                               tooltip: 'Metni Seslendir',
                                             ),
                                           ],
@@ -1040,7 +1054,6 @@ class _LessonScreenState extends State<LessonScreen>
                                       fontWeight: FontWeight.bold)),
                             ),
 
-
                           // Soru ve Seçenekler (sadece kullanıcı hazır olduğunda)
                           if (_canProceedToQuestion) ...<Widget>[
                             const SizedBox(height: 30),
@@ -1061,100 +1074,120 @@ class _LessonScreenState extends State<LessonScreen>
                             ),
                             // Cevap seçenekleri - Kompakt modern tasarım
                             ...((question['options'] as List<String>)
-                                .asMap().entries.map((entry) {
-                                  final index = entry.key;
-                                  final opt = entry.value;
-                                  
-                                  final accentColors = [
-                                    const Color(0xFF3B82F6), // A - Mavi
-                                    const Color(0xFF22C55E), // B - Yeşil
-                                    const Color(0xFFF97316), // C - Turuncu
-                                    const Color(0xFFA855F7), // D - Mor
-                                  ];
-                                  final accentColor = accentColors[index % accentColors.length];
-                                  
-                                  
-                                  return Padding(
-                                    padding: const EdgeInsets.only(bottom: 12),
-                                    child: GestureDetector(
-                                      onTap: _showFeedback ? null : () => _checkAnswer(opt),
-                                      child: Container(
-                                        width: double.infinity,
-                                        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
-                                        decoration: BoxDecoration(
-                                          gradient: _showFeedback
-                                              ? (opt == question['correct']
-                                                  ? const LinearGradient(
-                                                      colors: [Color(0xFF00b09b), Color(0xFF96c93d)],
-                                                      begin: Alignment.topLeft,
-                                                      end: Alignment.bottomRight,
-                                                    )
-                                                  : LinearGradient(
-                                                      colors: [Colors.grey.shade600, Colors.grey.shade800],
-                                                      begin: Alignment.topLeft,
-                                                      end: Alignment.bottomRight,
-                                                    ))
-                                              : LinearGradient(
-                                                  colors: [accentColor, accentColor.withValues(alpha: 0.7)],
+                                .asMap()
+                                .entries
+                                .map((entry) {
+                              final index = entry.key;
+                              final opt = entry.value;
+
+                              final accentColors = [
+                                const Color(0xFF3B82F6), // A - Mavi
+                                const Color(0xFF22C55E), // B - Yeşil
+                                const Color(0xFFF97316), // C - Turuncu
+                                const Color(0xFFA855F7), // D - Mor
+                              ];
+                              final accentColor =
+                                  accentColors[index % accentColors.length];
+
+                              return Padding(
+                                padding: const EdgeInsets.only(bottom: 12),
+                                child: GestureDetector(
+                                  onTap: _showFeedback
+                                      ? null
+                                      : () => _checkAnswer(opt),
+                                  child: Container(
+                                    width: double.infinity,
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 16, horizontal: 20),
+                                    decoration: BoxDecoration(
+                                      gradient: _showFeedback
+                                          ? (opt == question['correct']
+                                              ? const LinearGradient(
+                                                  colors: [
+                                                    Color(0xFF00b09b),
+                                                    Color(0xFF96c93d)
+                                                  ],
                                                   begin: Alignment.topLeft,
                                                   end: Alignment.bottomRight,
-                                                ),
-                                          borderRadius: BorderRadius.circular(14),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: accentColor.withValues(alpha: 0.4),
-                                              blurRadius: 10,
-                                              offset: const Offset(0, 4),
+                                                )
+                                              : LinearGradient(
+                                                  colors: [
+                                                    Colors.grey.shade600,
+                                                    Colors.grey.shade800
+                                                  ],
+                                                  begin: Alignment.topLeft,
+                                                  end: Alignment.bottomRight,
+                                                ))
+                                          : LinearGradient(
+                                              colors: [
+                                                accentColor,
+                                                accentColor.withValues(
+                                                    alpha: 0.7)
+                                              ],
+                                              begin: Alignment.topLeft,
+                                              end: Alignment.bottomRight,
                                             ),
-                                          ],
+                                      borderRadius: BorderRadius.circular(14),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: accentColor.withValues(
+                                              alpha: 0.4),
+                                          blurRadius: 10,
+                                          offset: const Offset(0, 4),
                                         ),
-                                        child: Row(
-                                          children: [
-                                            // A, B, C, D Harfi
-                                            Container(
-                                              width: 32,
-                                              height: 32,
-                                              decoration: BoxDecoration(
-                                                color: Colors.white.withValues(alpha: 0.25),
-                                                borderRadius: BorderRadius.circular(8),
-                                              ),
-                                              child: Center(
-                                                child: Text(
-                                                  String.fromCharCode(65 + index),
-                                                  style: const TextStyle(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            const SizedBox(width: 14),
-                                            // Cevap metni
-                                            Expanded(
-                                              child: Text(
-                                                opt,
-                                                style: const TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                            ),
-                                            // Ok ikonu
-                                            Icon(
-                                              _showFeedback && opt == question['correct']
-                                                  ? Icons.check_circle
-                                                  : Icons.arrow_forward_ios,
-                                              color: Colors.white.withValues(alpha: 0.8),
-                                              size: 18,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
+                                      ],
                                     ),
-                                  );
-                                })),
+                                    child: Row(
+                                      children: [
+                                        // A, B, C, D Harfi
+                                        Container(
+                                          width: 32,
+                                          height: 32,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white
+                                                .withValues(alpha: 0.25),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          child: Center(
+                                            child: Text(
+                                              String.fromCharCode(65 + index),
+                                              style: const TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 14),
+                                        // Cevap metni
+                                        Expanded(
+                                          child: Text(
+                                            opt,
+                                            style: const TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w600,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                        // Ok ikonu
+                                        Icon(
+                                          _showFeedback &&
+                                                  opt == question['correct']
+                                              ? Icons.check_circle
+                                              : Icons.arrow_forward_ios,
+                                          color: Colors.white
+                                              .withValues(alpha: 0.8),
+                                          size: 18,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              );
+                            })),
                           ],
                         ],
 
@@ -1162,7 +1195,8 @@ class _LessonScreenState extends State<LessonScreen>
                         if (question['type'] == 'term') ...<Widget>[
                           // Question text - Minimalist tasarım
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
                               color: Colors.white.withValues(alpha: 0.08),
                               borderRadius: BorderRadius.circular(12),
@@ -1191,7 +1225,8 @@ class _LessonScreenState extends State<LessonScreen>
                                   color: Colors.black.withValues(alpha: 0.25),
                                   borderRadius: BorderRadius.circular(16),
                                 ),
-                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 6, vertical: 3),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -1200,14 +1235,19 @@ class _LessonScreenState extends State<LessonScreen>
                                     _buildSpeedChip('⚡', 1.2, 'Hızlı'),
                                     const SizedBox(width: 4),
                                     GestureDetector(
-                                      onTap: () => speakText(question['question'], rate: _speechRate),
+                                      onTap: () => speakText(
+                                          question['question'],
+                                          rate: _speechRate),
                                       child: Container(
                                         padding: const EdgeInsets.all(6),
                                         decoration: BoxDecoration(
-                                          color: Colors.amber.withValues(alpha: 0.2),
-                                          borderRadius: BorderRadius.circular(10),
+                                          color: Colors.amber
+                                              .withValues(alpha: 0.2),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                         ),
-                                        child: const Icon(Icons.volume_up, color: Colors.amber, size: 20),
+                                        child: const Icon(Icons.volume_up,
+                                            color: Colors.amber, size: 20),
                                       ),
                                     ),
                                   ],
@@ -1218,100 +1258,120 @@ class _LessonScreenState extends State<LessonScreen>
                           const SizedBox(height: 10),
                           // Cevap seçenekleri - Ultra kompakt modern tasarım
                           ...((question['options'] as List<String>)
-                              .asMap().entries.map((entry) {
-                                final index = entry.key;
-                                final opt = entry.value;
-                                
-                                // Belirgin farklı renkler
-                                final accentColors = [
-                                  const Color(0xFF3B82F6), // A - Mavi
-                                  const Color(0xFF22C55E), // B - Yeşil
-                                  const Color(0xFFF97316), // C - Turuncu
-                                  const Color(0xFFA855F7), // D - Mor
-                                ];
-                                final accentColor = accentColors[index % accentColors.length];
-                                
-                                return Padding(
-                                  padding: const EdgeInsets.only(bottom: 12),
-                                  child: GestureDetector(
-                                    onTap: _showFeedback ? null : () => _checkAnswer(opt),
-                                    child: Container(
-                                      width: double.infinity,
-                                      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
-                                      decoration: BoxDecoration(
-                                        gradient: _showFeedback
-                                            ? (opt == question['correct']
-                                                ? const LinearGradient(
-                                                    colors: [Color(0xFF00b09b), Color(0xFF96c93d)],
-                                                    begin: Alignment.topLeft,
-                                                    end: Alignment.bottomRight,
-                                                  )
-                                                : LinearGradient(
-                                                    colors: [Colors.grey.shade600, Colors.grey.shade800],
-                                                    begin: Alignment.topLeft,
-                                                    end: Alignment.bottomRight,
-                                                  ))
-                                            : LinearGradient(
-                                                colors: [accentColor, accentColor.withValues(alpha: 0.7)],
+                              .asMap()
+                              .entries
+                              .map((entry) {
+                            final index = entry.key;
+                            final opt = entry.value;
+
+                            // Belirgin farklı renkler
+                            final accentColors = [
+                              const Color(0xFF3B82F6), // A - Mavi
+                              const Color(0xFF22C55E), // B - Yeşil
+                              const Color(0xFFF97316), // C - Turuncu
+                              const Color(0xFFA855F7), // D - Mor
+                            ];
+                            final accentColor =
+                                accentColors[index % accentColors.length];
+
+                            return Padding(
+                              padding: const EdgeInsets.only(bottom: 12),
+                              child: GestureDetector(
+                                onTap: _showFeedback
+                                    ? null
+                                    : () => _checkAnswer(opt),
+                                child: Container(
+                                  width: double.infinity,
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 16, horizontal: 20),
+                                  decoration: BoxDecoration(
+                                    gradient: _showFeedback
+                                        ? (opt == question['correct']
+                                            ? const LinearGradient(
+                                                colors: [
+                                                  Color(0xFF00b09b),
+                                                  Color(0xFF96c93d)
+                                                ],
                                                 begin: Alignment.topLeft,
                                                 end: Alignment.bottomRight,
-                                              ),
-                                        borderRadius: BorderRadius.circular(14),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: accentColor.withValues(alpha: 0.4),
-                                            blurRadius: 10,
-                                            offset: const Offset(0, 4),
+                                              )
+                                            : LinearGradient(
+                                                colors: [
+                                                  Colors.grey.shade600,
+                                                  Colors.grey.shade800
+                                                ],
+                                                begin: Alignment.topLeft,
+                                                end: Alignment.bottomRight,
+                                              ))
+                                        : LinearGradient(
+                                            colors: [
+                                              accentColor,
+                                              accentColor.withValues(alpha: 0.7)
+                                            ],
+                                            begin: Alignment.topLeft,
+                                            end: Alignment.bottomRight,
                                           ),
-                                        ],
+                                    borderRadius: BorderRadius.circular(14),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color:
+                                            accentColor.withValues(alpha: 0.4),
+                                        blurRadius: 10,
+                                        offset: const Offset(0, 4),
                                       ),
-                                      child: Row(
-                                        children: [
-                                          // A, B, C, D Harfi
-                                          Container(
-                                            width: 32,
-                                            height: 32,
-                                            decoration: BoxDecoration(
-                                              color: Colors.white.withValues(alpha: 0.25),
-                                              borderRadius: BorderRadius.circular(8),
-                                            ),
-                                            child: Center(
-                                              child: Text(
-                                                String.fromCharCode(65 + index),
-                                                style: const TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(width: 14),
-                                          // Cevap metni
-                                          Expanded(
-                                            child: Text(
-                                              opt,
-                                              style: const TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
-                                          // Ok ikonu
-                                          Icon(
-                                            _showFeedback && opt == question['correct']
-                                                ? Icons.check_circle
-                                                : Icons.arrow_forward_ios,
-                                            color: Colors.white.withValues(alpha: 0.8),
-                                            size: 18,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
+                                    ],
                                   ),
-                                );
-                              })),
+                                  child: Row(
+                                    children: [
+                                      // A, B, C, D Harfi
+                                      Container(
+                                        width: 32,
+                                        height: 32,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white
+                                              .withValues(alpha: 0.25),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            String.fromCharCode(65 + index),
+                                            style: const TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 14),
+                                      // Cevap metni
+                                      Expanded(
+                                        child: Text(
+                                          opt,
+                                          style: const TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                      // Ok ikonu
+                                      Icon(
+                                        _showFeedback &&
+                                                opt == question['correct']
+                                            ? Icons.check_circle
+                                            : Icons.arrow_forward_ios,
+                                        color:
+                                            Colors.white.withValues(alpha: 0.8),
+                                        size: 18,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          })),
                         ],
 
                         // WRITING QUESTION
@@ -1488,7 +1548,7 @@ class _LessonScreenState extends State<LessonScreen>
                             ),
                           ),
                           const SizedBox(height: 32),
-                          
+
                           // Doğru cevabı göster (sadece yanlış cevaplarda)
                           if (!_isCorrect) ...[
                             Container(
@@ -1546,7 +1606,7 @@ class _LessonScreenState extends State<LessonScreen>
                             ),
                             const SizedBox(height: 24),
                           ],
-                          
+
                           // Butonlar - Neon Cyberpunk Tarzı
                           Row(
                             children: [
@@ -1562,12 +1622,14 @@ class _LessonScreenState extends State<LessonScreen>
                                     ),
                                     boxShadow: [
                                       BoxShadow(
-                                        color: Colors.cyan.withValues(alpha: 0.4),
+                                        color:
+                                            Colors.cyan.withValues(alpha: 0.4),
                                         blurRadius: 15,
                                         spreadRadius: 1,
                                       ),
                                       BoxShadow(
-                                        color: Colors.cyan.withValues(alpha: 0.2),
+                                        color:
+                                            Colors.cyan.withValues(alpha: 0.2),
                                         blurRadius: 30,
                                         spreadRadius: 5,
                                       ),
@@ -1579,9 +1641,11 @@ class _LessonScreenState extends State<LessonScreen>
                                       onTap: () => Navigator.pop(context),
                                       borderRadius: BorderRadius.circular(14),
                                       child: Padding(
-                                        padding: const EdgeInsets.symmetric(vertical: 18),
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 18),
                                         child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                           children: [
                                             Icon(
                                               Icons.power_settings_new_rounded,
@@ -1628,9 +1692,11 @@ class _LessonScreenState extends State<LessonScreen>
                                       margin: const EdgeInsets.only(top: 4),
                                       height: 60,
                                       decoration: BoxDecoration(
-                                        color: _isCorrect 
-                                            ? const Color(0xFF00b09b).withValues(alpha: 0.5)
-                                            : const Color(0xFFeb3349).withValues(alpha: 0.5),
+                                        color: _isCorrect
+                                            ? const Color(0xFF00b09b)
+                                                .withValues(alpha: 0.5)
+                                            : const Color(0xFFeb3349)
+                                                .withValues(alpha: 0.5),
                                         borderRadius: BorderRadius.circular(16),
                                       ),
                                     ),
@@ -1639,20 +1705,27 @@ class _LessonScreenState extends State<LessonScreen>
                                       decoration: BoxDecoration(
                                         gradient: LinearGradient(
                                           colors: _isCorrect
-                                              ? [const Color(0xFF00b09b), const Color(0xFF96c93d)]
-                                              : [const Color(0xFFeb3349), const Color(0xFFf45c43)],
+                                              ? [
+                                                  const Color(0xFF00b09b),
+                                                  const Color(0xFF96c93d)
+                                                ]
+                                              : [
+                                                  const Color(0xFFeb3349),
+                                                  const Color(0xFFf45c43)
+                                                ],
                                           begin: Alignment.topLeft,
                                           end: Alignment.bottomRight,
                                         ),
                                         borderRadius: BorderRadius.circular(16),
                                         border: Border.all(
-                                          color: Colors.white.withValues(alpha: 0.4),
+                                          color: Colors.white
+                                              .withValues(alpha: 0.4),
                                           width: 2,
                                         ),
                                         boxShadow: [
                                           BoxShadow(
-                                            color: (_isCorrect 
-                                                    ? const Color(0xFF00b09b) 
+                                            color: (_isCorrect
+                                                    ? const Color(0xFF00b09b)
                                                     : const Color(0xFFeb3349))
                                                 .withValues(alpha: 0.6),
                                             blurRadius: 20,
@@ -1664,11 +1737,14 @@ class _LessonScreenState extends State<LessonScreen>
                                         color: Colors.transparent,
                                         child: InkWell(
                                           onTap: _nextQuestion,
-                                          borderRadius: BorderRadius.circular(14),
+                                          borderRadius:
+                                              BorderRadius.circular(14),
                                           child: Padding(
-                                            padding: const EdgeInsets.symmetric(vertical: 18),
+                                            padding: const EdgeInsets.symmetric(
+                                                vertical: 18),
                                             child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
                                               children: [
                                                 const Icon(
                                                   Icons.rocket_launch_rounded,
@@ -1683,7 +1759,8 @@ class _LessonScreenState extends State<LessonScreen>
                                                 ),
                                                 const SizedBox(width: 12),
                                                 Text(
-                                                  Provider.of<AppProvider>(context)
+                                                  Provider.of<AppProvider>(
+                                                          context)
                                                       .getString('continue')
                                                       .toUpperCase(),
                                                   style: const TextStyle(

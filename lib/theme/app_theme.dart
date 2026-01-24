@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,7 +7,7 @@ class AppTheme {
   static const Color darkOrange = Color(0xFFFB8C00); // Dark Orange
   static const Color darkBlack = Color(0xFF000000); // Pure Black
   static const Color darkSurface = Color(0xFF0A0A0A); // Very dark surface
-  
+
   // Light Theme Colors (Orange-White - Güneş ☀️)
   static const Color skyOrange = Color(0xFFFF9800); // Orange
   static const Color lightOrange = Color(0xFFFFA726); // Light Orange
@@ -21,7 +20,8 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
-      scaffoldBackgroundColor: const Color(0xFF1E1E1E), // Dark grey instead of black
+      scaffoldBackgroundColor:
+          const Color(0xFF1E1E1E), // Dark grey instead of black
       colorScheme: const ColorScheme.dark(
         primary: alienOrange,
         secondary: alienOrange,
@@ -63,7 +63,8 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      scaffoldBackgroundColor: const Color(0xFFF8F9FA), // Soft white instead of pure white
+      scaffoldBackgroundColor:
+          const Color(0xFFF8F9FA), // Soft white instead of pure white
       colorScheme: const ColorScheme.light(
         primary: skyOrange,
         secondary: lightOrange,
@@ -71,10 +72,10 @@ class AppTheme {
         onSurface: Color(0xFF212121),
       ),
       textTheme: GoogleFonts.interTextTheme(ThemeData.light().textTheme).apply(
-         bodyColor: const Color(0xFF212121),
-         displayColor: const Color(0xFF212121),
+        bodyColor: const Color(0xFF212121),
+        displayColor: const Color(0xFF212121),
       ),
-       /* cardTheme: CardTheme(
+      /* cardTheme: CardTheme(
         color: Colors.white,
         elevation: 2,
         shape: RoundedRectangleBorder(

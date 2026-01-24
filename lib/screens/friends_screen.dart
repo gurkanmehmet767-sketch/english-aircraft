@@ -10,12 +10,13 @@ class FriendsScreen extends StatefulWidget {
   State<FriendsScreen> createState() => _FriendsScreenState();
 }
 
-class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProviderStateMixin {
+class _FriendsScreenState extends State<FriendsScreen>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final _firestoreService = FirestoreService();
   final _localStorageService = LocalStorageService();
   final _searchController = TextEditingController();
-  
+
   UserModel? _currentUser;
   List<UserModel> _friends = [];
   List<FriendRequest> _pendingRequests = [];
@@ -39,13 +40,14 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
 
   Future<void> _loadData() async {
     setState(() => _isLoading = true);
-    
+
     _currentUser = await _localStorageService.getUser();
     if (_currentUser != null && _currentUser!.isSynced) {
       _friends = await _firestoreService.getFriends(_currentUser!.uid);
-      _pendingRequests = await _firestoreService.getFriendRequests(_currentUser!.uid);
+      _pendingRequests =
+          await _firestoreService.getFriendRequests(_currentUser!.uid);
     }
-    
+
     setState(() => _isLoading = false);
   }
 
@@ -59,14 +61,14 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
     }
 
     setState(() => _isSearching = true);
-    
+
     final results = await _firestoreService.searchUsersByUsername(query);
     // Filter out current user and existing friends
     final filtered = results.where((user) {
-      return user.uid != _currentUser?.uid && 
-             !_friends.any((friend) => friend.uid == user.uid);
+      return user.uid != _currentUser?.uid &&
+          !_friends.any((friend) => friend.uid == user.uid);
     }).toList();
-    
+
     setState(() {
       _searchResults = filtered;
       _isSearching = false;
@@ -83,11 +85,12 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
         _currentUser!.username,
         targetUser.username,
       );
-      
+
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('${targetUser.username} adlı kullanıcıya istek gönderildi'),
+            content: Text(
+                '${targetUser.username} adlı kullanıcıya istek gönderildi'),
             backgroundColor: const Color(0xFF58CC02),
           ),
         );
@@ -108,7 +111,7 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
     try {
       await _firestoreService.acceptFriendRequest(request.id);
       await _loadData();
-      
+
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -145,7 +148,8 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Arkadaşı Çıkar'),
-        content: Text('${friend.username} adlı kullanıcıyı arkadaş listesinden çıkarmak istediğinize emin misiniz?'),
+        content: Text(
+            '${friend.username} adlı kullanıcıyı arkadaş listesinden çıkarmak istediğinize emin misiniz?'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
@@ -174,7 +178,8 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Arkadaşlar', style: TextStyle(fontWeight: FontWeight.bold)),
+        title: const Text('Arkadaşlar',
+            style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: const Color(0xFF667eea),
         foregroundColor: Colors.white,
         elevation: 0,
@@ -209,16 +214,19 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.cloud_off, size: 64, color: Colors.grey.shade400),
+                      Icon(Icons.cloud_off,
+                          size: 64, color: Colors.grey.shade400),
                       const SizedBox(height: 16),
                       Text(
                         'WiFi bağlantısı bekleniyor',
-                        style: TextStyle(fontSize: 16, color: Colors.grey.shade600),
+                        style: TextStyle(
+                            fontSize: 16, color: Colors.grey.shade600),
                       ),
                       const SizedBox(height: 8),
                       Text(
                         'Arkadaş eklemek için online olmanız gerekiyor',
-                        style: TextStyle(fontSize: 14, color: Colors.grey.shade500),
+                        style: TextStyle(
+                            fontSize: 14, color: Colors.grey.shade500),
                       ),
                     ],
                   ),
@@ -248,7 +256,10 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
             const SizedBox(height: 16),
             Text(
               'Henüz arkadaşın yok',
-              style: TextStyle(fontSize: 18, color: Colors.grey.shade600, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.grey.shade600,
+                  fontWeight: FontWeight.w600),
             ),
             const SizedBox(height: 8),
             Text(
@@ -263,7 +274,8 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF667eea),
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
               ),
             ),
           ],
@@ -296,7 +308,8 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
           backgroundColor: const Color(0xFF667eea),
           child: Text(
             friend.username[0].toUpperCase(),
-            style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+            style: const TextStyle(
+                color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
           ),
         ),
         title: Text(
@@ -348,7 +361,10 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
             const SizedBox(height: 16),
             Text(
               'Arkadaşlık isteği yok',
-              style: TextStyle(fontSize: 18, color: Colors.grey.shade600, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.grey.shade600,
+                  fontWeight: FontWeight.w600),
             ),
           ],
         ),
@@ -382,7 +398,10 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
               backgroundColor: const Color(0xFF58CC02),
               child: Text(
                 request.fromUsername[0].toUpperCase(),
-                style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold),
               ),
             ),
             const SizedBox(width: 16),
@@ -392,7 +411,8 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
                 children: [
                   Text(
                     request.fromUsername,
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                   const SizedBox(height: 4),
                   Text(
@@ -406,7 +426,8 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
               mainAxisSize: MainAxisSize.min,
               children: [
                 IconButton(
-                  icon: const Icon(Icons.check_circle, color: Color(0xFF58CC02)),
+                  icon:
+                      const Icon(Icons.check_circle, color: Color(0xFF58CC02)),
                   onPressed: () => _acceptRequest(request),
                 ),
                 IconButton(
@@ -503,7 +524,8 @@ class _FriendsScreenState extends State<FriendsScreen> with SingleTickerProvider
           backgroundColor: const Color(0xFFFF9800),
           child: Text(
             user.username[0].toUpperCase(),
-            style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+            style: const TextStyle(
+                color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
           ),
         ),
         title: Text(
