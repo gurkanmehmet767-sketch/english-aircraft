@@ -398,7 +398,8 @@ class SettingsScreen extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8),
                     child: Image.asset(
-                      'assets/images/${bg}_bg.webp',
+                      // palm_beach and ocean use PNG, dark backgrounds use WEBP
+                      'assets/images/${bg}_bg.${(bg == 'palm_beach' || bg == 'ocean') ? 'png' : 'webp'}',
                       fit: BoxFit.cover,
                       errorBuilder: (context, error, stackTrace) {
                         return Container(

@@ -1,5 +1,6 @@
 // Script to expand vocabulary_data_fixed.dart with words from word_dictionary.dart
 import 'dart:io';
+import 'package:flutter/foundation.dart' show debugPrint;
 
 void main() {
   // Read word_dictionary.dart
@@ -10,7 +11,7 @@ void main() {
   final regex = RegExp(r"'(\w+)':\s*\{'tr':\s*'([^']*)'");
   final matches = regex.allMatches(content);
   
-  print('Found ${matches.length} words in word_dictionary.dart');
+  debugPrint('Found ${matches.length} words in word_dictionary.dart');
   
   // Group by category
   final categories = <String, List<Map<String, String>>>{
@@ -55,6 +56,6 @@ void main() {
   
   // Print counts
   for (final entry in categories.entries) {
-    print('${entry.key}: ${entry.value.length} words');
+    debugPrint('${entry.key}: ${entry.value.length} words');
   }
 }

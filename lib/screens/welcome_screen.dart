@@ -141,7 +141,7 @@ class WelcomeScreen extends StatelessWidget {
                           ),
                           // Main illustration
                           Image.asset(
-                            'assets/images/alien_welcome_hero.webp',
+                            'assets/images/sky_mascot_hero.webp',
                             fit: BoxFit.contain,
                             errorBuilder: (context, error, stackTrace) => 
                               Text('👽✈️\n🌍📚🚀', 

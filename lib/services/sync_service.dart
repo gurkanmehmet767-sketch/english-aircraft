@@ -1,3 +1,15 @@
+/// SyncService - Manages offline-first data synchronization
+/// 
+/// Handles synchronization of local data to Firebase when connectivity is available.
+/// Implements a queue-based system for reliable offline-to-online data sync.
+/// 
+/// Features:
+/// - Automatic connectivity detection
+/// - Queue-based sync for reliability
+/// - Web-safe implementation (assumes always online)
+/// - Singleton pattern
+library;
+
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -5,6 +17,10 @@ import '../models/user_model.dart';
 import 'local_storage_service.dart';
 import 'firestore_service.dart';
 
+/// Manages data synchronization between local storage and Firebase.
+/// 
+/// This service monitors connectivity and automatically syncs queued changes
+/// when the device comes online. On web, assumes always online.
 class SyncService {
   final LocalStorageService _localStorage = LocalStorageService();
   final FirestoreService _firestore = FirestoreService();

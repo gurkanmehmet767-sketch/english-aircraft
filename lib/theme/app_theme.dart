@@ -21,7 +21,7 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
-      scaffoldBackgroundColor: darkBlack,
+      scaffoldBackgroundColor: const Color(0xFF1E1E1E), // Dark grey instead of black
       colorScheme: const ColorScheme.dark(
         primary: alienOrange,
         secondary: alienOrange,
@@ -63,7 +63,7 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      scaffoldBackgroundColor: pureWhite,
+      scaffoldBackgroundColor: const Color(0xFFF8F9FA), // Soft white instead of pure white
       colorScheme: const ColorScheme.light(
         primary: skyOrange,
         secondary: lightOrange,

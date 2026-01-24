@@ -1,0 +1,1266 @@
+﻿00:00 +0: loading C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart
+flutter : test/auth_s
+ervice_test.dart:15:2
+5: Error: The method 
+'signOut' isn't defin
+ed for the type 'Auth
+Service'.
+At line:1 char:1
++ flutter test --no-p
+ub 2>&1 | Out-File -F
+ilePath "test_results
+.txt" -E ...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (test/au   
+ th_servi... 'Aut    
+hService'.:Strin    g
+) [], RemoteExc    ep
+tion
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'signOut'.
+      await authServi
+ce.signOut();
+                     
+   ^^^^^^^
+test/auth_service_tes
+t.dart:19:26: Error: 
+The method 'validateE
+mail' isn't defined f
+or the type 'AuthServ
+ice'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'validateEmail'.
+      expect(authServ
+ice.validateEmail('te
+st@example.com'), tru
+e);
+                     
+    ^^^^^^^^^^^^^
+test/auth_service_tes
+t.dart:20:26: Error: 
+The method 'validateE
+mail' isn't defined f
+or the type 'AuthServ
+ice'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'validateEmail'.
+      expect(authServ
+ice.validateEmail('us
+er.name@domain.co.uk'
+), true);
+                     
+    ^^^^^^^^^^^^^
+test/auth_service_tes
+t.dart:21:26: Error: 
+The method 'validateE
+mail' isn't defined f
+or the type 'AuthServ
+ice'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'validateEmail'.
+      expect(authServ
+ice.validateEmail('te
+st123@test.com'), tru
+e);
+                     
+    ^^^^^^^^^^^^^
+test/auth_service_tes
+t.dart:25:26: Error: 
+The method 'validateE
+mail' isn't defined f
+or the type 'AuthServ
+ice'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'validateEmail'.
+      expect(authServ
+ice.validateEmail('')
+, false);
+                     
+    ^^^^^^^^^^^^^
+test/auth_service_tes
+t.dart:26:26: Error: 
+The method 'validateE
+mail' isn't defined f
+or the type 'AuthServ
+ice'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'validateEmail'.
+      expect(authServ
+ice.validateEmail('in
+valid'), false);
+                     
+    ^^^^^^^^^^^^^
+test/auth_service_tes
+t.dart:27:26: Error: 
+The method 'validateE
+mail' isn't defined f
+or the type 'AuthServ
+ice'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'validateEmail'.
+      expect(authServ
+ice.validateEmail('@e
+xample.com'), false);
+                     
+    ^^^^^^^^^^^^^
+test/auth_service_tes
+t.dart:28:26: Error: 
+The method 'validateE
+mail' isn't defined f
+or the type 'AuthServ
+ice'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'validateEmail'.
+      expect(authServ
+ice.validateEmail('te
+st@'), false);
+                     
+    ^^^^^^^^^^^^^
+test/auth_service_tes
+t.dart:29:26: Error: 
+The method 'validateE
+mail' isn't defined f
+or the type 'AuthServ
+ice'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'validateEmail'.
+      expect(authServ
+ice.validateEmail('te
+st @example.com'), fa
+lse);
+                     
+    ^^^^^^^^^^^^^
+test/auth_service_tes
+t.dart:33:26: Error: 
+The method 'getPasswo
+rdStrength' isn't def
+ined for the type 'Au
+thService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'getPasswordStrengt
+h'.
+      expect(authServ
+ice.getPasswordStreng
+th('123'), 'zay─▒f');
+                     
+    ^^^^^^^^^^^^^^^^^
+^^
+test/auth_service_tes
+t.dart:34:26: Error: 
+The method 'getPasswo
+rdStrength' isn't def
+ined for the type 'Au
+thService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'getPasswordStrengt
+h'.
+      expect(authServ
+ice.getPasswordStreng
+th('abc'), 'zay─▒f');
+                     
+    ^^^^^^^^^^^^^^^^^
+^^
+test/auth_service_tes
+t.dart:35:26: Error: 
+The method 'getPasswo
+rdStrength' isn't def
+ined for the type 'Au
+thService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'getPasswordStrengt
+h'.
+      expect(authServ
+ice.getPasswordStreng
+th('12345'), 'zay─▒f'
+);
+                     
+    ^^^^^^^^^^^^^^^^^
+^^
+test/auth_service_tes
+t.dart:39:26: Error: 
+The method 'getPasswo
+rdStrength' isn't def
+ined for the type 'Au
+thService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'getPasswordStrengt
+h'.
+      expect(authServ
+ice.getPasswordStreng
+th('abcdef'), 'orta')
+;
+                     
+    ^^^^^^^^^^^^^^^^^
+^^
+test/auth_service_tes
+t.dart:40:26: Error: 
+The method 'getPasswo
+rdStrength' isn't def
+ined for the type 'Au
+thService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'getPasswordStrengt
+h'.
+      expect(authServ
+ice.getPasswordStreng
+th('123456'), 'orta')
+;
+                     
+    ^^^^^^^^^^^^^^^^^
+^^
+test/auth_service_tes
+t.dart:41:26: Error: 
+The method 'getPasswo
+rdStrength' isn't def
+ined for the type 'Au
+thService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'getPasswordStrengt
+h'.
+      expect(authServ
+ice.getPasswordStreng
+th('password'), 'orta
+');
+                     
+    ^^^^^^^^^^^^^^^^^
+^^
+test/auth_service_tes
+t.dart:45:26: Error: 
+The method 'getPasswo
+rdStrength' isn't def
+ined for the type 'Au
+thService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'getPasswordStrengt
+h'.
+      expect(authServ
+ice.getPasswordStreng
+th('Abcdef123'), 'g├╝
+├ğl├╝');
+                     
+    ^^^^^^^^^^^^^^^^^
+^^
+test/auth_service_tes
+t.dart:46:26: Error: 
+The method 'getPasswo
+rdStrength' isn't def
+ined for the type 'Au
+thService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'getPasswordStrengt
+h'.
+      expect(authServ
+ice.getPasswordStreng
+th('Test@123'), 'g├╝├
+ğl├╝');
+                     
+    ^^^^^^^^^^^^^^^^^
+^^
+test/auth_service_tes
+t.dart:47:26: Error: 
+The method 'getPasswo
+rdStrength' isn't def
+ined for the type 'Au
+thService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'getPasswordStrengt
+h'.
+      expect(authServ
+ice.getPasswordStreng
+th('PassW0rd!'), 'g├╝
+├ğl├╝');
+                     
+    ^^^^^^^^^^^^^^^^^
+^^
+test/auth_service_tes
+t.dart:52:26: Error: 
+The getter 'currentUs
+er' isn't defined for
+ the type 'AuthServic
+e'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing getter, or d
+efining a getter or f
+ield named 'currentUs
+er'.
+      expect(authServ
+ice.currentUser, null
+);
+                     
+    ^^^^^^^^^^^
+test/auth_service_tes
+t.dart:56:40: Error: 
+The method 'register'
+ isn't defined for th
+e type 'AuthService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'register'.
+      final result = 
+await authService.reg
+ister(
+                     
+                  ^^^
+^^^^^
+test/auth_service_tes
+t.dart:64:26: Error: 
+The getter 'currentUs
+er' isn't defined for
+ the type 'AuthServic
+e'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing getter, or d
+efining a getter or f
+ield named 'currentUs
+er'.
+      expect(authServ
+ice.currentUser, isNo
+tNull);
+                     
+    ^^^^^^^^^^^
+test/auth_service_tes
+t.dart:68:40: Error: 
+The method 'register'
+ isn't defined for th
+e type 'AuthService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'register'.
+      final result = 
+await authService.reg
+ister(
+                     
+                  ^^^
+^^^^^
+test/auth_service_tes
+t.dart:79:40: Error: 
+The method 'register'
+ isn't defined for th
+e type 'AuthService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'register'.
+      final result = 
+await authService.reg
+ister(
+                     
+                  ^^^
+^^^^^
+test/auth_service_tes
+t.dart:91:25: Error: 
+The method 'register'
+ isn't defined for th
+e type 'AuthService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'register'.
+      await authServi
+ce.register(
+                     
+   ^^^^^^^^
+test/auth_service_tes
+t.dart:98:25: Error: 
+The method 'signOut' 
+isn't defined for the
+ type 'AuthService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'signOut'.
+      await authServi
+ce.signOut();
+                     
+   ^^^^^^^
+test/auth_service_tes
+t.dart:106:20: Error:
+ The operator '[]' is
+n't defined for the t
+ype 'AuthResult'.
+ - 'AuthResult' is fr
+om 'package:english_a
+ircraft/services/auth
+_service.dart' ('lib/
+services/auth_service
+.dart').
+Try correcting the op
+erator to an existing
+ operator, or definin
+g a '[]' operator.
+      expect(result['
+success'], true);
+                   ^
+test/auth_service_tes
+t.dart:112:25: Error:
+ The method 'register
+' isn't defined for t
+he type 'AuthService'
+.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'register'.
+      await authServi
+ce.register(
+                     
+   ^^^^^^^^
+test/auth_service_tes
+t.dart:119:25: Error:
+ The method 'signOut'
+ isn't defined for th
+e type 'AuthService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'signOut'.
+      await authServi
+ce.signOut();
+                     
+   ^^^^^^^
+test/auth_service_tes
+t.dart:127:20: Error:
+ The operator '[]' is
+n't defined for the t
+ype 'AuthResult'.
+ - 'AuthResult' is fr
+om 'package:english_a
+ircraft/services/auth
+_service.dart' ('lib/
+services/auth_service
+.dart').
+Try correcting the op
+erator to an existing
+ operator, or definin
+g a '[]' operator.
+      expect(result['
+success'], false);
+                   ^
+test/auth_service_tes
+t.dart:133:25: Error:
+ The method 'register
+' isn't defined for t
+he type 'AuthService'
+.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'register'.
+      await authServi
+ce.register(
+                     
+   ^^^^^^^^
+test/auth_service_tes
+t.dart:142:25: Error:
+ The method 'signOut'
+ isn't defined for th
+e type 'AuthService'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'signOut'.
+      await authServi
+ce.signOut();
+                     
+   ^^^^^^^
+test/auth_service_tes
+t.dart:145:26: Error:
+ The getter 'currentU
+ser' isn't defined fo
+r the type 'AuthServi
+ce'.
+ - 'AuthService' is f
+rom 'package:english_
+aircraft/services/aut
+h_service.dart' ('lib
+/services/auth_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing getter, or d
+efining a getter or f
+ield named 'currentUs
+er'.
+      expect(authServ
+ice.currentUser, null
+);
+                     
+    ^^^^^^^^^^^
+00:00 +0 -1: loading C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart [E]
+  Failed to load "C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart":
+  Compilation failed for testPath=C:/Users/Casper/Desktop/english_aircraft/test/auth_service_test.dart: test/auth_service_test.dart:15:25: Error: The method 'signOut' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'signOut'.
+        await authService.signOut();
+                          ^^^^^^^
+  test/auth_service_test.dart:19:26: Error: The method 'validateEmail' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'validateEmail'.
+        expect(authService.validateEmail('test@example.com'), true);
+                           ^^^^^^^^^^^^^
+  test/auth_service_test.dart:20:26: Error: The method 'validateEmail' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'validateEmail'.
+        expect(authService.validateEmail('user.name@domain.co.uk'), true);
+                           ^^^^^^^^^^^^^
+  test/auth_service_test.dart:21:26: Error: The method 'validateEmail' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'validateEmail'.
+        expect(authService.validateEmail('test123@test.com'), true);
+                           ^^^^^^^^^^^^^
+  test/auth_service_test.dart:25:26: Error: The method 'validateEmail' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'validateEmail'.
+        expect(authService.validateEmail(''), false);
+                           ^^^^^^^^^^^^^
+  test/auth_service_test.dart:26:26: Error: The method 'validateEmail' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'validateEmail'.
+        expect(authService.validateEmail('invalid'), false);
+                           ^^^^^^^^^^^^^
+  test/auth_service_test.dart:27:26: Error: The method 'validateEmail' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'validateEmail'.
+        expect(authService.validateEmail('@example.com'), false);
+                           ^^^^^^^^^^^^^
+  test/auth_service_test.dart:28:26: Error: The method 'validateEmail' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'validateEmail'.
+        expect(authService.validateEmail('test@'), false);
+                           ^^^^^^^^^^^^^
+  test/auth_service_test.dart:29:26: Error: The method 'validateEmail' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'validateEmail'.
+        expect(authService.validateEmail('test @example.com'), false);
+                           ^^^^^^^^^^^^^
+  test/auth_service_test.dart:33:26: Error: The method 'getPasswordStrength' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'getPasswordStrength'.
+        expect(authService.getPasswordStrength('123'), 'zay─▒f');
+                           ^^^^^^^^^^^^^^^^^^^
+  test/auth_service_test.dart:34:26: Error: The method 'getPasswordStrength' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'getPasswordStrength'.
+        expect(authService.getPasswordStrength('abc'), 'zay─▒f');
+                           ^^^^^^^^^^^^^^^^^^^
+  test/auth_service_test.dart:35:26: Error: The method 'getPasswordStrength' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'getPasswordStrength'.
+        expect(authService.getPasswordStrength('12345'), 'zay─▒f');
+                           ^^^^^^^^^^^^^^^^^^^
+  test/auth_service_test.dart:39:26: Error: The method 'getPasswordStrength' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'getPasswordStrength'.
+        expect(authService.getPasswordStrength('abcdef'), 'orta');
+                           ^^^^^^^^^^^^^^^^^^^
+  test/auth_service_test.dart:40:26: Error: The method 'getPasswordStrength' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'getPasswordStrength'.
+        expect(authService.getPasswordStrength('123456'), 'orta');
+                           ^^^^^^^^^^^^^^^^^^^
+  test/auth_service_test.dart:41:26: Error: The method 'getPasswordStrength' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'getPasswordStrength'.
+        expect(authService.getPasswordStrength('password'), 'orta');
+                           ^^^^^^^^^^^^^^^^^^^
+  test/auth_service_test.dart:45:26: Error: The method 'getPasswordStrength' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'getPasswordStrength'.
+        expect(authService.getPasswordStrength('Abcdef123'), 'g├╝├ğl├╝');
+                           ^^^^^^^^^^^^^^^^^^^
+  test/auth_service_test.dart:46:26: Error: The method 'getPasswordStrength' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'getPasswordStrength'.
+        expect(authService.getPasswordStrength('Test@123'), 'g├╝├ğl├╝');
+                           ^^^^^^^^^^^^^^^^^^^
+  test/auth_service_test.dart:47:26: Error: The method 'getPasswordStrength' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'getPasswordStrength'.
+        expect(authService.getPasswordStrength('PassW0rd!'), 'g├╝├ğl├╝');
+                           ^^^^^^^^^^^^^^^^^^^
+  test/auth_service_test.dart:52:26: Error: The getter 'currentUser' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing getter, or defining a getter or field named 'currentUser'.
+        expect(authService.currentUser, null);
+                           ^^^^^^^^^^^
+  test/auth_service_test.dart:56:40: Error: The method 'register' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'register'.
+        final result = await authService.register(
+                                         ^^^^^^^^
+  test/auth_service_test.dart:64:26: Error: The getter 'currentUser' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing getter, or defining a getter or field named 'currentUser'.
+        expect(authService.currentUser, isNotNull);
+                           ^^^^^^^^^^^
+  test/auth_service_test.dart:68:40: Error: The method 'register' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'register'.
+        final result = await authService.register(
+                                         ^^^^^^^^
+  test/auth_service_test.dart:79:40: Error: The method 'register' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'register'.
+        final result = await authService.register(
+                                         ^^^^^^^^
+  test/auth_service_test.dart:91:25: Error: The method 'register' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'register'.
+        await authService.register(
+                          ^^^^^^^^
+  test/auth_service_test.dart:98:25: Error: The method 'signOut' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'signOut'.
+        await authService.signOut();
+                          ^^^^^^^
+  test/auth_service_test.dart:106:20: Error: The operator '[]' isn't defined for the type 'AuthResult'.
+   - 'AuthResult' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the operator to an existing operator, or defining a '[]' operator.
+        expect(result['success'], true);
+                     ^
+  test/auth_service_test.dart:112:25: Error: The method 'register' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'register'.
+        await authService.register(
+                          ^^^^^^^^
+  test/auth_service_test.dart:119:25: Error: The method 'signOut' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'signOut'.
+        await authService.signOut();
+                          ^^^^^^^
+  test/auth_service_test.dart:127:20: Error: The operator '[]' isn't defined for the type 'AuthResult'.
+   - 'AuthResult' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the operator to an existing operator, or defining a '[]' operator.
+        expect(result['success'], false);
+                     ^
+  test/auth_service_test.dart:133:25: Error: The method 'register' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'register'.
+        await authService.register(
+                          ^^^^^^^^
+  test/auth_service_test.dart:142:25: Error: The method 'signOut' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'signOut'.
+        await authService.signOut();
+                          ^^^^^^^
+  test/auth_service_test.dart:145:26: Error: The getter 'currentUser' isn't defined for the type 'AuthService'.
+   - 'AuthService' is from 'package:english_aircraft/services/auth_service.dart' ('lib/services/auth_service.dart').
+  Try correcting the name to the name of an existing getter, or defining a getter or field named 'currentUser'.
+        expect(authService.currentUser, null);
+                           ^^^^^^^^^^^
+  .
+00:00 +0 -2: loading C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart [E]
+  Error: The Dart compiler exited unexpectedly.
+  package:flutter_tools/src/base/common.dart 34:3  throwToolExit
+  package:flutter_tools/src/compile.dart 911:11    DefaultResidentCompiler._compile.<fn>
+  dart:async/zone.dart 1538:47                     _rootRunUnary
+  dart:async/zone.dart 1429:19                     _CustomZone.runUnary
+  dart:async/future_impl.dart 948:45               Future._propagateToListeners.handleValueCallback
+  dart:async/future_impl.dart 977:13               Future._propagateToListeners
+  dart:async/future_impl.dart 862:9                Future._propagateToListeners
+  dart:async/future_impl.dart 720:5                Future._completeWithValue
+  dart:async/future_impl.dart 804:7                Future._asyncCompleteWithValue.<fn>
+  dart:async/zone.dart 1525:13                     _rootRun
+  dart:async/zone.dart 1422:19                     _CustomZone.run
+  dart:async/zone.dart 1321:7                      _CustomZone.runGuarded
+  dart:async/zone.dart 1362:23                     _CustomZone.bindCallbackGuarded.<fn>
+  dart:async/schedule_microtask.dart 40:35         _microtaskLoop
+  dart:async/schedule_microtask.dart 49:5          _startMicrotaskLoop
+  dart:isolate-patch/isolate_patch.dart 127:13     _runPendingImmediateCallback
+  dart:isolate-patch/isolate_patch.dart 194:5      _RawReceivePort._handleMessage
+  
+00:00 +0 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests AdService should be singleton
+00:00 +1 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests initialize should complete without errors
+00:00 +2 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests loadBannerAd should not throw
+00:00 +3 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests loadInterstitialAd should not throw
+00:00 +4 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests loadRewardedAd should not throw
+00:00 +5 -2: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests showInterstitialAd should call onAdDismissed
+00:00 +5 -3: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests showInterstitialAd should call onAdDismissed [E]
+  Expected: <true>
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test\ad_service_test.dart 55:7                      main.<fn>.<fn>
+  
+00:00 +5 -3: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests showRewardedAd should call onAdDismissed
+00:00 +5 -4: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests showRewardedAd should call onAdDismissed [E]
+  Expected: <true>
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test\ad_service_test.dart 64:7                      main.<fn>.<fn>
+  
+00:00 +5 -4: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests bannerAd should return null
+00:00 +6 -4: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests isBannerAdReady should be false
+00:00 +7 -4: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests isInterstitialAdReady should be false
+00:00 +8 -4: C:/Users/Casper/Desktop/english_aircraft/test/ad_service_test.dart: AdService Tests isRewardedAdReady should be false
+00:01 +9 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: XP Calculation Tests Correct answer should give base XP
+00:01 +10 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: XP Calculation Tests Streak bonus should multiply correctly
+00:01 +11 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: XP Calculation Tests Wrong answer should give 0 XP
+00:01 +12 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: XP Calculation Tests Perfect lesson completion bonus
+00:01 +13 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Initial lives should be 5
+00:01 +14 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Wrong answer should decrease lives
+00:01 +15 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Lives should not go below 0
+00:01 +16 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Lives should not exceed maximum (5)
+00:01 +17 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Lives regenerate over time
+00:01 +18 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Lives System Tests Multiple lives regeneration
+00:01 +19 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Streak System Tests New user should have 0 streak
+00:01 +20 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Streak System Tests Daily completion should increase streak
+00:01 +21 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Streak System Tests Missing a day should reset streak
+00:01 +22 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Streak System Tests Streak should be maintained with daily activity
+00:01 +23 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: League System Tests User should start in Bronze league
+00:01 +24 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: League System Tests 500 XP should promote to Silver
+00:01 +25 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: League System Tests 10000 XP should promote to Champion
+00:01 +26 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Mastery System Tests New lesson should have mastery level 0
+00:01 +27 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Mastery System Tests First completion should set mastery to 1 (Bronze)
+00:01 +28 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Mastery System Tests Mastery should not exceed level 4
+00:01 +29 -4: C:/Users/Casper/Desktop/english_aircraft/test/gamification_test.dart: Mastery System Tests Wrong answers should decrease mastery
+test/sync_service_tes
+t.dart:32:37: Error: 
+The method 'syncNow' 
+isn't defined for the
+ type 'SyncService'.
+ - 'SyncService' is f
+rom 'package:english_
+aircraft/services/syn
+c_service.dart' ('lib
+/services/sync_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'syncNow'.
+      await expectLat
+er(syncService.syncNo
+w(), completes);
+                     
+               ^^^^^^
+^
+test/sync_service_tes
+t.dart:38:21: Error: 
+The method 'syncNow' 
+isn't defined for the
+ type 'SyncService'.
+ - 'SyncService' is f
+rom 'package:english_
+aircraft/services/syn
+c_service.dart' ('lib
+/services/sync_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'syncNow'.
+        syncService.s
+yncNow(),
+                    ^
+^^^^^^
+test/sync_service_tes
+t.dart:39:21: Error: 
+The method 'syncNow' 
+isn't defined for the
+ type 'SyncService'.
+ - 'SyncService' is f
+rom 'package:english_
+aircraft/services/syn
+c_service.dart' ('lib
+/services/sync_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'syncNow'.
+        syncService.s
+yncNow(),
+                    ^
+^^^^^^
+test/sync_service_tes
+t.dart:40:21: Error: 
+The method 'syncNow' 
+isn't defined for the
+ type 'SyncService'.
+ - 'SyncService' is f
+rom 'package:english_
+aircraft/services/syn
+c_service.dart' ('lib
+/services/sync_servic
+e.dart').
+Try correcting the na
+me to the name of an 
+existing method, or d
+efining a method name
+d 'syncNow'.
+        syncService.s
+yncNow(),
+                    ^
+^^^^^^
+test/sync_service_tes
+t.dart:43:37: Error: 
+The argument type 'Li
+st<dynamic>' can't be
+ assigned to the para
+meter type 'Iterable<
+Future<dynamic>>'.
+ - 'List' is from 'da
+rt:core'.
+ - 'Iterable' is from
+ 'dart:core'.
+ - 'Future' is from '
+dart:async'.
+      await expectLat
+er(Future.wait(future
+s), completes);
+                     
+               ^
+00:01 +30 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests New word should be due immediately
+00:01 +31 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests First review should schedule next review in 1 day
+00:01 +32 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Second review should schedule next review in 3 days
+00:01 +33 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Third review should schedule next review in 7 days
+00:01 +34 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Fourth review should schedule next review in 14 days
+00:01 +35 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Word should be due after interval passes
+00:01 +36 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Word should not be due before interval passes
+00:01 +37 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Wrong answer should reset interval to 1 day
+00:01 +38 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Spaced Repetition Tests Correct answer should increase interval
+00:01 +39 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Review Priority Tests Overdue words should have higher priority
+00:01 +40 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Review Priority Tests Urgency should increase with days overdue
+00:01 +41 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Review Priority Tests New words should have lower priority than reviews
+00:01 +42 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Mastery Impact on Intervals High mastery should have longer intervals
+00:02 +43 -4: C:/Users/Casper/Desktop/english_aircraft/test/spaced_repetition_test.dart: Mastery Impact on Intervals Perfect answers should double interval growth
+00:02 +44 -5: loading C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart [E]
+  Failed to load "C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart":
+  Compilation failed for testPath=C:/Users/Casper/Desktop/english_aircraft/test/sync_service_test.dart: test/sync_service_test.dart:32:37: Error: The method 'syncNow' isn't defined for the type 'SyncService'.
+   - 'SyncService' is from 'package:english_aircraft/services/sync_service.dart' ('lib/services/sync_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'syncNow'.
+        await expectLater(syncService.syncNow(), completes);
+                                      ^^^^^^^
+  test/sync_service_test.dart:38:21: Error: The method 'syncNow' isn't defined for the type 'SyncService'.
+   - 'SyncService' is from 'package:english_aircraft/services/sync_service.dart' ('lib/services/sync_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'syncNow'.
+          syncService.syncNow(),
+                      ^^^^^^^
+  test/sync_service_test.dart:39:21: Error: The method 'syncNow' isn't defined for the type 'SyncService'.
+   - 'SyncService' is from 'package:english_aircraft/services/sync_service.dart' ('lib/services/sync_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'syncNow'.
+          syncService.syncNow(),
+                      ^^^^^^^
+  test/sync_service_test.dart:40:21: Error: The method 'syncNow' isn't defined for the type 'SyncService'.
+   - 'SyncService' is from 'package:english_aircraft/services/sync_service.dart' ('lib/services/sync_service.dart').
+  Try correcting the name to the name of an existing method, or defining a method named 'syncNow'.
+          syncService.syncNow(),
+                      ^^^^^^^
+  test/sync_service_test.dart:43:37: Error: The argument type 'List<dynamic>' can't be assigned to the parameter type 'Iterable<Future<dynamic>>'.
+   - 'List' is from 'dart:core'.
+   - 'Iterable' is from 'dart:core'.
+   - 'Future' is from 'dart:async'.
+        await expectLater(Future.wait(futures), completes);
+                                      ^
+  .
+00:03 +44 -5: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: Term Model Tests Term should be created with correct properties
+00:03 +45 -5: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: Term Model Tests Term equality should work correctly
+00:03 +46 -5: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: Term Model Tests Term hashCode should be consistent
+00:03 +47 -5: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: CategoryData Model Tests CategoryData should be created correctly
+00:03 +48 -5: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: CategoryData Model Tests CategoryData should have correct term count
+00:03 +49 -5: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: League Model Tests League should be created with correct properties
+00:03 +50 -5: C:/Users/Casper/Desktop/english_aircraft/test/vocabulary_test.dart: League Model Tests League comparison should work based on XP
+00:06 +51 -5: C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart: App should build successfully
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY WIDGETS LIBRARY ÔòŞÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following FirebaseException was thrown building AlienApp(dirty, dependencies:
+[_InheritedProviderScope<AppProvider?>]):
+[core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+
+The relevant error-causing widget was:
+  AlienApp AlienApp:file:///C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart:20:22
+
+When the exception was thrown, this was the stack:
+#0      MethodChannelFirebase.app (package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart:190:5)
+#1      Firebase.app (package:firebase_core/src/firebase.dart:79:41)
+#2      FirebaseFirestore.instance (package:cloud_firestore/src/firestore.dart:33:21)
+#3      new FirestoreService._internal (package:english_aircraft/services/firestore_service.dart:5:58)
+#4      FirestoreService._instance (package:english_aircraft/services/firestore_service.dart:8:62)
+#5      FirestoreService._instance (package:english_aircraft/services/firestore_service.dart)
+#6      new FirestoreService (package:english_aircraft/services/firestore_service.dart:9:33)
+#7      new SyncService._internal (package:english_aircraft/services/sync_service.dart:10:39)
+#8      SyncService._instance (package:english_aircraft/services/sync_service.dart:14:52)
+#9      SyncService._instance (package:english_aircraft/services/sync_service.dart)
+#10     new SyncService (package:english_aircraft/services/sync_service.dart:15:28)
+#11     new AppProvider (package:english_aircraft/providers/app_provider.dart:59:36)
+#12     main.<anonymous closure>.<anonymous closure> (file:///C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart:19:24)
+#13     _CreateInheritedProviderState.value (package:provider/src/inherited_provider.dart:749:36)
+#14     _InheritedProviderScopeElement.value (package:provider/src/inherited_provider.dart:603:33)
+#15     Provider.of (package:provider/src/provider.dart:337:37)
+#16     AlienApp.build (package:english_aircraft/main.dart:44:31)
+#17     StatelessElement.build (package:flutter/src/widgets/framework.dart:5892:49)
+#18     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5820:15)
+#19     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#20     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5802:5)
+#21     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5796:5)
+...     Normal element mounting (7 frames)
+#28     _InheritedProviderScopeElement.mount (package:provider/src/inherited_provider.dart:424:11)
+...     Normal element mounting (7 frames)
+#35     SingleChildWidgetElementMixin.mount (package:nested/nested.dart:222:11)
+#36     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4590:20)
+#37     Element.updateChild (package:flutter/src/widgets/framework.dart:4053:20)
+#38     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#39     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#40     ProxyElement.update (package:flutter/src/widgets/framework.dart:6152:5)
+#41     _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#42     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#43     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#44     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5985:11)
+#45     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#46     StatefulElement.update (package:flutter/src/widgets/framework.dart:6010:5)
+#47     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#48     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#49     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#50     ProxyElement.update (package:flutter/src/widgets/framework.dart:6152:5)
+#51     _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#52     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#53     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#54     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5985:11)
+#55     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#56     StatefulElement.update (package:flutter/src/widgets/framework.dart:6010:5)
+#57     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#58     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#59     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5985:11)
+#60     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#61     StatefulElement.update (package:flutter/src/widgets/framework.dart:6010:5)
+#62     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#63     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#64     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#65     ProxyElement.update (package:flutter/src/widgets/framework.dart:6152:5)
+#66     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#67     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#68     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5985:11)
+#69     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#70     StatefulElement.update (package:flutter/src/widgets/framework.dart:6010:5)
+#71     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#72     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#73     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#74     ProxyElement.update (package:flutter/src/widgets/framework.dart:6152:5)
+#75     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#76     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#77     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#78     ProxyElement.update (package:flutter/src/widgets/framework.dart:6152:5)
+#79     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#80     _RawViewElement._updateChild (package:flutter/src/widgets/view.dart:481:16)
+#81     _RawViewElement.update (package:flutter/src/widgets/view.dart:568:5)
+#82     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#83     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#84     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#85     StatelessElement.update (package:flutter/src/widgets/framework.dart:5898:5)
+#86     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#87     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5844:16)
+#88     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5985:11)
+#89     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#90     StatefulElement.update (package:flutter/src/widgets/framework.dart:6010:5)
+#91     Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#92     RootElement._rebuild (package:flutter/src/widgets/binding.dart:1782:16)
+#93     RootElement.update (package:flutter/src/widgets/binding.dart:1760:5)
+#94     RootElement.performRebuild (package:flutter/src/widgets/binding.dart:1774:7)
+#95     Element.rebuild (package:flutter/src/widgets/framework.dart:5532:7)
+#96     BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2750:15)
+#97     BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2807:11)
+#98     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3111:18)
+#99     AutomatedTestWidgetsFlutterBinding.drawFrame (package:flutter_test/src/binding.dart:1506:19)
+#100    RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:495:5)
+#101    SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1434:15)
+#102    SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1347:9)
+#103    AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:1335:9)
+#106    TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#107    AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:1324:27)
+#108    WidgetTester.pumpWidget.<anonymous closure> (package:flutter_test/src/widget_tester.dart:598:22)
+#111    TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#112    WidgetTester.pumpWidget (package:flutter_test/src/widget_tester.dart:595:27)
+#113    main.<anonymous closure> (file:///C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart:17:18)
+#114    testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:29)
+<asynchronous suspension>
+#115    TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided 5 frames from dart:async and package:stack_trace)
+
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ÔòŞÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TypeWidgetFinder:<Found 0 widgets with type "MaterialApp": []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart:25:5)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart line 25
+The test description was:
+  App should build successfully
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ÔòŞÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following message was thrown:
+Multiple exceptions (2) were detected during the running of the current test, and at least one was
+unexpected.
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:06 +51 -6: C:/Users/Casper/Desktop/english_aircraft/test/widget_test.dart: App should build successfully [E]
+  Test failed. See exception logs above.
+  The test description was: App should build successfully
+  
+00:06 +51 -6: Some tests failed.

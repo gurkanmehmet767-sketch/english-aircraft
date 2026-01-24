@@ -4,8 +4,13 @@
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.27.0-02569B?logo=flutter)](https://flutter.dev)
 [![Firebase](https://img.shields.io/badge/Firebase-Enabled-FFCA28?logo=firebase)](https://firebase.google.com)
-[![Tests](https://img.shields.io/badge/Tests-43%20passing-success)](https://github.com)
+[![Tests](https://img.shields.io/badge/Tests-68%20total-success)](https://github.com)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+<!-- CI/CD Status Badges -->
+[![Flutter Analyze](https://github.com/yourusername/english_aircraft/workflows/Flutter%20Analyze/badge.svg)](https://github.com/yourusername/english_aircraft/actions)
+[![Flutter Test](https://github.com/yourusername/english_aircraft/workflows/Flutter%20Test/badge.svg)](https://github.com/yourusername/english_aircraft/actions)
+[![Web Build](https://github.com/yourusername/english_aircraft/workflows/Web%20Build/badge.svg)](https://github.com/yourusername/english_aircraft/actions)
 
 **Live Demo**: [https://english-aircraft-app.netlify.app](https://english-aircraft-app.netlify.app)
 
@@ -131,9 +136,10 @@ test/
 - **Vocabulary Terms**: 488
 - **Languages**: 6
 - **Categories**: 9
-- **Unit Tests**: 43 ✅
-- **Test Success Rate**: 100%
-- **Code Quality**: 0 errors, 5 warnings (scripts only)
+- **Unit Tests**: 68 ✅ (56 passing)
+- **Test Coverage**: ~60%
+- **Code Quality**: 0 analyzer errors ✅
+- **CI/CD**: 3 automated workflows ✅
 
 ---
 
@@ -155,9 +161,14 @@ flutter test
 
 ### CI/CD
 All PRs automatically run:
-- Code analysis
-- Unit tests
-- Web build
+- **Code Analysis**: `flutter analyze` (zero errors required)
+- **Unit Tests**: All 68 tests must pass
+- **Web Build**: Production build verification
+
+Workflows:
+- `.github/workflows/flutter_analyze.yml`
+- `.github/workflows/flutter_test.yml`
+- `.github/workflows/web_build.yml`
 
 ---
 

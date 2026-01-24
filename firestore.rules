@@ -1,0 +1,77 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      // Anyone can read user profiles (for leaderboards, friends)
+      allow read: if true;
+      
+      // Only owner can create/update their profile
+      allow create: if isAuthenticated() && isOwner(userId);
+      allow update: if isAuthenticated() && isOwner(userId);
+      
+      // Only owner can delete (though we don't delete, just mark inactive)
+      allow delete: if isAuthenticated() && isOwner(userId);
+    }
+    
+    // User progress collection
+    match /users/{userId}/progress/{progressId} {
+      // Only owner can read/write their progress
+      allow read, write: if isAuthenticated() && isOwner(userId);
+    }
+    
+    // Leaderboards collection (global XP rankings)
+    match /leaderboards/{entry} {
+      // Everyone can read leaderboards
+      allow read: if true;
+      
+      // Only authenticated users can write (via cloud functions ideally)
+      allow write: if isAuthenticated();
+    }
+    
+    // Friends collection
+    match /users/{userId}/friends/{friendId} {
+      // Owner can read their friends list
+      allow read: if isAuthenticated() && isOwner(userId);
+      
+      // Owner can add/remove friends
+      allow write: if isAuthenticated() && isOwner(userId);
+    }
+    
+    // Friend requests collection
+    match /friend_requests/{requestId} {
+      // Sender and receiver can read
+      allow read: if isAuthenticated() && 
+        (request.auth.uid == resource.data.senderId || 
+         request.auth.uid == resource.data.receiverId);
+      
+      // Only sender can create request
+      allow create: if isAuthenticated() && 
+        request.auth.uid == request.resource.data.senderId;
+      
+      // Sender and receiver can update (accept/reject)
+      allow update: if isAuthenticated() && 
+        (request.auth.uid == resource.data.senderId || 
+         request.auth.uid == resource.data.receiverId);
+      
+      // Only sender can delete their request
+      allow delete: if isAuthenticated() && 
+        request.auth.uid == resource.data.senderId;
+    }
+    
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

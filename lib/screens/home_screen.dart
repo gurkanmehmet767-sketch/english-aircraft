@@ -76,8 +76,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ? provider.selectedDarkBg
         : provider.selectedLightBg;
     
-    // palm_beach, sea, and ocean use PNG format for daytime images
-    if (bgName == 'palm_beach' || bgName == 'sea' || bgName == 'ocean') {
+    // palm_beach and ocean use PNG format for daytime images
+    if (bgName == 'palm_beach' || bgName == 'ocean') {
       return 'assets/images/${bgName}_bg.png';
     }
     // Other images use WebP format for better compression

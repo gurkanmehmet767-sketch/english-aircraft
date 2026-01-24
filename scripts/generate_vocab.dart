@@ -1,5 +1,6 @@
 // Generate expanded vocabulary_data_fixed.dart
 import 'dart:io';
+import 'package:flutter/foundation.dart' show debugPrint;
 
 void main() {
   final dictFile = File('lib/data/word_dictionary.dart');
@@ -126,8 +127,8 @@ void main() {
   buffer.writeln('};');
   
   File('lib/data/vocabulary_data_fixed.dart').writeAsStringSync(buffer.toString());
-  print('Generated vocabulary with ${seen.length} unique terms');
+  debugPrint('Generated vocabulary with ${seen.length} unique terms');
   for (final cat in categories.keys) {
-    print('  $cat: ${categories[cat]!.length} terms');
+    debugPrint('  $cat: ${categories[cat]!.length} terms');
   }
 }
