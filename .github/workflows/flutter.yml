@@ -54,6 +54,9 @@ jobs:
     name: Build Web
     runs-on: ubuntu-latest
     needs: test
+    # Disabled: GitHub Actions runner has persistent "Set up job" failures
+    # Will use manual build and deploy until infrastructure issue is resolved
+    if: false
     steps:
       - uses: actions/checkout@v3
       
@@ -76,11 +79,12 @@ jobs:
           retention-days: 7
 
   deploy:
-    name: Deploy to Netlify
+    name: Deploy to Netlify  
     runs-on: ubuntu-latest
     needs: build-web
-    if: false  # Temporarily disabled - will enable when build-web is fixed
+    # Disabled: Using manual deployment until build-web runner issue resolved
     # Original condition: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    if: false
     steps:
       - uses: actions/checkout@v3
       
