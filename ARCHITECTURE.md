@@ -295,7 +295,7 @@ group('Feature Tests', () {
 - Automatic deployment from `main` branch
 - Custom domain support
 - PWA-ready with offline capabilities
-- Live at: https://english-aircraft-app.netlify.app
+- Live at: https://cool-lily-c480e7.netlify.app
 
 ### Mobile (Future)
 - Android: Google Play Store (planned)

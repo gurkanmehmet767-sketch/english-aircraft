@@ -12,7 +12,7 @@
 [![Flutter Test](https://github.com/gurkanmehmet767-sketch/english-aircraft/workflows/Flutter%20Test/badge.svg)](https://github.com/gurkanmehmet767-sketch/english-aircraft/actions)
 [![Web Build](https://github.com/gurkanmehmet767-sketch/english-aircraft/workflows/Web%20Build/badge.svg)](https://github.com/gurkanmehmet767-sketch/english-aircraft/actions)
 
-**Live Demo**: [https://english-aircraft-app.netlify.app](https://english-aircraft-app.netlify.app)
+**Live Demo**: [https://cool-lily-c480e7.netlify.app](https://cool-lily-c480e7.netlify.app)
 
 ---
 
