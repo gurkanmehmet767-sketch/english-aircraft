@@ -33,10 +33,10 @@ Your repository needs the following secrets for CI/CD:
 **How to Get It:**
 
 1. Go to [Netlify](https://app.netlify.com)
-2. Click on your **english-aircraft-app** site
+2. Click on your **cool-lily-c480e7** site
 3. Go to **Site settings**
 4. Under **Site details**, find **Site ID**
-5. Copy the Site ID (looks like: `1234abcd-5678-90ef-ghij-klmnopqrstuv`)
+5. Copy the Site ID: `7023e14b-80c2-4c2d-b5c6-6d70f6099cbc`
 
 ---
 
@@ -108,7 +108,8 @@ Once secrets are added, uncomment the deployment section in GitHub Actions:
 
 ## Current Deployment URL
 
-**Live Site**: https://english-aircraft-app.netlify.app
+**Live Site**: https://cool-lily-c480e7.netlify.app
+**Site ID**: `7023e14b-80c2-4c2d-b5c6-6d70f6099cbc`
 
 ---
 
