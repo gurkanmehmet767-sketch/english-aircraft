@@ -79,7 +79,7 @@ class ScoreScreen extends StatelessWidget {
           Text(
             '${provider.totalXP}',
             style: const TextStyle(
-              fontSize: 48,
+              fontSize: 32,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),

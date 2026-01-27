@@ -1068,7 +1068,7 @@ class _LessonScreenState extends State<LessonScreen>
                               child: Text(
                                 question['question'],
                                 style: const TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
+                                    fontSize: 18, fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.center,
                               ),
                             ),
@@ -1208,7 +1208,7 @@ class _LessonScreenState extends State<LessonScreen>
                             child: Text(
                               question['question'],
                               style: const TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w700,
                                 letterSpacing: 0.5,
                               ),
@@ -1535,7 +1535,7 @@ class _LessonScreenState extends State<LessonScreen>
                                 : 'YANLIŞ!',
                             style: const TextStyle(
                               color: Colors.white,
-                              fontSize: 32,
+                              fontSize: 24,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 1.5,
                               shadows: [
@@ -1596,7 +1596,7 @@ class _LessonScreenState extends State<LessonScreen>
                                     textAlign: TextAlign.center,
                                     style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 24,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.bold,
                                       letterSpacing: 0.5,
                                     ),
