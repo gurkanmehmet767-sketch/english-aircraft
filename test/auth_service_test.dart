@@ -22,6 +22,7 @@ void main() {
       final result = await authService.registerOffline(
         email: 'invalid-email',
         username: 'testuser',
+        fullName: 'Test User',
         password: 'Pass123',
       );
 
@@ -33,6 +34,7 @@ void main() {
       final result = await authService.registerOffline(
         email: 'test@example.com',
         username: 'testuser',
+        fullName: 'Test User',
         password: '123', // Too short
       );
 
@@ -44,11 +46,24 @@ void main() {
       final result = await authService.registerOffline(
         email: 'test@example.com',
         username: 'ab', // Too short
+        fullName: 'Test User',
         password: 'Pass123',
       );
 
       expect(result.success, false);
       expect(result.error, contains('3-20'));
+    });
+
+    test('registerOffline should require valid full name', () async {
+      final result = await authService.registerOffline(
+        email: 'test@example.com',
+        username: 'testuser',
+        fullName: 'Test', // No space
+        password: 'Pass123',
+      );
+
+      expect(result.success, false);
+      expect(result.error, contains('Ad Soyad'));
     });
 
     test('login should  fail with non-existent user', () async {

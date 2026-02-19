@@ -40,17 +40,30 @@ class AuthService {
     return usernameRegex.hasMatch(username);
   }
 
+  // Validate full name
+  bool _isValidFullName(String fullName) {
+    // At least 5 characters and contains a space
+    if (fullName.length < 5) return false;
+    return fullName.trim().contains(' ');
+  }
+
   // ===== OFFLINE REGISTRATION =====
 
   Future<AuthResult> registerOffline({
     required String email,
     required String username,
+    required String fullName,
     required String password,
   }) async {
     try {
       // Validate inputs
       if (!_isValidEmail(email)) {
         return AuthResult.error('Geçersiz email adresi');
+      }
+
+      if (!_isValidFullName(fullName)) {
+        return AuthResult.error(
+            'Ad Soyad en az 5 karakter olmalı ve ad ile soyad arasında boşluk olmalıdır');
       }
 
       if (!_isValidUsername(username)) {
@@ -79,6 +92,7 @@ class AuthService {
         uid: tempUid,
         email: email.toLowerCase().trim(),
         username: username.trim(),
+        fullName: fullName.trim(),
         createdAt: now,
         lastActive: now,
         isSynced: false,
@@ -94,6 +108,7 @@ class AuthService {
         'uid': tempUid,
         'email': user.email,
         'username': user.username,
+        'fullName': user.fullName,
         'passwordHash': passwordHash,
         'createdAt': now.millisecondsSinceEpoch,
       });
