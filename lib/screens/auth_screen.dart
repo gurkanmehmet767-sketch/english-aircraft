@@ -23,6 +23,7 @@ class _AuthScreenState extends State<AuthScreen>
   final _loginEmailController = TextEditingController();
   final _loginPasswordController = TextEditingController();
 
+  final _registerFullNameController = TextEditingController();
   final _registerEmailController = TextEditingController();
   final _registerUsernameController = TextEditingController();
   final _registerPasswordController = TextEditingController();
@@ -30,6 +31,7 @@ class _AuthScreenState extends State<AuthScreen>
   // Focus nodes
   final _loginEmailFocus = FocusNode();
   final _loginPasswordFocus = FocusNode();
+  final _registerFullNameFocus = FocusNode();
   final _registerEmailFocus = FocusNode();
   final _registerUsernameFocus = FocusNode();
   final _registerPasswordFocus = FocusNode();
@@ -41,6 +43,7 @@ class _AuthScreenState extends State<AuthScreen>
   bool _kvkkAccepted = false; // KVKK onayı
 
   // Validation
+  bool _fullNameValid = false;
   bool _emailValid = false;
   bool _usernameValid = false;
   int _passwordStrength = 0; // 0-3
@@ -55,6 +58,7 @@ class _AuthScreenState extends State<AuthScreen>
     );
 
     // Add listeners for real-time validation
+    _registerFullNameController.addListener(_validateFullName);
     _registerEmailController.addListener(_validateEmail);
     _registerUsernameController.addListener(_validateUsername);
     _registerPasswordController.addListener(_validatePassword);
@@ -65,15 +69,25 @@ class _AuthScreenState extends State<AuthScreen>
     _tabController.dispose();
     _loginEmailController.dispose();
     _loginPasswordController.dispose();
+    _registerFullNameController.dispose();
     _registerEmailController.dispose();
     _registerUsernameController.dispose();
     _registerPasswordController.dispose();
     _loginEmailFocus.dispose();
     _loginPasswordFocus.dispose();
+    _registerFullNameFocus.dispose();
     _registerEmailFocus.dispose();
     _registerUsernameFocus.dispose();
     _registerPasswordFocus.dispose();
     super.dispose();
+  }
+
+  void _validateFullName() {
+    final fullName = _registerFullNameController.text;
+    setState(() {
+      _fullNameValid =
+          fullName.trim().length >= 5 && fullName.trim().contains(' ');
+    });
   }
 
   void _validateEmail() {
@@ -144,6 +158,7 @@ class _AuthScreenState extends State<AuthScreen>
     final result = await _authService.registerOffline(
       email: _registerEmailController.text,
       username: _registerUsernameController.text,
+      fullName: _registerFullNameController.text,
       password: _registerPasswordController.text,
     );
 
@@ -234,7 +249,7 @@ class _AuthScreenState extends State<AuthScreen>
               ),
               const SizedBox(height: 8),
               Text(
-                user.username,
+                user.fullName ?? user.username,
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -362,13 +377,23 @@ class _AuthScreenState extends State<AuthScreen>
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           // Logo
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              _buildLogoCircle('👽'),
-                              const SizedBox(width: 12),
-                              _buildLogoCircle('✈️'),
-                            ],
+                          TweenAnimationBuilder(
+                            tween: Tween<double>(begin: 0, end: 1),
+                            duration: const Duration(milliseconds: 800),
+                            curve: Curves.elasticOut,
+                            builder: (context, double value, child) {
+                              return Transform.scale(
+                                scale: value,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    _buildLogoCircle('👽'),
+                                    const SizedBox(width: 12),
+                                    _buildLogoCircle('✈️'),
+                                  ],
+                                ),
+                              );
+                            },
                           ),
 
                           const SizedBox(height: 16),
@@ -561,6 +586,19 @@ class _AuthScreenState extends State<AuthScreen>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            _buildModernTextField(
+              controller: _registerFullNameController,
+              focusNode: _registerFullNameFocus,
+              label: 'Ad Soyad',
+              icon: Icons.badge_outlined,
+              keyboardType: TextInputType.name,
+              onSubmitted: (_) => _registerEmailFocus.requestFocus(),
+              validationIcon: _registerFullNameController.text.isNotEmpty
+                  ? (_fullNameValid ? Icons.check_circle : Icons.cancel)
+                  : null,
+              validationColor: _fullNameValid ? Colors.green : Colors.red,
+            ),
+            const SizedBox(height: 14),
             _buildModernTextField(
               controller: _registerEmailController,
               focusNode: _registerEmailFocus,

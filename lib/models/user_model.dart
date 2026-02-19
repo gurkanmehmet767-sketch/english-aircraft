@@ -2,6 +2,7 @@ class UserModel {
   final String uid;
   final String email;
   final String username;
+  final String? fullName;
   final String? photoURL;
 
   // Game Stats
@@ -30,6 +31,7 @@ class UserModel {
     required this.uid,
     required this.email,
     required this.username,
+    this.fullName,
     this.photoURL,
     this.xp = 0,
     this.level = 1,
@@ -53,6 +55,7 @@ class UserModel {
       uid: json['uid'] as String,
       email: json['email'] as String,
       username: json['username'] as String,
+      fullName: json['fullName'] as String?,
       photoURL: json['photoURL'] as String?,
       xp: json['xp'] as int? ?? 0,
       level: json['level'] as int? ?? 1,
@@ -96,6 +99,7 @@ class UserModel {
       'uid': uid,
       'email': email,
       'username': username,
+      'fullName': fullName,
       'photoURL': photoURL,
       'xp': xp,
       'level': level,
@@ -119,6 +123,7 @@ class UserModel {
     String? uid,
     String? email,
     String? username,
+    String? fullName,
     String? photoURL,
     int? xp,
     int? level,
@@ -139,6 +144,7 @@ class UserModel {
       uid: uid ?? this.uid,
       email: email ?? this.email,
       username: username ?? this.username,
+      fullName: fullName ?? this.fullName,
       photoURL: photoURL ?? this.photoURL,
       xp: xp ?? this.xp,
       level: level ?? this.level,
